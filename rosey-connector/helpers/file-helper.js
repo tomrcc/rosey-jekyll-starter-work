@@ -66,7 +66,6 @@ function getTranslationHtmlFilename(translationFilename, baseUrlFileData) {
     ".html"
   );
 
-  // console.log({ baseUrlFileData });
   const baseUrlFileDataKeys = Object.keys(baseUrlFileData);
   // Check whether the filename is filename.html or filename/index.html
   const fileName = baseUrlFileDataKeys.includes(htmlFileName)
@@ -80,6 +79,24 @@ function getTranslationHtmlFilename(translationFilename, baseUrlFileData) {
   return fileName;
 }
 
+function getYamlFileName(file) {
+  if (!file) {
+    return "";
+  }
+  return file
+    .replace("/index.html", "")
+    .replace(".html", "")
+    .replace("index", "home");
+}
+
+function getParentFolderName(filePath) {
+  if (!filePath) {
+    return "";
+  }
+
+  return filePath.substring(0, filePath.lastIndexOf("/") + 1);
+}
+
 export {
   readFileWithFallback,
   readJsonFromFile,
@@ -87,4 +104,6 @@ export {
   readContentPage,
   readConfigFile,
   getTranslationHtmlFilename,
+  getYamlFileName,
+  getParentFolderName,
 };

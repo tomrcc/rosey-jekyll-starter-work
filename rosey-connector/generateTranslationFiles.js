@@ -8,6 +8,8 @@ import {
   readFileWithFallback,
   readJsonFromFile,
   getTranslationHtmlFilename,
+  getYamlFileName,
+  getParentFolderName,
 } from "./helpers/file-helper.js";
 
 const nhm = new NodeHtmlMarkdown(
@@ -19,7 +21,7 @@ dotenv.config();
 
 export async function generateTranslationFiles(configData) {
   const locales = configData.locales;
-  // Loop through locales
+  // Generate translation files for each locale
   for (let i = 0; i < locales.length; i++) {
     const locale = locales[i];
 
@@ -47,33 +49,36 @@ async function generateTranslationFilesForLocale(locale, configData) {
     smartlingTranslationsDataFilePath
   );
 
+  // Get pages from the base.urls.json
   const baseUrlFileDataKeys = baseURLFileData.keys;
   const pages = Object.keys(baseUrlFileDataKeys);
 
+  // Make sure there is a directory for the translation files to go in
   const translationsLocalePath = path.join(translationFilesDirPath, locale);
   await fs.promises.mkdir(translationsLocalePath, { recursive: true });
 
+  // Get current translation files
   const translationsFiles = await fs.promises.readdir(translationsLocalePath, {
     recursive: true,
   });
 
   // Remove translations pages no longer present in the base.json file
   await Promise.all(
-    translationsFiles.map(async (fileNameWithExt) => {
-      const filePath = path.join(translationsLocalePath, fileNameWithExt);
+    translationsFiles.map(async (fileName) => {
+      const filePath = path.join(translationsLocalePath, fileName);
 
       if (await isDirectory(filePath)) {
         return;
       }
 
-      const fileNameHTMLFormatted = getTranslationHtmlFilename(
-        fileNameWithExt,
+      const fileNameHtmlFormatted = getTranslationHtmlFilename(
+        fileName,
         baseUrlFileDataKeys
       );
 
-      if (!pages.includes(fileNameHTMLFormatted)) {
+      if (!pages.includes(fileNameHtmlFormatted)) {
         console.log(
-          `🧹 The page ${fileNameHTMLFormatted} doesn't exist in the pages in our base.json - deleting!`
+          `🧹 The page ${fileNameHtmlFormatted} doesn't exist in the pages in our base.json - deleting!`
         );
 
         await fs.promises.unlink(filePath);
@@ -85,51 +90,43 @@ async function generateTranslationFilesForLocale(locale, configData) {
   // Loop through the pages present in the base.json
   await Promise.all(
     pages.map(async (page) => {
-      // Format the page name
-      const pageName = page
-        .replace("/index.html", "")
-        .replace(".html", "")
-        .replace("index", "home");
-
-      // Find the page file path
+      const pageName = getYamlFileName(page);
       const translationFilePath = path.join(
         translationFilesDirPath,
         locale,
         `${pageName}.yaml`
       );
 
-      const cleanedOutputFileData = {};
+      const translationDataToWrite = {};
 
       // Ensure nested pages have parent folders
       const pageHasParentFolder = pageName.includes("/");
       if (pageHasParentFolder) {
-        const parentFolder = pageName.substring(
-          0,
-          pageName.lastIndexOf("/") + 1
-        );
+        const parentFolderName = getParentFolderName(pageName);
         const parentFolderFilePath = path.join(
           translationFilesDirPath,
           locale,
-          parentFolder
+          parentFolderName
         );
         await fs.promises.mkdir(parentFolderFilePath, { recursive: true });
       }
 
-      const translationFileString = await readFileWithFallback(
+      // Get the current translation page data as YAML
+      const translationFileRaw = await readFileWithFallback(
         translationFilePath,
         "_inputs: {}"
       );
-      const translationFileData = await YAML.parse(translationFileString);
+      const translationFileData = await YAML.parse(translationFileRaw);
 
-      // Create the url key
+      // Get the current url translation, or create the url key if none exists
       if (translationFileData.urlTranslation?.length > 0) {
-        cleanedOutputFileData.urlTranslation =
+        translationDataToWrite.urlTranslation =
           translationFileData.urlTranslation;
       } else {
-        cleanedOutputFileData.urlTranslation = page;
+        translationDataToWrite.urlTranslation = page;
       }
 
-      initDefaultInputs(cleanedOutputFileData, page, locale, baseURL);
+      initDefaultInputs(translationDataToWrite, page, locale, baseURL);
 
       // Loop through keys to check for changes
       // Exit early if key doesn't exist on the page we're on in the loop
@@ -144,22 +141,22 @@ async function generateTranslationFilesForLocale(locale, configData) {
         // Only add the key to our output data if it still exists in base.json
         // If entry no longer exists in base.json it's original has changed
         if (translationFileData[inputKey]) {
-          cleanedOutputFileData[inputKey] = translationFileData[inputKey];
+          translationDataToWrite[inputKey] = translationFileData[inputKey];
         }
 
         // If entry doesn't exist in our output file, add it
         // Check smartling translations for the translation and add it here if it exists
-        if (!cleanedOutputFileData[inputKey]) {
+        if (!translationDataToWrite[inputKey]) {
           if (smartlingTranslationData[inputKey]) {
-            cleanedOutputFileData[inputKey] = nhm.translate(
+            translationDataToWrite[inputKey] = nhm.translate(
               smartlingTranslationData[inputKey]
             );
           } else {
-            cleanedOutputFileData[inputKey] = "";
+            translationDataToWrite[inputKey] = "";
           }
         }
 
-        cleanedOutputFileData._inputs[inputKey] = getInputConfig(
+        translationDataToWrite._inputs[inputKey] = getInputConfig(
           inputKey,
           page,
           baseTranslationObj,
@@ -167,12 +164,12 @@ async function generateTranslationFilesForLocale(locale, configData) {
         );
 
         // Add each entry to page object group depending on whether they are translated or not
-        if (cleanedOutputFileData[inputKey]?.length > 0) {
-          cleanedOutputFileData._inputs.$.options.groups[1].inputs.push(
+        if (translationDataToWrite[inputKey]?.length > 0) {
+          translationDataToWrite._inputs.$.options.groups[1].inputs.push(
             inputKey
           );
         } else {
-          cleanedOutputFileData._inputs.$.options.groups[0].inputs.push(
+          translationDataToWrite._inputs.$.options.groups[0].inputs.push(
             inputKey
           );
         }
@@ -180,7 +177,7 @@ async function generateTranslationFilesForLocale(locale, configData) {
 
       await fs.promises.writeFile(
         translationFilePath,
-        YAML.stringify(cleanedOutputFileData)
+        YAML.stringify(translationDataToWrite)
       );
       console.log(
         `Translation file: ${translationFilePath} updated succesfully`
