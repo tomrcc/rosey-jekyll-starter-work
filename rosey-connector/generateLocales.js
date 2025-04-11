@@ -84,19 +84,19 @@ async function generateLocale(locale, configData) {
     })
   );
 
-  let localeData = {};
-  let localeUrlsData = {};
-  let keysToUpdate = {};
+  const localeData = {};
+  const localeUrlsData = {};
+  const keysToUpdate = {};
 
   await Promise.all(
     Object.keys(localeDataEntries).map(async (filename) => {
       const { data, urlData } = localeDataEntries[filename];
 
-      Object.keys(urlData).forEach((key) => {
+      for (const key of Object.keys(urlData)) {
         localeUrlsData[key] = urlData[key];
-      });
+      }
 
-      Object.keys(data).forEach((key) => {
+      for (const key of Object.keys(data)) {
         if (!localeData[key] || data[key].isNewTranslation) {
           const isKeyMarkdown = key.slice(0, 10).includes("markdown:");
 
@@ -112,10 +112,11 @@ async function generateLocale(locale, configData) {
         if (data[key].isNewTranslation) {
           keysToUpdate[key] = data[key].value;
         }
-      });
+      }
     })
   );
 
+  // For any new translations, search for duplicate keys on each translation page
   await Promise.all(
     Object.keys(localeDataEntries).map(async (filename) => {
       const translationFilePath = getTranslationPath(
@@ -126,22 +127,17 @@ async function generateLocale(locale, configData) {
       const fileContents = await readFileWithFallback(translationFilePath, "");
       const data = YAML.parse(fileContents);
 
-      let updatedKeys = [];
-      Object.keys(keysToUpdate).forEach((key) => {
-        if (data[key] || data[key] === "") {
+      const updatedKeys = [];
+      for (const key of Object.keys(keysToUpdate)) {
+        if (data[key] || data[key] === "" || data[key] === null) {
           data[key] = keysToUpdate[key];
-          updatedKeys = [key];
+          updatedKeys.push(key);
         }
-      });
+      }
 
       if (updatedKeys.length > 0) {
         const yamlString = YAML.stringify(data);
         await fs.promises.writeFile(translationFilePath, yamlString);
-        console.log(
-          `✅ ${translationFilePath} succesfully updated duplicate keys: ${updatedKeys.join(
-            ", "
-          )}`
-        );
       }
     })
   );
@@ -274,7 +270,7 @@ async function processTranslation(
 
   // Check if theres a translation and
   // Add each obj to our locales data, excluding '_inputs' object.
-  Object.entries(data).forEach(([keyName, translatedString]) => {
+  Object.entries(data).map(([keyName, translatedString]) => {
     if (keyName === "_inputs") {
       return;
     }

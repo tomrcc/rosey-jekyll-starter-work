@@ -135,7 +135,7 @@ async function generateTranslationFilesForLocale(locale, configData) {
 
       // Loop through keys to check for changes
       // Exit early if key doesn't exist on the page we're on in the loop
-      Object.keys(baseFileData.keys).map((inputKey) => {
+      for (const inputKey of Object.keys(baseFileData.keys)) {
         const baseTranslationObj = baseFileData.keys[inputKey];
 
         // If input doesn't exist on this page exit early
@@ -178,7 +178,7 @@ async function generateTranslationFilesForLocale(locale, configData) {
             inputKey
           );
         }
-      });
+      }
 
       await fs.promises.writeFile(
         translationFilePath,
