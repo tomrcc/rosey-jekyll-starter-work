@@ -121,8 +121,6 @@ async function generateTranslationFilesForLocale(locale, configData) {
       );
       const translationFileData = await YAML.parse(translationFileString);
 
-      // console.log({ translationFileData });
-
       // Create the url key
       if (translationFileData.urlTranslation?.length > 0) {
         cleanedOutputFileData.urlTranslation =
@@ -135,7 +133,7 @@ async function generateTranslationFilesForLocale(locale, configData) {
 
       // Loop through keys to check for changes
       // Exit early if key doesn't exist on the page we're on in the loop
-      for (const inputKey of Object.keys(baseFileData.keys)) {
+      Object.keys(baseFileData.keys).map((inputKey) => {
         const baseTranslationObj = baseFileData.keys[inputKey];
 
         // If input doesn't exist on this page exit early
@@ -178,7 +176,7 @@ async function generateTranslationFilesForLocale(locale, configData) {
             inputKey
           );
         }
-      }
+      });
 
       await fs.promises.writeFile(
         translationFilePath,
