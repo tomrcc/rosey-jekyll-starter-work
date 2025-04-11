@@ -98,7 +98,7 @@ async function generateTranslationFilesForLocale(locale, configData) {
         `${pageName}.yaml`
       );
 
-      let cleanedOutputFileData = {};
+      const cleanedOutputFileData = {};
 
       // Ensure nested pages have parent folders
       const pageHasParentFolder = pageName.includes("/");
@@ -124,18 +124,18 @@ async function generateTranslationFilesForLocale(locale, configData) {
       // console.log({ translationFileData });
 
       // Create the url key
-      if (translationFileData["urlTranslation"]?.length > 0) {
-        cleanedOutputFileData["urlTranslation"] =
-          translationFileData["urlTranslation"];
+      if (translationFileData.urlTranslation?.length > 0) {
+        cleanedOutputFileData.urlTranslation =
+          translationFileData.urlTranslation;
       } else {
-        cleanedOutputFileData["urlTranslation"] = page;
+        cleanedOutputFileData.urlTranslation = page;
       }
 
       initDefaultInputs(cleanedOutputFileData, page, locale, baseURL);
 
       // Loop through keys to check for changes
       // Exit early if key doesn't exist on the page we're on in the loop
-      Object.keys(baseFileData.keys).forEach((inputKey) => {
+      Object.keys(baseFileData.keys).map((inputKey) => {
         const baseTranslationObj = baseFileData.keys[inputKey];
 
         // If input doesn't exist on this page exit early
@@ -161,7 +161,7 @@ async function generateTranslationFilesForLocale(locale, configData) {
           }
         }
 
-        cleanedOutputFileData["_inputs"][inputKey] = getInputConfig(
+        cleanedOutputFileData._inputs[inputKey] = getInputConfig(
           inputKey,
           page,
           baseTranslationObj,
@@ -170,11 +170,11 @@ async function generateTranslationFilesForLocale(locale, configData) {
 
         // Add each entry to page object group depending on whether they are translated or not
         if (cleanedOutputFileData[inputKey]?.length > 0) {
-          cleanedOutputFileData["_inputs"]["$"].options.groups[1].inputs.push(
+          cleanedOutputFileData._inputs.$.options.groups[1].inputs.push(
             inputKey
           );
         } else {
-          cleanedOutputFileData["_inputs"]["$"].options.groups[0].inputs.push(
+          cleanedOutputFileData._inputs.$.options.groups[0].inputs.push(
             inputKey
           );
         }
@@ -185,7 +185,7 @@ async function generateTranslationFilesForLocale(locale, configData) {
         YAML.stringify(cleanedOutputFileData)
       );
       console.log(
-        "Translation file: " + translationFilePath + " updated succesfully"
+        `Translation file: ${translationFilePath} updated succesfully`
       );
     })
   );
@@ -197,14 +197,14 @@ function getPageString(page) {
 
 function initDefaultInputs(data, page, locale, baseURL) {
   // Create the inputs obj if there is none
-  if (!data["_inputs"]) {
-    data["_inputs"] = {};
+  if (!data._inputs) {
+    data._inputs = {};
   }
 
   // Create the page input object
-  if (!data["_inputs"]["$"]) {
+  if (!data._inputs.$) {
     const pageString = getPageString(page);
-    data["_inputs"]["$"] = {
+    data._inputs.$ = {
       type: "object",
       comment: `[See ${pageString}](${baseURL}${pageString})`,
       options: {
@@ -282,7 +282,7 @@ function getInputConfig(inputKey, page, baseTranslationObj, baseURL) {
   const inputConfig = isLabelConcat
     ? {
         label: formattedLabel,
-        hidden: untranslatedPhrase === "" ? true : false,
+        hidden: untranslatedPhrase === "",
         type: inputType,
         options: options,
         comment: locationString,
@@ -295,7 +295,7 @@ function getInputConfig(inputKey, page, baseTranslationObj, baseURL) {
       }
     : {
         label: formattedLabel,
-        hidden: untranslatedPhrase === "" ? true : false,
+        hidden: untranslatedPhrase === "",
         type: inputType,
         options: options,
         comment: locationString,
@@ -338,9 +338,8 @@ function generateLocationString(originalPhrase, page, baseURL) {
         word.replaceAll(regexToMatch, "")
       );
       break;
-    } else {
-      startHighlightArrayWithoutPunctuation.push(word);
     }
+    startHighlightArrayWithoutPunctuation.push(word);
   }
 
   for (let j = 0; j < endHighlightArrayWithPunctuation.length; j++) {
@@ -351,9 +350,8 @@ function generateLocationString(originalPhrase, page, baseURL) {
         word.replaceAll(regexToMatch, "")
       );
       break;
-    } else {
-      endHighlightArrayWithoutPunctuation.push(word);
     }
+    endHighlightArrayWithoutPunctuation.push(word);
   }
 
   const originalPhraseArrayByWord = originalPhraseArray.join(" ").split(" ");
