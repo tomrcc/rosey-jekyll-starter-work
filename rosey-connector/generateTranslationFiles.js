@@ -1,12 +1,14 @@
 import fs from "fs";
 import YAML from "yaml";
 import path from "path";
-import dotenv, { config } from "dotenv";
+import dotenv from "dotenv";
 import { NodeHtmlMarkdown } from "node-html-markdown";
 import {
   isDirectory,
   readFileWithFallback,
   readJsonFromFile,
+  getTranslationHTMLFilename,
+  getTranslationHTMLFilenameExtensionless,
 } from "./helpers/file-helper.js";
 
 const nhm = new NodeHtmlMarkdown(
@@ -22,14 +24,13 @@ export async function generateTranslationFiles(configData) {
   for (let i = 0; i < locales.length; i++) {
     const locale = locales[i];
 
-    generateTranslationFilesForLocale(locale, configData).catch((err) => {
+    await generateTranslationFilesForLocale(locale, configData).catch((err) => {
       console.error(`❌❌ Encountered an error translating ${locale}:`, err);
     });
   }
 }
 
 async function generateTranslationFilesForLocale(locale, configData) {
-  // Get the Rosey generated data
   const baseURL = configData.base_url;
   const inputFilePath = configData.rosey_paths.rosey_base_file_path;
   const inputURLFilePath = configData.rosey_paths.rosey_base_urls_file_path;
@@ -50,8 +51,6 @@ async function generateTranslationFilesForLocale(locale, configData) {
   const pages = Object.keys(inputURLFileData.keys);
 
   const translationsLocalePath = path.join(translationFilesDirPath, locale);
-
-  console.log(`📂📂 ${translationsLocalePath} ensuring folder exists`);
   await fs.promises.mkdir(translationsLocalePath, { recursive: true });
 
   const translationsFiles = await fs.promises.readdir(translationsLocalePath, {
@@ -68,14 +67,19 @@ async function generateTranslationFilesForLocale(locale, configData) {
       }
 
       const fileNameHTMLFormatted = getTranslationHTMLFilename(fileNameWithExt);
+      const fileNameHtmlFormattedExtensionlessUrl =
+        getTranslationHTMLFilenameExtensionless(fileNameWithExt);
 
-      if (!pages.includes(fileNameHTMLFormatted)) {
+      if (
+        !pages.includes(fileNameHTMLFormatted) &&
+        !pages.includes(fileNameHtmlFormattedExtensionlessUrl)
+      ) {
         console.log(
-          `❌ Deleting ${fileNameHTMLFormatted}(${filePath}), since it doesn't exist in the pages in our base.json`
+          `🧹 The page ${fileNameWithExt} doesn't exist in the pages in our base.json - deleting!`
         );
 
         await fs.promises.unlink(filePath);
-        console.log(`❌ ${fileNameHTMLFormatted} at ${filePath} was deleted`);
+        console.log(`🧹 Translation file ${filePath} was deleted!`);
       }
     })
   );
@@ -180,7 +184,9 @@ async function generateTranslationFilesForLocale(locale, configData) {
         translationFilePath,
         YAML.stringify(cleanedOutputFileData)
       );
-      console.log("✅✅ " + translationFilePath + " updated succesfully");
+      console.log(
+        "Translation file: " + translationFilePath + " updated succesfully"
+      );
     })
   );
 }
@@ -244,8 +250,8 @@ function getInputConfig(inputKey, page, inputTranslationObj, baseURL) {
   const inputType = isKeyMarkdown
     ? "markdown"
     : isInputShortText
-      ? "text"
-      : "textarea";
+    ? "text"
+    : "textarea";
 
   const options = isKeyMarkdown
     ? {
@@ -296,18 +302,6 @@ function getInputConfig(inputKey, page, inputTranslationObj, baseURL) {
       };
 
   return inputConfig;
-}
-
-function getTranslationHTMLFilename(translationFilename) {
-  if (translationFilename === "404.yaml") {
-    return "404.html";
-  }
-
-  if (translationFilename === "home.yaml") {
-    return "index.html";
-  }
-
-  return translationFilename.replace(".yaml", "/index.html");
 }
 
 function generateLocationString(originalPhrase, page, baseURL) {
