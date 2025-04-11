@@ -72,19 +72,19 @@ A prebuild exists in your `.cloudcannon` folder.
 ``` bash
 #!/usr/bin/env bash
 
-echo "Moving jekyllMarkdownPlugin.rb to _plugins"
-mv rosey-connector/ssgs/jekyllMarkdownPlugin.rb site/_plugins/jekyllMarkdownPlugin.rb
-echo "Moved jekyllMarkdownPlugin.rb to _plugins!"
-echo "Moving jekyllImagePlugin.rb to _plugins"
-mv rosey-connector/ssgs/jekyllImagePlugin.rb site/_plugins/jekyllImagePlugin.rb
-echo "Moved jekyllImagePlugin.rb to _plugins!"
+echo "Moving jekyllMarkdownTaggerPlugin.rb to _plugins"
+mv rosey-connector/ssgs/jekyllMarkdownTaggerPlugin.rb site/_plugins/jekyllMarkdownTaggerPlugin.rb
+echo "Moved jekyllMarkdownTaggerPlugin.rb to _plugins!"
+echo "Moving jekyllImageUnwrapPlugin.rb to _plugins"
+mv rosey-connector/ssgs/jekyllImageUnwrapPlugin.rb site/_plugins/jekyllImageUnwrapPlugin.rb
+echo "Moved jekyllImageUnwrapPlugin.rb to _plugins!"
 ```
 
 This prebuild moves two plugins two our sites `_plugins` folder. Both plugins customise the markdown processing of Jekyll; by extending how Jekyll uses Kramdown to parse the markdown. This affects page body content, and templating with the `markdownify` filter. This means neither body content, nor templating with the `markdownify` filter need to be tagged manually.
 
-`jekyllMarkdownPlugin.rb` tags all block level elements with `data-rosey` tags. It uses the slugified text contents of the element for the value.
+`jekyllMarkdownTaggerPlugin.rb` tags all block level elements with `data-rosey` tags. It uses the slugified text contents of the element for the value.
 
-`jekyllImagePlugin.rb` removes the wrapping paragraph element from an image. This is important so that we don't have image links mistakenly appear in our translations.
+`jekyllImageUnwrapPlugin.rb` removes the wrapping paragraph element from an image. This is important so that we don't have image links mistakenly appear in our translations.
 
 > [!IMPORTANT]
 > You could remove this, and place it permanently in your `_plugins` directory. This is moved on this template because the rosey-connector directory depends on an upstream repository for maintenance. Your project will likely have no such need.
