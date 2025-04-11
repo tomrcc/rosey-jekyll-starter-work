@@ -51,10 +51,36 @@ async function readConfigFile(configFilePath) {
   return configData;
 }
 
+function getTranslationHTMLFilename(translationFilename) {
+  if (translationFilename === "404.yaml") {
+    return "404.html";
+  }
+
+  if (translationFilename === "home.yaml") {
+    return "index.html";
+  }
+
+  return translationFilename.replace(".yaml", "/index.html");
+}
+
+function getTranslationHTMLFilenameExtensionless(translationFilename) {
+  if (translationFilename === "404.yaml") {
+    return "404.html";
+  }
+
+  if (translationFilename === "home.yaml") {
+    return "index.html";
+  }
+
+  return translationFilename.replace(".yaml", ".html");
+}
+
 export {
   readFileWithFallback,
   readJsonFromFile,
   isDirectory,
   readContentPage,
   readConfigFile,
+  getTranslationHTMLFilename,
+  getTranslationHTMLFilenameExtensionless,
 };
