@@ -227,6 +227,7 @@ function processContentTranslationKey(
       : localeData[keyName];
   }
   // If its not an old translation, write the value to the locales file
+  console.log(`Detected a new translation: ${translatedString}`);
   return {
     original: baseFileData[keyName]?.original,
     value: translatedString,
