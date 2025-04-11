@@ -51,7 +51,7 @@ async function readConfigFile(configFilePath) {
   return configData;
 }
 
-function getTranslationHTMLFilename(translationFilename) {
+function getTranslationHtmlFilename(translationFilename, baseUrlFileData) {
   if (translationFilename === "404.yaml") {
     return "404.html";
   }
@@ -60,19 +60,24 @@ function getTranslationHTMLFilename(translationFilename) {
     return "index.html";
   }
 
-  return translationFilename.replace(".yaml", "/index.html");
-}
+  const htmlFileName = translationFilename.replace(".yaml", "/index.html");
+  const extensionlessHtmlFileName = translationFilename.replace(
+    ".yaml",
+    ".html"
+  );
 
-function getTranslationHTMLFilenameExtensionless(translationFilename) {
-  if (translationFilename === "404.yaml") {
-    return "404.html";
+  // console.log({ baseUrlFileData });
+  const baseUrlFileDataKeys = Object.keys(baseUrlFileData);
+  // Check whether the filename is filename.html or filename/index.html
+  const fileName = baseUrlFileDataKeys.includes(htmlFileName)
+    ? htmlFileName
+    : extensionlessHtmlFileName;
+
+  if (!fileName) {
+    console.log("No filename found in our base.urls.json");
   }
 
-  if (translationFilename === "home.yaml") {
-    return "index.html";
-  }
-
-  return translationFilename.replace(".yaml", ".html");
+  return fileName;
 }
 
 export {
@@ -81,6 +86,5 @@ export {
   isDirectory,
   readContentPage,
   readConfigFile,
-  getTranslationHTMLFilename,
-  getTranslationHTMLFilenameExtensionless,
+  getTranslationHtmlFilename,
 };

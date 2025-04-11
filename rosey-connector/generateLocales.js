@@ -5,8 +5,7 @@ import path from "path";
 import {
   isDirectory,
   readFileWithFallback,
-  getTranslationHTMLFilename,
-  getTranslationHTMLFilenameExtensionless,
+  getTranslationHtmlFilename,
 } from "./helpers/file-helper.js";
 import dotenv from "dotenv";
 const md = markdownit();
@@ -185,7 +184,6 @@ function getTranslationPath(locale, translationsDirPath, translationFilename) {
 function processUrlTranslationKey(
   translationEntry,
   translationHTMLFilename,
-  translationHTMLFilenameExtensionless,
   baseUrlFileData,
   oldUrlsLocaleData
 ) {
@@ -193,11 +191,9 @@ function processUrlTranslationKey(
     return;
   }
 
-  if (
-    translationEntry !== oldUrlsLocaleData[translationHTMLFilename]?.value &&
-    translationEntry !==
-      oldUrlsLocaleData[translationHTMLFilenameExtensionless]?.value
-  ) {
+  const lastTranslationUrlData = oldUrlsLocaleData[translationHTMLFilename];
+
+  if (translationEntry !== lastTranslationUrlData?.value) {
     console.log(`Detected a new URL translation: ${translationEntry}`);
     return {
       original: translationHTMLFilename,
@@ -208,7 +204,7 @@ function processUrlTranslationKey(
   return {
     original: baseUrlFileData[translationHTMLFilename]?.original,
     value:
-      oldUrlsLocaleData[translationHTMLFilename]?.value ||
+      lastTranslationUrlData?.value ||
       baseUrlFileData[translationHTMLFilename]?.original,
   };
 }
@@ -269,10 +265,12 @@ async function processTranslation(
     console.log("No data from filepath: ", translationsPath);
   }
 
-  const translationHTMLFilename =
-    getTranslationHTMLFilename(translationFilename);
-  const translationHTMLFilenameExtensionless =
-    getTranslationHTMLFilenameExtensionless(translationFilename);
+  // console.log({ baseUrlFileData });
+
+  const translationHTMLFilename = getTranslationHtmlFilename(
+    translationFilename,
+    baseUrlFileData
+  );
 
   // Check if theres a translation and
   // Add each obj to our locales data, excluding '_inputs' object.
@@ -287,7 +285,6 @@ async function processTranslation(
       const newEntry = processUrlTranslationKey(
         translatedString,
         translationHTMLFilename,
-        translationHTMLFilenameExtensionless,
         baseUrlFileData,
         oldUrlsLocaleData
       );

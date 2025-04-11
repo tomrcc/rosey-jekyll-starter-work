@@ -7,8 +7,7 @@ import {
   isDirectory,
   readFileWithFallback,
   readJsonFromFile,
-  getTranslationHTMLFilename,
-  getTranslationHTMLFilenameExtensionless,
+  getTranslationHtmlFilename,
 } from "./helpers/file-helper.js";
 
 const nhm = new NodeHtmlMarkdown(
@@ -32,8 +31,8 @@ export async function generateTranslationFiles(configData) {
 
 async function generateTranslationFilesForLocale(locale, configData) {
   const baseURL = configData.base_url;
-  const inputFilePath = configData.rosey_paths.rosey_base_file_path;
-  const inputURLFilePath = configData.rosey_paths.rosey_base_urls_file_path;
+  const baseFilePath = configData.rosey_paths.rosey_base_file_path;
+  const baseURLFilePath = configData.rosey_paths.rosey_base_urls_file_path;
   const translationFilesDirPath = configData.rosey_paths.translations_dir_path;
   const incomingSmartlingTranslationsDir =
     configData.smartling.incoming_translations_dir;
@@ -42,13 +41,14 @@ async function generateTranslationFilesForLocale(locale, configData) {
     `${locale}.json`
   );
 
-  const inputFileData = await readJsonFromFile(inputFilePath);
-  const inputURLFileData = await readJsonFromFile(inputURLFilePath);
+  const baseFileData = await readJsonFromFile(baseFilePath);
+  const baseURLFileData = await readJsonFromFile(baseURLFilePath);
   const smartlingTranslationData = await readJsonFromFile(
     smartlingTranslationsDataFilePath
   );
 
-  const pages = Object.keys(inputURLFileData.keys);
+  const baseUrlFileDataKeys = baseURLFileData.keys;
+  const pages = Object.keys(baseUrlFileDataKeys);
 
   const translationsLocalePath = path.join(translationFilesDirPath, locale);
   await fs.promises.mkdir(translationsLocalePath, { recursive: true });
@@ -66,16 +66,14 @@ async function generateTranslationFilesForLocale(locale, configData) {
         return;
       }
 
-      const fileNameHTMLFormatted = getTranslationHTMLFilename(fileNameWithExt);
-      const fileNameHtmlFormattedExtensionlessUrl =
-        getTranslationHTMLFilenameExtensionless(fileNameWithExt);
+      const fileNameHTMLFormatted = getTranslationHtmlFilename(
+        fileNameWithExt,
+        baseUrlFileDataKeys
+      );
 
-      if (
-        !pages.includes(fileNameHTMLFormatted) &&
-        !pages.includes(fileNameHtmlFormattedExtensionlessUrl)
-      ) {
+      if (!pages.includes(fileNameHTMLFormatted)) {
         console.log(
-          `🧹 The page ${fileNameWithExt} doesn't exist in the pages in our base.json - deleting!`
+          `🧹 The page ${fileNameHTMLFormatted} doesn't exist in the pages in our base.json - deleting!`
         );
 
         await fs.promises.unlink(filePath);
@@ -123,6 +121,8 @@ async function generateTranslationFilesForLocale(locale, configData) {
       );
       const translationFileData = await YAML.parse(translationFileString);
 
+      // console.log({ translationFileData });
+
       // Create the url key
       if (translationFileData["urlTranslation"]?.length > 0) {
         cleanedOutputFileData["urlTranslation"] =
@@ -135,11 +135,11 @@ async function generateTranslationFilesForLocale(locale, configData) {
 
       // Loop through keys to check for changes
       // Exit early if key doesn't exist on the page we're on in the loop
-      Object.keys(inputFileData.keys).forEach((inputKey) => {
-        const inputTranslationObj = inputFileData.keys[inputKey];
+      Object.keys(baseFileData.keys).forEach((inputKey) => {
+        const baseTranslationObj = baseFileData.keys[inputKey];
 
         // If input doesn't exist on this page exit early
-        if (!inputTranslationObj.pages[page]) {
+        if (!baseTranslationObj.pages[page]) {
           return;
         }
 
@@ -164,7 +164,7 @@ async function generateTranslationFilesForLocale(locale, configData) {
         cleanedOutputFileData["_inputs"][inputKey] = getInputConfig(
           inputKey,
           page,
-          inputTranslationObj,
+          baseTranslationObj,
           baseURL
         );
 
@@ -237,8 +237,8 @@ function formatMarkdownForComments(markdown) {
   );
 }
 
-function getInputConfig(inputKey, page, inputTranslationObj, baseURL) {
-  const untranslatedPhrase = inputTranslationObj.original.trim();
+function getInputConfig(inputKey, page, baseTranslationObj, baseURL) {
+  const untranslatedPhrase = baseTranslationObj.original.trim();
   const untranslatedPhraseMarkdown = nhm.translate(untranslatedPhrase);
   const originalPhraseTidiedForComment = formatMarkdownForComments(
     untranslatedPhraseMarkdown
