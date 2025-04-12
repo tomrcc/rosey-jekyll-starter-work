@@ -6,7 +6,7 @@ const nhm = new NodeHtmlMarkdown(
   /* customTransformers (optional) */ undefined,
   /* customCodeBlockTranslators (optional) */ undefined
 );
-function initDefaultInputs(data, page, locale, baseURL) {
+function initDefaultInputs(data, page, locale, baseUrl) {
   // Create the inputs obj if there is none
   if (!data._inputs) {
     data._inputs = {};
@@ -17,18 +17,18 @@ function initDefaultInputs(data, page, locale, baseURL) {
     const pageString = getPageString(page);
     data._inputs.$ = {
       type: "object",
-      comment: `[See ${pageString}](${baseURL}${pageString})`,
+      comment: `[See ${pageString}](${baseUrl}${pageString})`,
       options: {
         place_groups_below: false,
         groups: [
           {
             heading: `Still to translate (${locale})`,
-            comment: `Text to translate on [${pageString}](${baseURL}${pageString})`,
+            comment: `Text to translate on [${pageString}](${baseUrl}${pageString})`,
             inputs: [],
           },
           {
             heading: `Already translated (${locale})`,
-            comment: `Text already translated on [${pageString}](${baseURL}${pageString})`,
+            comment: `Text already translated on [${pageString}](${baseUrl}${pageString})`,
             inputs: [],
           },
         ],
@@ -37,7 +37,7 @@ function initDefaultInputs(data, page, locale, baseURL) {
   }
 }
 
-function getInputConfig(inputKey, page, baseTranslationObj, baseURL) {
+function getInputConfig(inputKey, page, baseTranslationObj, baseUrl) {
   const untranslatedPhrase = baseTranslationObj.original.trim();
   const untranslatedPhraseMarkdown = nhm.translate(untranslatedPhrase);
   const originalPhraseTidiedForComment = formatMarkdownText(
@@ -70,7 +70,7 @@ function getInputConfig(inputKey, page, baseTranslationObj, baseURL) {
   const locationString = generateLocationString(
     originalPhraseTidiedForComment,
     page,
-    baseURL
+    baseUrl
   );
 
   const isLabelConcat = originalPhraseTidiedForComment.length > 42;
@@ -104,7 +104,7 @@ function getInputConfig(inputKey, page, baseTranslationObj, baseURL) {
   return inputConfig;
 }
 
-function generateLocationString(originalPhrase, page, baseURL) {
+function generateLocationString(originalPhrase, page, baseUrl) {
   // Limit each phrase to 3 words
   const urlHighlighterWordLength = 3;
   const originalPhraseArray = originalPhrase.split(/[\n]+/);
@@ -168,8 +168,8 @@ function generateLocationString(originalPhrase, page, baseURL) {
   // Look to see if original phrase is 5 words or shorter
   // if it is fallback to the encoded original phrase for the highlight link
   return originalPhraseArrayByWord.length > urlHighlighterWordLength * 2
-    ? `[See on page](${baseURL}${pageString}#:~:text=${encodedStartHighlight},${encodedEndHighlight})`
-    : `[See on page](${baseURL}${pageString}#:~:text=${encodedOriginalPhrase})`;
+    ? `[See on page](${baseUrl}${pageString}#:~:text=${encodedStartHighlight},${encodedEndHighlight})`
+    : `[See on page](${baseUrl}${pageString}#:~:text=${encodedOriginalPhrase})`;
 }
 
 function sortTranslationsIntoInputGroup(translationDataToWrite, inputKey) {

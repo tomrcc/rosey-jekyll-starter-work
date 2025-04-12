@@ -22,37 +22,46 @@ const nhm = new NodeHtmlMarkdown(
 );
 
 export async function generateTranslationFiles(configData) {
+  // Get all the config data
   const locales = configData.locales;
+  const baseUrl = configData.base_url;
+  const baseFilePath = configData.rosey_paths.rosey_base_file_path;
+  const baseUrlFilePath = configData.rosey_paths.rosey_base_urls_file_path;
+  const translationFilesDirPath = configData.rosey_paths.translations_dir_path;
+  const incomingSmartlingTranslationsDir =
+    configData.smartling.incoming_translations_dir;
+
+  // Get the base.json and base.urls.json
+  const baseFileData = await readJsonFromFile(baseFilePath);
+  const baseUrlFileData = await readJsonFromFile(baseUrlFilePath);
+
   // Generate translation files for each locale
   for (let i = 0; i < locales.length; i++) {
     const locale = locales[i];
 
-    await generateTranslationFilesForLocale(locale, configData).catch((err) => {
+    await generateTranslationFilesForLocale(
+      locale,
+      baseUrl,
+      baseFileData,
+      baseUrlFileData,
+      translationFilesDirPath,
+      incomingSmartlingTranslationsDir
+    ).catch((err) => {
       console.error(`❌❌ Encountered an error translating ${locale}:`, err);
     });
   }
 }
 
-async function generateTranslationFilesForLocale(locale, configData) {
-  const baseURL = configData.base_url;
-  const baseFilePath = configData.rosey_paths.rosey_base_file_path;
-  const baseURLFilePath = configData.rosey_paths.rosey_base_urls_file_path;
-  const translationFilesDirPath = configData.rosey_paths.translations_dir_path;
-  const incomingSmartlingTranslationsDir =
-    configData.smartling.incoming_translations_dir;
-  const smartlingTranslationsDataFilePath = path.join(
-    incomingSmartlingTranslationsDir,
-    `${locale}.json`
-  );
-
-  const baseFileData = await readJsonFromFile(baseFilePath);
-  const baseURLFileData = await readJsonFromFile(baseURLFilePath);
-  const smartlingTranslationData = await readJsonFromFile(
-    smartlingTranslationsDataFilePath
-  );
-
+async function generateTranslationFilesForLocale(
+  locale,
+  baseUrl,
+  baseFileData,
+  baseUrlFileData,
+  translationFilesDirPath,
+  incomingSmartlingTranslationsDir
+) {
   // Get pages from the base.urls.json
-  const baseUrlFileDataKeys = baseURLFileData.keys;
+  const baseUrlFileDataKeys = baseUrlFileData.keys;
   const pages = Object.keys(baseUrlFileDataKeys);
 
   // Make sure there is a directory for the translation files to go in
@@ -70,6 +79,16 @@ async function generateTranslationFilesForLocale(locale, configData) {
     translationsLocalePath,
     baseUrlFileDataKeys,
     pages
+  );
+
+  // Get Smartling data if any exists
+  const smartlingTranslationsDataFilePath = path.join(
+    incomingSmartlingTranslationsDir,
+    `${locale}.json`
+  );
+  // Fallback of empty object
+  const smartlingTranslationData = await readJsonFromFile(
+    smartlingTranslationsDataFilePath
   );
 
   // Loop through the pages present in the base.json
@@ -94,7 +113,7 @@ async function generateTranslationFilesForLocale(locale, configData) {
       // Get existing translation page data, returns a fallback if none exists
       const translationFileData = await readYamlFromFile(translationFilePath);
       // Set up inputs for the page if none exist already
-      initDefaultInputs(translationDataToWrite, page, locale, baseURL);
+      initDefaultInputs(translationDataToWrite, page, locale, baseUrl);
       // Process the url translation
       processUrlTranslation(translationFileData, translationDataToWrite, page);
       // Process the rest of the translations
@@ -103,7 +122,7 @@ async function generateTranslationFilesForLocale(locale, configData) {
         translationFileData,
         translationDataToWrite,
         smartlingTranslationData,
-        baseURL,
+        baseUrl,
         page
       );
 
@@ -136,7 +155,7 @@ function processTranslations(
   translationFileData,
   translationDataToWrite,
   smartlingTranslationData,
-  baseURL,
+  baseUrl,
   page
 ) {
   // Loop through all the translations in the base.json
@@ -171,7 +190,7 @@ function processTranslations(
       inputKey,
       page,
       baseTranslationObj,
-      baseURL
+      baseUrl
     );
 
     // Add each entry to page object group depending on whether they are already translated or not

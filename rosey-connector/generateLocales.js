@@ -32,13 +32,13 @@ async function generateLocale(locale, configData) {
     configData.rosey_paths.rosey_base_file_path
   );
   const baseFileData = JSON.parse(baseFile.toString("utf-8")).keys;
-  const baseURLsFile = await fs.promises.readFile(
+  const baseUrlsFile = await fs.promises.readFile(
     configData.rosey_paths.rosey_base_urls_file_path
   );
-  const baseUrlFileData = JSON.parse(baseURLsFile.toString("utf-8")).keys;
+  const baseUrlFileData = JSON.parse(baseUrlsFile.toString("utf-8")).keys;
 
   const localePath = path.join(localesDirPath, `${locale}.json`);
-  const localeURLsPath = path.join(localesDirPath, `${locale}.urls.json`);
+  const localeUrlsPath = path.join(localesDirPath, `${locale}.urls.json`);
   const translationsLocalePath = path.join(translationsDirPath, locale);
 
   // Ensure directories exist
@@ -50,7 +50,7 @@ async function generateLocale(locale, configData) {
     await readFileWithFallback(localePath, "{}")
   );
   const oldUrlsLocaleData = JSON.parse(
-    await readFileWithFallback(localeURLsPath, "{}")
+    await readFileWithFallback(localeUrlsPath, "{}")
   );
 
   // Get current translations
@@ -165,12 +165,12 @@ async function generateLocale(locale, configData) {
   );
   console.log(`Locale file: ${localePath} updated succesfully`);
 
-  // Write locales URL data
+  // Write locales Url data
   await fs.promises.writeFile(
-    localeURLsPath,
+    localeUrlsPath,
     JSON.stringify(orderedLocaleUrlData, null, "\t")
   );
-  console.log(`Locale url file: ${localeURLsPath} updated succesfully`);
+  console.log(`Locale url file: ${localeUrlsPath} updated succesfully`);
 }
 
 function getTranslationPath(locale, translationsDirPath, translationFilename) {
@@ -179,7 +179,7 @@ function getTranslationPath(locale, translationsDirPath, translationFilename) {
 
 function processUrlTranslationKey(
   translationEntry,
-  translationHTMLFilename,
+  translationHtmlFilename,
   baseUrlFileData,
   oldUrlsLocaleData
 ) {
@@ -187,21 +187,21 @@ function processUrlTranslationKey(
     return;
   }
 
-  const lastTranslationUrlData = oldUrlsLocaleData[translationHTMLFilename];
+  const lastTranslationUrlData = oldUrlsLocaleData[translationHtmlFilename];
 
   if (translationEntry !== lastTranslationUrlData?.value) {
-    console.log(`Detected a new URL translation: ${translationEntry}`);
+    console.log(`Detected a new Url translation: ${translationEntry}`);
     return {
-      original: translationHTMLFilename,
+      original: translationHtmlFilename,
       value: translationEntry,
     };
   }
 
   return {
-    original: baseUrlFileData[translationHTMLFilename]?.original,
+    original: baseUrlFileData[translationHtmlFilename]?.original,
     value:
       lastTranslationUrlData?.value ||
-      baseUrlFileData[translationHTMLFilename]?.original,
+      baseUrlFileData[translationHtmlFilename]?.original,
   };
 }
 
@@ -264,7 +264,7 @@ async function processTranslation(
 
   // console.log({ baseUrlFileData });
 
-  const translationHTMLFilename = getTranslationHtmlFilename(
+  const translationHtmlFilename = getTranslationHtmlFilename(
     translationFilename,
     baseUrlFileData
   );
@@ -281,27 +281,27 @@ async function processTranslation(
     if (keyName === "urlTranslation") {
       const newEntry = processUrlTranslationKey(
         translatedString,
-        translationHTMLFilename,
+        translationHtmlFilename,
         baseUrlFileData,
         oldUrlsLocaleData
       );
 
       if (newEntry) {
-        localeUrlsData[translationHTMLFilename] = newEntry;
+        localeUrlsData[translationHtmlFilename] = newEntry;
       } else if (
-        // Provide a fallback if there's no translated URL so the translated URL isn't a blank string
-        localeUrlsData[translationHTMLFilename]?.value === "" ||
-        localeUrlsData[translationHTMLFilename]?.value === undefined
+        // Provide a fallback if there's no translated Url so the translated Url isn't a blank string
+        localeUrlsData[translationHtmlFilename]?.value === "" ||
+        localeUrlsData[translationHtmlFilename]?.value === undefined
       ) {
         return {
-          original: baseUrlFileData[translationHTMLFilename]?.original,
-          value: baseUrlFileData[translationHTMLFilename]?.original,
+          original: baseUrlFileData[translationHtmlFilename]?.original,
+          value: baseUrlFileData[translationHtmlFilename]?.original,
         };
       }
-      // Preserve old URL translation
+      // Preserve old Url translation
       return {
-        original: baseUrlFileData[translationHTMLFilename]?.original,
-        value: baseUrlFileData[translationHTMLFilename]?.value,
+        original: baseUrlFileData[translationHtmlFilename]?.original,
+        value: baseUrlFileData[translationHtmlFilename]?.value,
       };
     }
 
