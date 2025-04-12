@@ -6,7 +6,7 @@ import {
   isDirectory,
   readFileWithFallback,
   getTranslationHtmlFilename,
-} from "./helpers/file-helper.js";
+} from "./helpers/file-helpers.js";
 import dotenv from "dotenv";
 const md = markdownit();
 dotenv.config();

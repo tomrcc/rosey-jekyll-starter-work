@@ -1,5 +1,12 @@
 import fs from "fs";
 import YAML from "yaml";
+import path from "path";
+
+async function isDirectory(filepath) {
+  const stat = await fs.promises.stat(filepath);
+
+  return stat.isDirectory();
+}
 
 async function readFileWithFallback(filepath, fallbackString) {
   try {
@@ -18,10 +25,12 @@ async function readJsonFromFile(filepath) {
   return JSON.parse(contents);
 }
 
-async function isDirectory(filepath) {
-  const stat = await fs.promises.stat(filepath);
-
-  return stat.isDirectory();
+async function readYamlFromFile(filepath) {
+  const translationFileRaw = await readFileWithFallback(
+    filepath,
+    "_inputs: {}"
+  );
+  return YAML.parse(translationFileRaw);
 }
 
 async function readContentPage(filePath) {
@@ -79,17 +88,21 @@ function getTranslationHtmlFilename(translationFilename, baseUrlFileData) {
   return fileName;
 }
 
-function getYamlFileName(file) {
-  if (!file) {
+function getYamlFileName(fileName) {
+  if (!fileName) {
     return "";
   }
-  return file
+  return fileName
     .replace("/index.html", "")
     .replace(".html", "")
     .replace("index", "home");
 }
 
-function getParentFolderName(filePath) {
+function getPageString(page) {
+  return page.replace(".html", "").replace("index", "");
+}
+
+function getParentDirName(filePath) {
   if (!filePath) {
     return "";
   }
@@ -97,13 +110,64 @@ function getParentFolderName(filePath) {
   return filePath.substring(0, filePath.lastIndexOf("/") + 1);
 }
 
+async function createParentDirIfExists(
+  pageName,
+  translationFilesDirPath,
+  locale
+) {
+  const pageHasParentDir = pageName.includes("/");
+  if (pageHasParentDir) {
+    const parentDirName = getParentDirName(pageName);
+    const parentDirFilePath = path.join(
+      translationFilesDirPath,
+      locale,
+      parentDirName
+    );
+    await fs.promises.mkdir(parentDirFilePath, { recursive: true });
+  }
+}
+
+async function removeOldTranslationFiles(
+  translationsFiles,
+  translationsLocalePath,
+  baseUrlFileDataKeys,
+  pages
+) {
+  await Promise.all(
+    translationsFiles.map(async (fileName) => {
+      const filePath = path.join(translationsLocalePath, fileName);
+
+      if (await isDirectory(filePath)) {
+        return;
+      }
+
+      const fileNameHtmlFormatted = getTranslationHtmlFilename(
+        fileName,
+        baseUrlFileDataKeys
+      );
+
+      if (!pages.includes(fileNameHtmlFormatted)) {
+        console.log(
+          `🧹 The page ${fileNameHtmlFormatted} doesn't exist in the pages in our base.json - deleting!`
+        );
+
+        await fs.promises.unlink(filePath);
+        console.log(`🧹 Translation file ${filePath} was deleted!`);
+      }
+    })
+  );
+}
+
 export {
+  isDirectory,
   readFileWithFallback,
   readJsonFromFile,
-  isDirectory,
+  readYamlFromFile,
   readContentPage,
   readConfigFile,
   getTranslationHtmlFilename,
   getYamlFileName,
-  getParentFolderName,
+  getPageString,
+  createParentDirIfExists,
+  removeOldTranslationFiles,
 };

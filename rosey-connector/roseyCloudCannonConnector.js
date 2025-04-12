@@ -1,8 +1,8 @@
+import { readConfigFile } from "./helpers/file-helpers.js";
 import { checkLocales } from "./checkLocales.js";
-import { generateTranslationFiles } from "./generateTranslationFiles.js";
 import { callSmartling } from "./callSmartling.js";
+import { generateTranslationFiles } from "./generateTranslationFiles.js";
 import { generateLocales } from "./generateLocales.js";
-import { readConfigFile } from "./helpers/file-helper.js";
 
 (async () => {
   const configData = await readConfigFile("./rosey/config.yaml");

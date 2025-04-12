@@ -13,7 +13,7 @@ import {
 import fs from "fs";
 import path from "path";
 import dotenv from "dotenv";
-import { readJsonFromFile } from "./helpers/file-helper.js";
+import { readJsonFromFile } from "./helpers/file-helpers.js";
 dotenv.config();
 
 export async function callSmartling(configData) {
