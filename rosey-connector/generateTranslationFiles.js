@@ -28,6 +28,7 @@ export async function generateTranslationFiles(configData) {
   const locales = configData.locales;
   const seeOnPageCommentSettings = configData.see_on_page_comment;
   const githubCommentSettings = configData.github_history;
+  const inputLengths = configData.input_lengths;
   const baseFilePath = configData.rosey_paths.rosey_base_file_path;
   const baseUrlFilePath = configData.rosey_paths.rosey_base_urls_file_path;
   const translationFilesDirPath = configData.rosey_paths.translations_dir_path;
@@ -47,6 +48,7 @@ export async function generateTranslationFiles(configData) {
       locale,
       seeOnPageCommentSettings,
       githubCommentSettings,
+      inputLengths,
       baseFileData,
       baseUrlFileData,
       translationFilesDirPath,
@@ -62,6 +64,7 @@ async function generateTranslationFilesForLocale(
   locale,
   seeOnPageCommentSettings,
   githubCommentSettings,
+  inputLengths,
   baseFileData,
   baseUrlFileData,
   translationFilesDirPath,
@@ -139,7 +142,8 @@ async function generateTranslationFilesForLocale(
         smartlingTranslationData,
         page,
         namespaceArray,
-        seeOnPageCommentSettings
+        seeOnPageCommentSettings,
+        inputLengths
       );
 
       // Write the file back once we've processed the translations
@@ -191,7 +195,7 @@ async function generateTranslationFilesForLocale(
 
           // Set up inputs for each key
           namespaceTranslationDataToWrite._inputs[inputKey] =
-            getNamespaceInputConfig(inputKey, baseTranslationObj);
+            getNamespaceInputConfig(inputKey, baseTranslationObj, inputLengths);
 
           // Add each entry to page object group depending on whether they are already translated or not
           sortTranslationIntoInputGroup(
@@ -231,7 +235,8 @@ function processTranslations(
   smartlingTranslationData,
   page,
   namespaceArray,
-  seeOnPageCommentSettings
+  seeOnPageCommentSettings,
+  inputLengths
 ) {
   // Loop through all the translations in the base.json
   Object.keys(baseFileData.keys).map((inputKey) => {
@@ -276,7 +281,8 @@ function processTranslations(
       inputKey,
       page,
       baseTranslationObj,
-      seeOnPageCommentSettings
+      seeOnPageCommentSettings,
+      inputLengths
     );
 
     // Add each entry to page object group depending on whether they are already translated or not

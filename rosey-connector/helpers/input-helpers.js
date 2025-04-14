@@ -68,7 +68,8 @@ function getInputConfig(
   inputKey,
   page,
   baseTranslationObj,
-  seeOnPageCommentSettings
+  seeOnPageCommentSettings,
+  inputLengths
 ) {
   const seeOnPageCommentEnabled = seeOnPageCommentSettings.enabled;
   const baseUrl = seeOnPageCommentSettings.base_url;
@@ -80,7 +81,11 @@ function getInputConfig(
   );
 
   const isKeyMarkdown = inputKey.slice(0, 10).includes("markdown:");
-  const isInputShortText = untranslatedPhrase.length < 20;
+  const labelCutoffLength = inputLengths.label;
+  const textareaCutoffLength = inputLengths.textarea;
+  const isInputShortText = untranslatedPhrase.length < textareaCutoffLength;
+  const isLabelConcat =
+    originalPhraseTidiedForComment.length > labelCutoffLength;
 
   const inputType = isKeyMarkdown
     ? "markdown"
@@ -111,10 +116,8 @@ function getInputConfig(
       )
     : false;
 
-  const isLabelConcat = originalPhraseTidiedForComment.length > 42;
-
   const formattedLabel = isLabelConcat
-    ? `${originalPhraseTidiedForComment.substring(0, 42)}...`
+    ? `${originalPhraseTidiedForComment.substring(0, labelCutoffLength)}...`
     : originalPhraseTidiedForComment;
 
   const inputConfig = isLabelConcat
@@ -247,7 +250,7 @@ function initNamespacePageInputs(data, locale) {
   }
 }
 
-function getNamespaceInputConfig(inputKey, baseTranslationObj) {
+function getNamespaceInputConfig(inputKey, baseTranslationObj, inputLengths) {
   const untranslatedPhrase = baseTranslationObj.original.trim();
   const untranslatedPhraseMarkdown = nhm.translate(untranslatedPhrase);
   const originalPhraseTidiedForComment = formatMarkdownText(
@@ -255,7 +258,11 @@ function getNamespaceInputConfig(inputKey, baseTranslationObj) {
   );
 
   const isKeyMarkdown = inputKey.slice(0, 10).includes("markdown:");
-  const isInputShortText = untranslatedPhrase.length < 20;
+  const labelCutoffLength = inputLengths.label;
+  const textareaCutoffLength = inputLengths.textarea;
+  const isInputShortText = untranslatedPhrase.length < textareaCutoffLength;
+  const isLabelConcat =
+    originalPhraseTidiedForComment.length > labelCutoffLength;
 
   const inputType = isKeyMarkdown
     ? "markdown"
@@ -277,10 +284,8 @@ function getNamespaceInputConfig(inputKey, baseTranslationObj) {
       }
     : {};
 
-  const isLabelConcat = originalPhraseTidiedForComment.length > 42;
-
   const formattedLabel = isLabelConcat
-    ? `${originalPhraseTidiedForComment.substring(0, 42)}...`
+    ? `${originalPhraseTidiedForComment.substring(0, labelCutoffLength)}...`
     : originalPhraseTidiedForComment;
 
   const inputConfig = isLabelConcat
