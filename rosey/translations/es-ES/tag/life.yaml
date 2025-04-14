@@ -1,22 +1,19 @@
 _inputs:
   $:
     type: object
-    comment: "[tag/life](https://daring-button.cloudvent.net/tag/life)  //  [See in
-      git
+    comment: "[tag/life](https://daring-button.cloudvent.net/tag/life)  //  [Git
       history](https://github.com/tomrcc/rosey-jekyll-starter-work/commits/stag\
       ing/./rosey/translations/es-ES/tag/life.yaml)"
     options:
       place_groups_below: false
       groups:
         - heading: Still to translate (es-ES)
-          comment: "[tag/life](https://daring-button.cloudvent.net/tag/life)  //  [See in
-            git
+          comment: "[tag/life](https://daring-button.cloudvent.net/tag/life)  //  [Git
             history](https://github.com/tomrcc/rosey-jekyll-starter-work/commit\
             s/staging/./rosey/translations/es-ES/tag/life.yaml)"
           inputs: []
         - heading: Already translated (es-ES)
-          comment: "[tag/life](https://daring-button.cloudvent.net/tag/life)  //  [See in
-            git
+          comment: "[tag/life](https://daring-button.cloudvent.net/tag/life)  //  [Git
             history](https://github.com/tomrcc/rosey-jekyll-starter-work/commit\
             s/staging/./rosey/translations/es-ES/tag/life.yaml)"
           inputs: []

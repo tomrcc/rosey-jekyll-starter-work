@@ -3,7 +3,7 @@ _inputs:
     type: object
     comment: "[blog/the-way-i-see-it-every-life-is-a-pile-of-good-things](https://d\
       aring-button.cloudvent.net/blog/the-way-i-see-it-every-life-is-a-pile-of-\
-      good-things)  //  [See in git
+      good-things)  //  [Git
       history](https://github.com/tomrcc/rosey-jekyll-starter-work/commits/stag\
       ing/./rosey/translations/es-ES/blog/the-way-i-see-it-every-life-is-a-pile\
       -of-good-things.yaml)"
@@ -13,7 +13,7 @@ _inputs:
         - heading: Still to translate (es-ES)
           comment: "[blog/the-way-i-see-it-every-life-is-a-pile-of-good-things](https://d\
             aring-button.cloudvent.net/blog/the-way-i-see-it-every-life-is-a-pi\
-            le-of-good-things)  //  [See in git
+            le-of-good-things)  //  [Git
             history](https://github.com/tomrcc/rosey-jekyll-starter-work/commit\
             s/staging/./rosey/translations/es-ES/blog/the-way-i-see-it-every-li\
             fe-is-a-pile-of-good-things.yaml)"
@@ -27,7 +27,7 @@ _inputs:
         - heading: Already translated (es-ES)
           comment: "[blog/the-way-i-see-it-every-life-is-a-pile-of-good-things](https://d\
             aring-button.cloudvent.net/blog/the-way-i-see-it-every-life-is-a-pi\
-            le-of-good-things)  //  [See in git
+            le-of-good-things)  //  [Git
             history](https://github.com/tomrcc/rosey-jekyll-starter-work/commit\
             s/staging/./rosey/translations/es-ES/blog/the-way-i-see-it-every-li\
             fe-is-a-pile-of-good-things.yaml)"

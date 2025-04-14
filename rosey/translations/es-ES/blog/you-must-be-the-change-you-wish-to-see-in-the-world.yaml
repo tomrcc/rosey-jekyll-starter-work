@@ -3,7 +3,7 @@ _inputs:
     type: object
     comment: "[blog/you-must-be-the-change-you-wish-to-see-in-the-world](https://da\
       ring-button.cloudvent.net/blog/you-must-be-the-change-you-wish-to-see-in-\
-      the-world)  //  [See in git
+      the-world)  //  [Git
       history](https://github.com/tomrcc/rosey-jekyll-starter-work/commits/stag\
       ing/./rosey/translations/es-ES/blog/you-must-be-the-change-you-wish-to-se\
       e-in-the-world.yaml)"
@@ -13,7 +13,7 @@ _inputs:
         - heading: Still to translate (es-ES)
           comment: "[blog/you-must-be-the-change-you-wish-to-see-in-the-world](https://da\
             ring-button.cloudvent.net/blog/you-must-be-the-change-you-wish-to-s\
-            ee-in-the-world)  //  [See in git
+            ee-in-the-world)  //  [Git
             history](https://github.com/tomrcc/rosey-jekyll-starter-work/commit\
             s/staging/./rosey/translations/es-ES/blog/you-must-be-the-change-yo\
             u-wish-to-see-in-the-world.yaml)"
@@ -27,7 +27,7 @@ _inputs:
         - heading: Already translated (es-ES)
           comment: "[blog/you-must-be-the-change-you-wish-to-see-in-the-world](https://da\
             ring-button.cloudvent.net/blog/you-must-be-the-change-you-wish-to-s\
-            ee-in-the-world)  //  [See in git
+            ee-in-the-world)  //  [Git
             history](https://github.com/tomrcc/rosey-jekyll-starter-work/commit\
             s/staging/./rosey/translations/es-ES/blog/you-must-be-the-change-yo\
             u-wish-to-see-in-the-world.yaml)"

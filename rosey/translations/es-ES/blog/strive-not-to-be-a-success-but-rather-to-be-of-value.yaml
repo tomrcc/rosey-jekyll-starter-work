@@ -3,7 +3,7 @@ _inputs:
     type: object
     comment: "[blog/strive-not-to-be-a-success-but-rather-to-be-of-value](https://d\
       aring-button.cloudvent.net/blog/strive-not-to-be-a-success-but-rather-to-\
-      be-of-value)  //  [See in git
+      be-of-value)  //  [Git
       history](https://github.com/tomrcc/rosey-jekyll-starter-work/commits/stag\
       ing/./rosey/translations/es-ES/blog/strive-not-to-be-a-success-but-rather\
       -to-be-of-value.yaml)"
@@ -13,7 +13,7 @@ _inputs:
         - heading: Still to translate (es-ES)
           comment: "[blog/strive-not-to-be-a-success-but-rather-to-be-of-value](https://d\
             aring-button.cloudvent.net/blog/strive-not-to-be-a-success-but-rath\
-            er-to-be-of-value)  //  [See in git
+            er-to-be-of-value)  //  [Git
             history](https://github.com/tomrcc/rosey-jekyll-starter-work/commit\
             s/staging/./rosey/translations/es-ES/blog/strive-not-to-be-a-succes\
             s-but-rather-to-be-of-value.yaml)"
@@ -27,7 +27,7 @@ _inputs:
         - heading: Already translated (es-ES)
           comment: "[blog/strive-not-to-be-a-success-but-rather-to-be-of-value](https://d\
             aring-button.cloudvent.net/blog/strive-not-to-be-a-success-but-rath\
-            er-to-be-of-value)  //  [See in git
+            er-to-be-of-value)  //  [Git
             history](https://github.com/tomrcc/rosey-jekyll-starter-work/commit\
             s/staging/./rosey/translations/es-ES/blog/strive-not-to-be-a-succes\
             s-but-rather-to-be-of-value.yaml)"

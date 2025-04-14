@@ -3,7 +3,7 @@ _inputs:
     type: object
     comment: "[blog/everything-has-beauty-but-not-everyone-can-see](https://daring-\
       button.cloudvent.net/blog/everything-has-beauty-but-not-everyone-can-see)  \
-      //  [See in git
+      //  [Git
       history](https://github.com/tomrcc/rosey-jekyll-starter-work/commits/stag\
       ing/./rosey/translations/es-ES/blog/everything-has-beauty-but-not-everyon\
       e-can-see.yaml)"
@@ -13,7 +13,7 @@ _inputs:
         - heading: Still to translate (es-ES)
           comment: "[blog/everything-has-beauty-but-not-everyone-can-see](https://daring-\
             button.cloudvent.net/blog/everything-has-beauty-but-not-everyone-ca\
-            n-see)  //  [See in git
+            n-see)  //  [Git
             history](https://github.com/tomrcc/rosey-jekyll-starter-work/commit\
             s/staging/./rosey/translations/es-ES/blog/everything-has-beauty-but\
             -not-everyone-can-see.yaml)"
@@ -27,7 +27,7 @@ _inputs:
         - heading: Already translated (es-ES)
           comment: "[blog/everything-has-beauty-but-not-everyone-can-see](https://daring-\
             button.cloudvent.net/blog/everything-has-beauty-but-not-everyone-ca\
-            n-see)  //  [See in git
+            n-see)  //  [Git
             history](https://github.com/tomrcc/rosey-jekyll-starter-work/commit\
             s/staging/./rosey/translations/es-ES/blog/everything-has-beauty-but\
             -not-everyone-can-see.yaml)"

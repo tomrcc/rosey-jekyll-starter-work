@@ -3,7 +3,7 @@ _inputs:
     type: object
     comment: "[blog/do-what-you-can-with-what-you-have-where-you-are](https://darin\
       g-button.cloudvent.net/blog/do-what-you-can-with-what-you-have-where-you-\
-      are)  //  [See in git
+      are)  //  [Git
       history](https://github.com/tomrcc/rosey-jekyll-starter-work/commits/stag\
       ing/./rosey/translations/es-ES/blog/do-what-you-can-with-what-you-have-wh\
       ere-you-are.yaml)"
@@ -13,7 +13,7 @@ _inputs:
         - heading: Still to translate (es-ES)
           comment: "[blog/do-what-you-can-with-what-you-have-where-you-are](https://darin\
             g-button.cloudvent.net/blog/do-what-you-can-with-what-you-have-wher\
-            e-you-are)  //  [See in git
+            e-you-are)  //  [Git
             history](https://github.com/tomrcc/rosey-jekyll-starter-work/commit\
             s/staging/./rosey/translations/es-ES/blog/do-what-you-can-with-what\
             -you-have-where-you-are.yaml)"
@@ -27,7 +27,7 @@ _inputs:
         - heading: Already translated (es-ES)
           comment: "[blog/do-what-you-can-with-what-you-have-where-you-are](https://darin\
             g-button.cloudvent.net/blog/do-what-you-can-with-what-you-have-wher\
-            e-you-are)  //  [See in git
+            e-you-are)  //  [Git
             history](https://github.com/tomrcc/rosey-jekyll-starter-work/commit\
             s/staging/./rosey/translations/es-ES/blog/do-what-you-can-with-what\
             -you-have-where-you-are.yaml)"

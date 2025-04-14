@@ -2,7 +2,7 @@ _inputs:
   $:
     type: object
     comment: "[project/the-rocks](https://daring-button.cloudvent.net/project/the-r\
-      ocks)  //  [See in git
+      ocks)  //  [Git
       history](https://github.com/tomrcc/rosey-jekyll-starter-work/commits/stag\
       ing/./rosey/translations/es-ES/project/the-rocks.yaml)"
     options:
@@ -10,7 +10,7 @@ _inputs:
       groups:
         - heading: Still to translate (es-ES)
           comment: "[project/the-rocks](https://daring-button.cloudvent.net/project/the-r\
-            ocks)  //  [See in git
+            ocks)  //  [Git
             history](https://github.com/tomrcc/rosey-jekyll-starter-work/commit\
             s/staging/./rosey/translations/es-ES/project/the-rocks.yaml)"
           inputs:
@@ -19,7 +19,7 @@ _inputs:
             - markdown:praeteritis-inquit-gaudeo-praeteritis-inquit-gaudeo-quod-inquit-quamquam-voluptatibus-quibusdam-est-saepe-iucundius-tamen-expetitur-propter-voluptatem-scientiam-pollicentur-quam-non-erat-mirum-sapientiae-cupido-patria-esse-cariorem-non-quaeritur-autem-quid-naturae-tuae-consentaneum-sit-sed-quid-disciplinae-ita-ne-hoc-quidem-modo-paria-peccata-sunt-ita-prorsus-inquam-nunc-ita-separantur-ut-disiuncta-sint-quo-nihil-potest-esse-perversius-virtutibus-igitur-rectissime-mihi-videris-et-ad-consuetudinem-nostrae-orationis
         - heading: Already translated (es-ES)
           comment: "[project/the-rocks](https://daring-button.cloudvent.net/project/the-r\
-            ocks)  //  [See in git
+            ocks)  //  [Git
             history](https://github.com/tomrcc/rosey-jekyll-starter-work/commit\
             s/staging/./rosey/translations/es-ES/project/the-rocks.yaml)"
           inputs: []

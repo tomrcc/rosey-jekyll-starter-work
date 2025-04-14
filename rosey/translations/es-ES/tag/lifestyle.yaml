@@ -2,7 +2,7 @@ _inputs:
   $:
     type: object
     comment: "[tag/lifestyle](https://daring-button.cloudvent.net/tag/lifestyle)  /\
-      /  [See in git
+      /  [Git
       history](https://github.com/tomrcc/rosey-jekyll-starter-work/commits/stag\
       ing/./rosey/translations/es-ES/tag/lifestyle.yaml)"
     options:
@@ -10,13 +10,13 @@ _inputs:
       groups:
         - heading: Still to translate (es-ES)
           comment: "[tag/lifestyle](https://daring-button.cloudvent.net/tag/lifestyle)  /\
-            /  [See in git
+            /  [Git
             history](https://github.com/tomrcc/rosey-jekyll-starter-work/commit\
             s/staging/./rosey/translations/es-ES/tag/lifestyle.yaml)"
           inputs: []
         - heading: Already translated (es-ES)
           comment: "[tag/lifestyle](https://daring-button.cloudvent.net/tag/lifestyle)  /\
-            /  [See in git
+            /  [Git
             history](https://github.com/tomrcc/rosey-jekyll-starter-work/commit\
             s/staging/./rosey/translations/es-ES/tag/lifestyle.yaml)"
           inputs: []

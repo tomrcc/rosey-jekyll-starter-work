@@ -3,7 +3,7 @@ _inputs:
     type: object
     comment: "[blog/that-which-does-not-kill-us-makes-us-stronger](https://daring-b\
       utton.cloudvent.net/blog/that-which-does-not-kill-us-makes-us-stronger)  \
-      //  [See in git
+      //  [Git
       history](https://github.com/tomrcc/rosey-jekyll-starter-work/commits/stag\
       ing/./rosey/translations/es-ES/blog/that-which-does-not-kill-us-makes-us-\
       stronger.yaml)"
@@ -13,7 +13,7 @@ _inputs:
         - heading: Still to translate (es-ES)
           comment: "[blog/that-which-does-not-kill-us-makes-us-stronger](https://daring-b\
             utton.cloudvent.net/blog/that-which-does-not-kill-us-makes-us-stron\
-            ger)  //  [See in git
+            ger)  //  [Git
             history](https://github.com/tomrcc/rosey-jekyll-starter-work/commit\
             s/staging/./rosey/translations/es-ES/blog/that-which-does-not-kill-\
             us-makes-us-stronger.yaml)"
@@ -27,7 +27,7 @@ _inputs:
         - heading: Already translated (es-ES)
           comment: "[blog/that-which-does-not-kill-us-makes-us-stronger](https://daring-b\
             utton.cloudvent.net/blog/that-which-does-not-kill-us-makes-us-stron\
-            ger)  //  [See in git
+            ger)  //  [Git
             history](https://github.com/tomrcc/rosey-jekyll-starter-work/commit\
             s/staging/./rosey/translations/es-ES/blog/that-which-does-not-kill-\
             us-makes-us-stronger.yaml)"
