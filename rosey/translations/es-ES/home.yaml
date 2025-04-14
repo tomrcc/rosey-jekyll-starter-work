@@ -1,4 +1,3 @@
-urlTranslation: index.html
 _inputs:
   $:
     type: object
@@ -21,24 +20,24 @@ _inputs:
     hidden: false
     type: text
     options: {}
-    comment: "[See on
-      page](https://driven-darkness.cloudvent.net/#:~:text=Get%20in%20touch)"
+    comment: "[See in
+      context](https://driven-darkness.cloudvent.net/#:~:text=Get%20in%20touch)"
   hi-there-i-am-vanessa-marley:
     label: Hi there, I am Vanessa Marley
     hidden: false
     type: textarea
     options: {}
-    comment: "[See on
-      page](https://driven-darkness.cloudvent.net/#:~:text=Hi%20there,%20I%20am\
-      %20Vanessa%20Marley)"
+    comment: "[See in
+      context](https://driven-darkness.cloudvent.net/#:~:text=Hi%20there,%20I%2\
+      0am%20Vanessa%20Marley)"
   p-strong-photographer-strong-and-strong-visual-content-strategist-strong-from-albany-i-work-as-a-lifestyle-product-and-landscape-photographer-creating-images-for-a-diverse-range-of-requests-from-online-media-to-printed-artwork-p:
     label: Photographer and Visual Content Strategist...
     hidden: false
     type: textarea
     options: {}
-    comment: "[See on
-      page](https://driven-darkness.cloudvent.net/#:~:text=Photographer%20and%2\
-      0Visual,to%20printed%20artwork)"
+    comment: "[See in
+      context](https://driven-darkness.cloudvent.net/#:~:text=Photographer%20an\
+      d%20Visual,to%20printed%20artwork)"
     context:
       open: false
       title: Untranslated Text
@@ -51,8 +50,9 @@ _inputs:
     hidden: false
     type: text
     options: {}
-    comment: "[See on
-      page](https://driven-darkness.cloudvent.net/#:~:text=See%20my%20works)"
+    comment: "[See in
+      context](https://driven-darkness.cloudvent.net/#:~:text=See%20my%20works)"
+urlTranslation: index.html
 get-in-touch: Ponte en contacto
 hi-there-i-am-vanessa-marley: Hola, soy Vanessa Marley.
 p-strong-photographer-strong-and-strong-visual-content-strategist-strong-from-albany-i-work-as-a-lifestyle-product-and-landscape-photographer-creating-images-for-a-diverse-range-of-requests-from-online-media-to-printed-artwork-p:

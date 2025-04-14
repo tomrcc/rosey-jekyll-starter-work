@@ -1,4 +1,3 @@
-urlTranslation: tag/lifestyle.html
 _inputs:
   $:
     type: object
@@ -14,3 +13,4 @@ _inputs:
           comment: Text already translated on
             [tag/lifestyle](https://driven-darkness.cloudvent.net/tag/lifestyle)
           inputs: []
+urlTranslation: tag/lifestyle.html

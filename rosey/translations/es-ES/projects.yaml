@@ -1,4 +1,3 @@
-urlTranslation: projects/index.html
 _inputs:
   $:
     type: object
@@ -14,3 +13,4 @@ _inputs:
           comment: Text already translated on
             [projects/](https://driven-darkness.cloudvent.net/projects/)
           inputs: []
+urlTranslation: projects/index.html

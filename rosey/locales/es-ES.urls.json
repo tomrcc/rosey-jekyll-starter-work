@@ -3,65 +3,116 @@
 		"original": "about/index.html",
 		"value": "about/index.html"
 	},
+	"blog/believe-and-act-as-if-it-were-impossible-to-fail.html": {
+		"original": "blog/believe-and-act-as-if-it-were-impossible-to-fail.html",
+		"value": "blog/believe-and-act-as-if-it-were-impossible-to-fail.html"
+	},
+	"blog/do-what-you-can-with-what-you-have-where-you-are.html": {
+		"original": "blog/do-what-you-can-with-what-you-have-where-you-are.html",
+		"value": "blog/do-what-you-can-with-what-you-have-where-you-are.html"
+	},
+	"blog/everything-has-beauty-but-not-everyone-can-see.html": {
+		"original": "blog/everything-has-beauty-but-not-everyone-can-see.html",
+		"value": "blog/everything-has-beauty-but-not-everyone-can-see.html"
+	},
 	"blog/index.html": {
 		"original": "blog/index.html",
 		"value": "blog/index.html"
+	},
+	"blog/it-is-never-too-late-to-be-what-you-might-have-been.html": {
+		"original": "blog/it-is-never-too-late-to-be-what-you-might-have-been.html",
+		"value": "blog/it-is-never-too-late-to-be-what-you-might-have-been.html"
+	},
+	"blog/life-shrinks-or-expands-in-proportion-to-one-s-courage.html": {
+		"original": "blog/life-shrinks-or-expands-in-proportion-to-one-s-courage.html",
+		"value": "blog/life-shrinks-or-expands-in-proportion-to-one-s-courage.html"
+	},
+	"blog/strive-not-to-be-a-success-but-rather-to-be-of-value.html": {
+		"original": "blog/strive-not-to-be-a-success-but-rather-to-be-of-value.html",
+		"value": "blog/strive-not-to-be-a-success-but-rather-to-be-of-value.html"
+	},
+	"blog/that-which-does-not-kill-us-makes-us-stronger.html": {
+		"original": "blog/that-which-does-not-kill-us-makes-us-stronger.html",
+		"value": "blog/that-which-does-not-kill-us-makes-us-stronger.html"
+	},
+	"blog/the-way-i-see-it-every-life-is-a-pile-of-good-things.html": {
+		"original": "blog/the-way-i-see-it-every-life-is-a-pile-of-good-things.html",
+		"value": "blog/the-way-i-see-it-every-life-is-a-pile-of-good-things.html"
+	},
+	"blog/you-must-be-the-change-you-wish-to-see-in-the-world.html": {
+		"original": "blog/you-must-be-the-change-you-wish-to-see-in-the-world.html",
+		"value": "blog/you-must-be-the-change-you-wish-to-see-in-the-world.html"
 	},
 	"elements/index.html": {
 		"original": "elements/index.html",
 		"value": "elements/index.html"
 	},
-	"projects/index.html": {
-		"original": "projects/index.html",
-		"value": "projects/index.html"
-	},
 	"index.html": {
 		"original": "index.html",
 		"value": "index.html"
 	},
-	"tag/life/index.html": {
-		"value": "tag/life.html"
-	},
-	"tag/lifestyle/index.html": {
-		"value": "tag/lifestyle.html"
-	},
-	"tag/notes/index.html": {
-		"value": "tag/notes.html"
-	},
-	"tag/rest/index.html": {
-		"value": "tag/rest.html"
-	},
-	"tag/story/index.html": {
-		"value": "tag/story.html"
-	},
-	"project/antelope-anyon/index.html": {
+	"project/antelope-anyon.html": {
+		"original": "project/antelope-anyon.html",
 		"value": "project/antelope-anyon.html"
 	},
-	"tag/travel/index.html": {
-		"value": "tag/travel.html"
-	},
-	"project/big-airplane/index.html": {
+	"project/big-airplane.html": {
+		"original": "project/big-airplane.html",
 		"value": "project/big-airplane.html"
 	},
-	"project/desk-setup/index.html": {
+	"project/desk-setup.html": {
+		"original": "project/desk-setup.html",
 		"value": "project/desk-setup.html"
 	},
-	"project/green-plant/index.html": {
+	"project/green-plant.html": {
+		"original": "project/green-plant.html",
 		"value": "project/green-plant.html"
 	},
-	"project/mountains/index.html": {
+	"project/mountains.html": {
+		"original": "project/mountains.html",
 		"value": "project/mountains.html"
 	},
-	"project/prague-city/index.html": {
+	"project/prague-city.html": {
+		"original": "project/prague-city.html",
 		"value": "project/prague-city.html"
 	},
-	"project/quiet-lake/index.html": {
+	"project/quiet-lake.html": {
+		"original": "project/quiet-lake.html",
 		"value": "project/quiet-lake.html"
 	},
-	"project/the-rocks/index.html": {
+	"project/sea-and-rest.html": {
+		"original": "project/sea-and-rest.html",
+		"value": "project/sea-and-rest.html"
+	},
+	"project/the-rocks.html": {
+		"original": "project/the-rocks.html",
 		"value": "project/the-rocks.html"
 	},
-	"project/sea-and-rest/index.html": {
-		"value": "project/sea-and-rest.html"
+	"projects/index.html": {
+		"original": "projects/index.html",
+		"value": "projects/index.html"
+	},
+	"tag/life.html": {
+		"original": "tag/life.html",
+		"value": "tag/life.html"
+	},
+	"tag/lifestyle.html": {
+		"original": "tag/lifestyle.html",
+		"value": "tag/lifestyle.html"
+	},
+	"tag/notes.html": {
+		"original": "tag/notes.html",
+		"value": "tag/notes.html"
+	},
+	"tag/rest.html": {
+		"original": "tag/rest.html",
+		"value": "tag/rest.html"
+	},
+	"tag/story.html": {
+		"original": "tag/story.html",
+		"value": "tag/story.html"
+	},
+	"tag/travel.html": {
+		"original": "tag/travel.html",
+		"value": "tag/travel.html"
 	}
 }

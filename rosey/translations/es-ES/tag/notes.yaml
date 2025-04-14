@@ -1,4 +1,3 @@
-urlTranslation: tag/notes.html
 _inputs:
   $:
     type: object
@@ -14,3 +13,4 @@ _inputs:
           comment: Text already translated on
             [tag/notes](https://driven-darkness.cloudvent.net/tag/notes)
           inputs: []
+urlTranslation: tag/notes.html
