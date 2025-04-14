@@ -30,14 +30,14 @@ function initDefaultInputs(data, page, locale, seeOnPageCommentSettings) {
           {
             heading: `Still to translate (${locale})`,
             comment: seeOnPageCommentEnabled
-              ? `Text to translate on [${pageString}](${baseUrl}${pageString})`
+              ? `Text to translate on [${pageString}](${baseUrl}${pageString})\nSome new line text?`
               : "",
             inputs: [],
           },
           {
             heading: `Already translated (${locale})`,
             comment: seeOnPageCommentEnabled
-              ? `Text already translated on [${pageString}](${baseUrl}${pageString})`
+              ? `Text already translated on [${pageString}](${baseUrl}${pageString})\nSome new line text which will be git link?`
               : "",
             inputs: [],
           },
