@@ -8,8 +8,7 @@ const nhm = new NodeHtmlMarkdown(
 );
 
 // Input set up
-
-function initDefaultInputs(data, page, locale, baseUrl) {
+function initDefaultInputs(data, page, locale, seeOnPageCommentSettings) {
   // Create the inputs obj if there is none
   if (!data._inputs) {
     data._inputs = {};
@@ -18,20 +17,28 @@ function initDefaultInputs(data, page, locale, baseUrl) {
   // Create the page input object
   if (!data._inputs.$) {
     const pageString = getPageString(page);
+    const seeOnPageCommentEnabled = seeOnPageCommentSettings.enabled;
+    const baseUrl = seeOnPageCommentSettings.base_url;
     data._inputs.$ = {
       type: "object",
-      comment: `[See ${pageString}](${baseUrl}${pageString})`,
+      comment: seeOnPageCommentEnabled
+        ? `[See ${pageString}](${baseUrl}${pageString})`
+        : "",
       options: {
         place_groups_below: false,
         groups: [
           {
             heading: `Still to translate (${locale})`,
-            comment: `Text to translate on [${pageString}](${baseUrl}${pageString})`,
+            comment: seeOnPageCommentEnabled
+              ? `Text to translate on [${pageString}](${baseUrl}${pageString})`
+              : "",
             inputs: [],
           },
           {
             heading: `Already translated (${locale})`,
-            comment: `Text already translated on [${pageString}](${baseUrl}${pageString})`,
+            comment: seeOnPageCommentEnabled
+              ? `Text already translated on [${pageString}](${baseUrl}${pageString})`
+              : "",
             inputs: [],
           },
         ],
@@ -40,7 +47,15 @@ function initDefaultInputs(data, page, locale, baseUrl) {
   }
 }
 
-function getInputConfig(inputKey, page, baseTranslationObj, baseUrl) {
+function getInputConfig(
+  inputKey,
+  page,
+  baseTranslationObj,
+  seeOnPageCommentSettings
+) {
+  const seeOnPageCommentEnabled = seeOnPageCommentSettings.enabled;
+  const baseUrl = seeOnPageCommentSettings.base_url;
+  const seeOnPageCommentText = seeOnPageCommentSettings.comment_text;
   const untranslatedPhrase = baseTranslationObj.original.trim();
   const untranslatedPhraseMarkdown = nhm.translate(untranslatedPhrase);
   const originalPhraseTidiedForComment = formatMarkdownText(
@@ -70,11 +85,14 @@ function getInputConfig(inputKey, page, baseTranslationObj, baseUrl) {
       }
     : {};
 
-  const locationString = generateLocationString(
-    originalPhraseTidiedForComment,
-    page,
-    baseUrl
-  );
+  const locationString = seeOnPageCommentEnabled
+    ? generateLocationString(
+        originalPhraseTidiedForComment,
+        page,
+        baseUrl,
+        seeOnPageCommentText
+      )
+    : false;
 
   const isLabelConcat = originalPhraseTidiedForComment.length > 42;
 
@@ -105,6 +123,79 @@ function getInputConfig(inputKey, page, baseTranslationObj, baseUrl) {
       };
 
   return inputConfig;
+}
+
+function generateLocationString(
+  originalPhrase,
+  page,
+  baseUrl,
+  seeOnPageCommentText
+) {
+  // Limit each phrase to 3 words
+  const urlHighlighterWordLength = 3;
+  const originalPhraseArray = originalPhrase.split(/[\n]+/);
+  // Get the first and last line of the markdown so we only have complete lines in the highlight url
+  const firstPhrase = originalPhraseArray[0];
+  const lastPhrase = originalPhraseArray[originalPhraseArray.length - 1];
+  const endHighlightArrayAll = lastPhrase.split(" ");
+
+  const startHighlightArrayWithPunctuation = firstPhrase
+    .split(" ")
+    .slice(0, urlHighlighterWordLength);
+
+  const endHighlightArrayWithPunctuation = endHighlightArrayAll.slice(
+    endHighlightArrayAll.length - urlHighlighterWordLength,
+    endHighlightArrayAll.length
+  );
+
+  // Look at these arrays for any words with a special character after
+  // That is our last word in the start or end highlight
+  // The phrase stops there in an attempt to still capture the block of text
+
+  const startHighlightArrayWithoutPunctuation = [];
+  const endHighlightArrayWithoutPunctuation = [];
+  const regexToMatch = /[&#,+()$~%.":*?<>{}_]/gm;
+
+  for (let i = 0; i < startHighlightArrayWithPunctuation.length; i++) {
+    const word = startHighlightArrayWithPunctuation[i];
+    const foundMatches = word.match(regexToMatch);
+    if (foundMatches && foundMatches.length > 0) {
+      startHighlightArrayWithoutPunctuation.push(
+        word.replaceAll(regexToMatch, "")
+      );
+      break;
+    }
+    startHighlightArrayWithoutPunctuation.push(word);
+  }
+
+  for (let j = 0; j < endHighlightArrayWithPunctuation.length; j++) {
+    const word = endHighlightArrayWithPunctuation[j];
+    const foundMatches = word.match(regexToMatch);
+    if (foundMatches && foundMatches.length > 0) {
+      endHighlightArrayWithoutPunctuation.push(
+        word.replaceAll(regexToMatch, "")
+      );
+      break;
+    }
+    endHighlightArrayWithoutPunctuation.push(word);
+  }
+
+  const originalPhraseArrayByWord = originalPhraseArray.join(" ").split(" ");
+
+  // Trim and encode the resulting phrase
+  const startHighlight = startHighlightArrayWithoutPunctuation.join(" ").trim();
+  const endHighlight = endHighlightArrayWithoutPunctuation.join(" ").trim();
+
+  const encodedStartHighlight = encodeURI(startHighlight);
+  const encodedEndHighlight = encodeURI(endHighlight);
+  const encodedOriginalPhrase = encodeURI(originalPhraseArray.join(" "));
+
+  const pageString = getPageString(page);
+  // Look to see if original phrase is 5 words or shorter
+  // if it is fallback to the encoded original phrase for the highlight link
+  return originalPhraseArrayByWord.length > urlHighlighterWordLength * 2
+    ? `[${seeOnPageCommentText}](${baseUrl}${pageString}#:~:text=${encodedStartHighlight},${encodedEndHighlight})`
+    : `[${seeOnPageCommentText}](${baseUrl}${pageString}#:~:text=${encodedOriginalPhrase})`;
 }
 
 // Common input set up
@@ -196,74 +287,6 @@ function getNamespaceInputConfig(inputKey, baseTranslationObj) {
       };
 
   return inputConfig;
-}
-
-function generateLocationString(originalPhrase, page, baseUrl) {
-  // Limit each phrase to 3 words
-  const urlHighlighterWordLength = 3;
-  const originalPhraseArray = originalPhrase.split(/[\n]+/);
-  // Get the first and last line of the markdown so we only have complete lines in the highlight url
-  const firstPhrase = originalPhraseArray[0];
-  const lastPhrase = originalPhraseArray[originalPhraseArray.length - 1];
-  const endHighlightArrayAll = lastPhrase.split(" ");
-
-  const startHighlightArrayWithPunctuation = firstPhrase
-    .split(" ")
-    .slice(0, urlHighlighterWordLength);
-
-  const endHighlightArrayWithPunctuation = endHighlightArrayAll.slice(
-    endHighlightArrayAll.length - urlHighlighterWordLength,
-    endHighlightArrayAll.length
-  );
-
-  // Look at these arrays for any words with a special character after
-  // That is our last word in the start or end highlight
-  // The phrase stops there in an attempt to still capture the block of text
-
-  const startHighlightArrayWithoutPunctuation = [];
-  const endHighlightArrayWithoutPunctuation = [];
-  const regexToMatch = /[&#,+()$~%.":*?<>{}_]/gm;
-
-  for (let i = 0; i < startHighlightArrayWithPunctuation.length; i++) {
-    const word = startHighlightArrayWithPunctuation[i];
-    const foundMatches = word.match(regexToMatch);
-    if (foundMatches && foundMatches.length > 0) {
-      startHighlightArrayWithoutPunctuation.push(
-        word.replaceAll(regexToMatch, "")
-      );
-      break;
-    }
-    startHighlightArrayWithoutPunctuation.push(word);
-  }
-
-  for (let j = 0; j < endHighlightArrayWithPunctuation.length; j++) {
-    const word = endHighlightArrayWithPunctuation[j];
-    const foundMatches = word.match(regexToMatch);
-    if (foundMatches && foundMatches.length > 0) {
-      endHighlightArrayWithoutPunctuation.push(
-        word.replaceAll(regexToMatch, "")
-      );
-      break;
-    }
-    endHighlightArrayWithoutPunctuation.push(word);
-  }
-
-  const originalPhraseArrayByWord = originalPhraseArray.join(" ").split(" ");
-
-  // Trim and encode the resulting phrase
-  const startHighlight = startHighlightArrayWithoutPunctuation.join(" ").trim();
-  const endHighlight = endHighlightArrayWithoutPunctuation.join(" ").trim();
-
-  const encodedStartHighlight = encodeURI(startHighlight);
-  const encodedEndHighlight = encodeURI(endHighlight);
-  const encodedOriginalPhrase = encodeURI(originalPhraseArray.join(" "));
-
-  const pageString = getPageString(page);
-  // Look to see if original phrase is 5 words or shorter
-  // if it is fallback to the encoded original phrase for the highlight link
-  return originalPhraseArrayByWord.length > urlHighlighterWordLength * 2
-    ? `[See on page](${baseUrl}${pageString}#:~:text=${encodedStartHighlight},${encodedEndHighlight})`
-    : `[See on page](${baseUrl}${pageString}#:~:text=${encodedOriginalPhrase})`;
 }
 
 function sortTranslationIntoInputGroup(translationDataToWrite, inputKey) {

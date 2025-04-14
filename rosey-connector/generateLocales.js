@@ -265,8 +265,6 @@ async function processTranslation(
     console.log("No data from filepath: ", translationsPath);
   }
 
-  // console.log({ baseUrlFileData });
-
   const translationHtmlFilename = getTranslationHtmlFilename(
     translationFilename,
     baseUrlFileData

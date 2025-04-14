@@ -1,6 +1,14 @@
 locales:
   - es-ES
-base_url: https://driven-darkness.cloudvent.net/
+see_on_page_comment: 
+  enabled: true
+  base_url: https://driven-darkness.cloudvent.net/
+  comment_text: See on page
+github_history:
+  enabled: true
+  repo_url: https://github.com/tomrcc/rosey-jekyll-starter-work
+  branch_name: staging
+  comment_text: See in git history
 namespace_pages:
   - common
 rosey_paths:
