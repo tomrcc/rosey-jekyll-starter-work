@@ -12,7 +12,9 @@ import {
 import {
   initDefaultInputs,
   getInputConfig,
-  sortTranslationsIntoInputGroup,
+  initCommonPageInputs,
+  getCommonInputConfig,
+  sortTranslationIntoInputGroup,
 } from "./helpers/input-helpers.js";
 
 const nhm = new NodeHtmlMarkdown(
@@ -117,6 +119,9 @@ async function generateTranslationFilesForLocale(
       // Process the url translation
       processUrlTranslation(translationFileData, translationDataToWrite, page);
       // Process the rest of the translations
+      // TODO: As part of process translations, look for keys with common at the start and
+      // add them to common array
+      // Don't write them to the translation file
       processTranslations(
         baseFileData,
         translationFileData,
@@ -136,6 +141,54 @@ async function generateTranslationFilesForLocale(
       );
     })
   );
+
+  // TODO: After the pages are done looping and writing, write an extra 'common' file
+  const commonFilePath = path.join(
+    translationFilesDirPath,
+    locale,
+    "common.yaml"
+  );
+
+  // Get the existing common file translations
+  const existingCommonFileData = await readYamlFromFile(commonFilePath); // Falls back to empty `inputs:` obj
+
+  // Loop through the existing keys again
+  const commonTranslationDataToWrite = {};
+  initCommonPageInputs(commonTranslationDataToWrite, locale);
+
+  await Promise.all(
+    Object.keys(baseFileData.keys).map(async (inputKey) => {
+      if (!inputKey.startsWith("common:")) {
+        return;
+      }
+      const baseTranslationObj = baseFileData.keys[inputKey];
+
+      // If they exist on the page already, preserve the translation
+      if (existingCommonFileData[inputKey]) {
+        commonTranslationDataToWrite[inputKey] =
+          existingCommonFileData[inputKey];
+      } else {
+        // Otherwise add them to the common page with their
+        commonTranslationDataToWrite[inputKey] = "";
+      }
+
+      // Set up inputs for each key
+      commonTranslationDataToWrite._inputs[inputKey] = getCommonInputConfig(
+        inputKey,
+        baseTranslationObj
+      );
+
+      // Add each entry to page object group depending on whether they are already translated or not
+      sortTranslationIntoInputGroup(commonTranslationDataToWrite, inputKey);
+    })
+  );
+
+  // Write the file back once we've processed the translations
+  await fs.promises.writeFile(
+    commonFilePath,
+    YAML.stringify(commonTranslationDataToWrite)
+  );
+  console.log(`Translation file: ${commonFilePath} updated succesfully`);
 }
 
 function processUrlTranslation(
@@ -143,8 +196,9 @@ function processUrlTranslation(
   translationDataToWrite,
   page
 ) {
-  if (translationFileData.urlTranslation?.length > 0) {
-    translationDataToWrite.urlTranslation = translationFileData.urlTranslation;
+  const existingUrlTranslation = translationFileData.urlTranslation;
+  if (existingUrlTranslation?.length > 0) {
+    translationDataToWrite.urlTranslation = existingUrlTranslation;
   } else {
     translationDataToWrite.urlTranslation = page;
   }
@@ -164,6 +218,10 @@ function processTranslations(
 
     // If translation doesn't exist on this page, exit early
     if (!baseTranslationObj.pages[page]) {
+      return;
+    }
+    // Check for namespace of common and exit early since this translation key belongs to the common page, not each individual page
+    if (inputKey.startsWith("common:")) {
       return;
     }
 
@@ -194,6 +252,6 @@ function processTranslations(
     );
 
     // Add each entry to page object group depending on whether they are already translated or not
-    sortTranslationsIntoInputGroup(translationDataToWrite, inputKey);
+    sortTranslationIntoInputGroup(translationDataToWrite, inputKey);
   });
 }

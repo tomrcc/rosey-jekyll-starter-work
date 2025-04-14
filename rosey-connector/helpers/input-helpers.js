@@ -6,6 +6,9 @@ const nhm = new NodeHtmlMarkdown(
   /* customTransformers (optional) */ undefined,
   /* customCodeBlockTranslators (optional) */ undefined
 );
+
+// Input set up
+
 function initDefaultInputs(data, page, locale, baseUrl) {
   // Create the inputs obj if there is none
   if (!data._inputs) {
@@ -104,6 +107,97 @@ function getInputConfig(inputKey, page, baseTranslationObj, baseUrl) {
   return inputConfig;
 }
 
+// Common input set up
+
+function initCommonPageInputs(data, locale) {
+  // Create the inputs obj if there is none
+  if (!data._inputs) {
+    data._inputs = {};
+  }
+
+  // Create the page input object
+  if (!data._inputs.$) {
+    data._inputs.$ = {
+      type: "object",
+      comment: "Translations that appear on many pages",
+      options: {
+        place_groups_below: false,
+        groups: [
+          {
+            heading: `Still to translate (${locale})`,
+            comment: "Text to translate",
+            inputs: [],
+          },
+          {
+            heading: `Already translated (${locale})`,
+            comment: "Text already translated",
+            inputs: [],
+          },
+        ],
+      },
+    };
+  }
+}
+
+function getCommonInputConfig(inputKey, baseTranslationObj) {
+  const untranslatedPhrase = baseTranslationObj.original.trim();
+  const untranslatedPhraseMarkdown = nhm.translate(untranslatedPhrase);
+  const originalPhraseTidiedForComment = formatMarkdownText(
+    untranslatedPhraseMarkdown
+  );
+
+  const isKeyMarkdown = inputKey.slice(0, 10).includes("markdown:");
+  const isInputShortText = untranslatedPhrase.length < 20;
+
+  const inputType = isKeyMarkdown
+    ? "markdown"
+    : isInputShortText
+    ? "text"
+    : "textarea";
+
+  const options = isKeyMarkdown
+    ? {
+        bold: true,
+        format: "p h1 h2 h3 h4",
+        italic: true,
+        link: true,
+        undo: true,
+        redo: true,
+        removeformat: true,
+        copyformatting: true,
+        blockquote: true,
+      }
+    : {};
+
+  const isLabelConcat = originalPhraseTidiedForComment.length > 42;
+
+  const formattedLabel = isLabelConcat
+    ? `${originalPhraseTidiedForComment.substring(0, 42)}...`
+    : originalPhraseTidiedForComment;
+
+  const inputConfig = isLabelConcat
+    ? {
+        label: formattedLabel,
+        hidden: untranslatedPhrase === "",
+        type: inputType,
+        options: options,
+        context: {
+          open: false,
+          title: "Untranslated Text",
+          icon: "translate",
+          content: untranslatedPhraseMarkdown,
+        },
+      }
+    : {
+        label: formattedLabel,
+        hidden: untranslatedPhrase === "",
+        type: inputType,
+        options: options,
+      };
+
+  return inputConfig;
+}
+
 function generateLocationString(originalPhrase, page, baseUrl) {
   // Limit each phrase to 3 words
   const urlHighlighterWordLength = 3;
@@ -172,7 +266,7 @@ function generateLocationString(originalPhrase, page, baseUrl) {
     : `[See on page](${baseUrl}${pageString}#:~:text=${encodedOriginalPhrase})`;
 }
 
-function sortTranslationsIntoInputGroup(translationDataToWrite, inputKey) {
+function sortTranslationIntoInputGroup(translationDataToWrite, inputKey) {
   if (translationDataToWrite[inputKey]?.length > 0) {
     translationDataToWrite._inputs.$.options.groups[1].inputs.push(inputKey);
   } else {
@@ -180,4 +274,10 @@ function sortTranslationsIntoInputGroup(translationDataToWrite, inputKey) {
   }
 }
 
-export { initDefaultInputs, getInputConfig, sortTranslationsIntoInputGroup };
+export {
+  initDefaultInputs,
+  getInputConfig,
+  initCommonPageInputs,
+  getCommonInputConfig,
+  sortTranslationIntoInputGroup,
+};
