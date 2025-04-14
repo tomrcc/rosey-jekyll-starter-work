@@ -1,16 +1,14 @@
 _inputs:
   $:
     type: object
-    comment: "[See tag/life](https://driven-darkness.cloudvent.net/tag/life)"
+    comment: ""
     options:
       place_groups_below: false
       groups:
         - heading: Still to translate (es-ES)
-          comment: Text to translate on
-            [tag/life](https://driven-darkness.cloudvent.net/tag/life)
+          comment: ""
           inputs: []
         - heading: Already translated (es-ES)
-          comment: Text already translated on
-            [tag/life](https://driven-darkness.cloudvent.net/tag/life)
+          comment: ""
           inputs: []
 urlTranslation: tag/life.html

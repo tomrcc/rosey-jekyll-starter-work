@@ -1,15 +1,15 @@
 _inputs:
   $:
     type: object
-    comment: "[See ](https://driven-darkness.cloudvent.net/)"
+    comment: ""
     options:
       place_groups_below: false
       groups:
         - heading: Still to translate (es-ES)
-          comment: Text to translate on [](https://driven-darkness.cloudvent.net/)
+          comment: ""
           inputs: []
         - heading: Already translated (es-ES)
-          comment: Text already translated on [](https://driven-darkness.cloudvent.net/)
+          comment: ""
           inputs:
             - get-in-touch
             - hi-there-i-am-vanessa-marley
@@ -20,24 +20,19 @@ _inputs:
     hidden: false
     type: text
     options: {}
-    comment: "[See on
-      page](https://driven-darkness.cloudvent.net/#:~:text=Get%20in%20touch)"
+    comment: false
   hi-there-i-am-vanessa-marley:
     label: Hi there, I am Vanessa Marley
     hidden: false
     type: textarea
     options: {}
-    comment: "[See on
-      page](https://driven-darkness.cloudvent.net/#:~:text=Hi%20there,%20I%20am\
-      %20Vanessa%20Marley)"
+    comment: false
   p-strong-photographer-strong-and-strong-visual-content-strategist-strong-from-albany-i-work-as-a-lifestyle-product-and-landscape-photographer-creating-images-for-a-diverse-range-of-requests-from-online-media-to-printed-artwork-p:
     label: Photographer and Visual Content Strategist...
     hidden: false
     type: textarea
     options: {}
-    comment: "[See on
-      page](https://driven-darkness.cloudvent.net/#:~:text=Photographer%20and%2\
-      0Visual,to%20printed%20artwork)"
+    comment: false
     context:
       open: false
       title: Untranslated Text
@@ -50,8 +45,7 @@ _inputs:
     hidden: false
     type: text
     options: {}
-    comment: "[See on
-      page](https://driven-darkness.cloudvent.net/#:~:text=See%20my%20works)"
+    comment: false
 urlTranslation: index.html
 get-in-touch: Ponte en contacto
 hi-there-i-am-vanessa-marley: Hola, soy Vanessa Marley.

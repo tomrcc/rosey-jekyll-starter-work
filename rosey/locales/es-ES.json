@@ -1,7 +1,7 @@
 {
 	"common:about": {
 		"original": "About",
-		"value": "About"
+		"value": "Acerca de"
 	},
 	"common:blog": {
 		"original": "Blog",
@@ -9,23 +9,23 @@
 	},
 	"common:elements": {
 		"original": "Elements",
-		"value": "Elements"
+		"value": "Acerca de"
 	},
 	"common:home": {
 		"original": "Home",
-		"value": "Home"
+		"value": "Hogar"
 	},
 	"common:menu": {
 		"original": "Menu",
-		"value": "Menu"
+		"value": "Menú"
 	},
 	"common:pages": {
 		"original": "Pages",
-		"value": "Pages"
+		"value": "Paginas"
 	},
 	"common:projects": {
 		"original": "Projects",
-		"value": "Projects"
+		"value": "proyectos"
 	},
 	"get-in-touch": {
 		"original": "Get in touch",

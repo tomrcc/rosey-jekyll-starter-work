@@ -7,6 +7,9 @@ _inputs:
       groups:
         - heading: Still to translate (es-ES)
           comment: Text to translate
+          inputs: []
+        - heading: Already translated (es-ES)
+          comment: Text already translated
           inputs:
             - common:about
             - common:blog
@@ -15,9 +18,6 @@ _inputs:
             - common:menu
             - common:pages
             - common:projects
-        - heading: Already translated (es-ES)
-          comment: Text already translated
-          inputs: []
   common:about:
     label: About
     hidden: false
