@@ -2,7 +2,7 @@ locales:
   - es-ES
 see_on_page_comment:
   enabled: true
-  base_url: https://driven-darkness.cloudvent.net/
+  base_url: https://daring-button.cloudvent.net/
   comment_text: See in context
 github_history:
   enabled: true
