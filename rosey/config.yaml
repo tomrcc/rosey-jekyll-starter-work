@@ -1,9 +1,9 @@
 locales:
   - es-ES
 see_on_page_comment:
-  enabled: false
+  enabled: true
   base_url: https://driven-darkness.cloudvent.net/broken/
-  comment_text: See on staging page
+  comment_text: See in context
 github_history:
   enabled: true
   repo_url: https://github.com/tomrcc/rosey-jekyll-starter-work
