@@ -1,14 +1,16 @@
 _inputs:
   $:
     type: object
-    comment: ""
+    comment: "[See tag/rest](https://driven-darkness.cloudvent.net/broken/tag/rest)"
     options:
       place_groups_below: false
       groups:
         - heading: Still to translate (es-ES)
-          comment: ""
+          comment: Text to translate on
+            [tag/rest](https://driven-darkness.cloudvent.net/broken/tag/rest)
           inputs: []
         - heading: Already translated (es-ES)
-          comment: ""
+          comment: Text already translated on
+            [tag/rest](https://driven-darkness.cloudvent.net/broken/tag/rest)
           inputs: []
 urlTranslation: tag/rest.html

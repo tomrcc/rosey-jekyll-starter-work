@@ -1,15 +1,16 @@
 _inputs:
   $:
     type: object
-    comment: ""
+    comment: "[See ](https://driven-darkness.cloudvent.net/broken/)"
     options:
       place_groups_below: false
       groups:
         - heading: Still to translate (es-ES)
-          comment: ""
+          comment: Text to translate on [](https://driven-darkness.cloudvent.net/broken/)
           inputs: []
         - heading: Already translated (es-ES)
-          comment: ""
+          comment: Text already translated on
+            [](https://driven-darkness.cloudvent.net/broken/)
           inputs:
             - get-in-touch
             - hi-there-i-am-vanessa-marley
@@ -20,19 +21,25 @@ _inputs:
     hidden: false
     type: text
     options: {}
-    comment: false
+    comment: "[See in
+      context](https://driven-darkness.cloudvent.net/broken/#:~:text=Get%20in%2\
+      0touch)"
   hi-there-i-am-vanessa-marley:
     label: Hi there, I am Vanessa Marley
     hidden: false
     type: textarea
     options: {}
-    comment: false
+    comment: "[See in
+      context](https://driven-darkness.cloudvent.net/broken/#:~:text=Hi%20there\
+      ,%20I%20am%20Vanessa%20Marley)"
   p-strong-photographer-strong-and-strong-visual-content-strategist-strong-from-albany-i-work-as-a-lifestyle-product-and-landscape-photographer-creating-images-for-a-diverse-range-of-requests-from-online-media-to-printed-artwork-p:
     label: Photographer and Visual Content Strategist...
     hidden: false
     type: textarea
     options: {}
-    comment: false
+    comment: "[See in
+      context](https://driven-darkness.cloudvent.net/broken/#:~:text=Photograph\
+      er%20and%20Visual,to%20printed%20artwork)"
     context:
       open: false
       title: Untranslated Text
@@ -45,7 +52,9 @@ _inputs:
     hidden: false
     type: text
     options: {}
-    comment: false
+    comment: "[See in
+      context](https://driven-darkness.cloudvent.net/broken/#:~:text=See%20my%2\
+      0works)"
 urlTranslation: index.html
 get-in-touch: Ponte en contacto
 hi-there-i-am-vanessa-marley: Hola, soy Vanessa Marley.

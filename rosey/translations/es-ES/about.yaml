@@ -1,14 +1,16 @@
 _inputs:
   $:
     type: object
-    comment: ""
+    comment: "[See about/](https://driven-darkness.cloudvent.net/broken/about/)"
     options:
       place_groups_below: false
       groups:
         - heading: Still to translate (es-ES)
-          comment: ""
+          comment: Text to translate on
+            [about/](https://driven-darkness.cloudvent.net/broken/about/)
           inputs: []
         - heading: Already translated (es-ES)
-          comment: ""
+          comment: Text already translated on
+            [about/](https://driven-darkness.cloudvent.net/broken/about/)
           inputs: []
 urlTranslation: about/index.html
