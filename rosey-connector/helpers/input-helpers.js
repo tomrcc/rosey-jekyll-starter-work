@@ -109,7 +109,7 @@ function getInputConfig(inputKey, page, baseTranslationObj, baseUrl) {
 
 // Common input set up
 
-function initCommonPageInputs(data, locale) {
+function initNamespacePageInputs(data, locale) {
   // Create the inputs obj if there is none
   if (!data._inputs) {
     data._inputs = {};
@@ -139,7 +139,7 @@ function initCommonPageInputs(data, locale) {
   }
 }
 
-function getCommonInputConfig(inputKey, baseTranslationObj) {
+function getNamespaceInputConfig(inputKey, baseTranslationObj) {
   const untranslatedPhrase = baseTranslationObj.original.trim();
   const untranslatedPhraseMarkdown = nhm.translate(untranslatedPhrase);
   const originalPhraseTidiedForComment = formatMarkdownText(
@@ -277,7 +277,7 @@ function sortTranslationIntoInputGroup(translationDataToWrite, inputKey) {
 export {
   initDefaultInputs,
   getInputConfig,
-  initCommonPageInputs,
-  getCommonInputConfig,
+  initNamespacePageInputs,
+  getNamespaceInputConfig,
   sortTranslationIntoInputGroup,
 };

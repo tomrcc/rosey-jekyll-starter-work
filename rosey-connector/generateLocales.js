@@ -187,9 +187,12 @@ function processUrlTranslationKey(
     return;
   }
 
-  const lastTranslationUrlData = oldUrlsLocaleData[translationHtmlFilename];
+  const lastTranslationUrlValue =
+    oldUrlsLocaleData[translationHtmlFilename]?.value;
+  const baseUrlFileOriginal =
+    baseUrlFileData[translationHtmlFilename]?.original;
 
-  if (translationEntry !== lastTranslationUrlData?.value) {
+  if (translationEntry !== lastTranslationUrlValue) {
     console.log(`Detected a new Url translation: ${translationEntry}`);
     return {
       original: translationHtmlFilename,
@@ -198,10 +201,8 @@ function processUrlTranslationKey(
   }
 
   return {
-    original: baseUrlFileData[translationHtmlFilename]?.original,
-    value:
-      lastTranslationUrlData?.value ||
-      baseUrlFileData[translationHtmlFilename]?.original,
+    original: baseUrlFileOriginal,
+    value: lastTranslationUrlValue || baseUrlFileOriginal,
   };
 }
 
@@ -213,23 +214,25 @@ function processContentTranslationKey(
   oldLocaleData
 ) {
   // Exit early if it's not a new translation, and use old locales data instead
+  const oldLocaleDataValue = oldLocaleData[keyName]?.value;
+  const baseFileDataOriginal = baseFileData[keyName]?.original;
+
   if (
     !translatedString ||
-    translatedString === oldLocaleData[keyName]?.value ||
-    md.render(translatedString) === oldLocaleData[keyName]?.value
+    translatedString === oldLocaleDataValue ||
+    md.render(translatedString) === oldLocaleDataValue
   ) {
     return !localeData[keyName]
       ? {
-          original: baseFileData[keyName]?.original,
-          value:
-            oldLocaleData[keyName]?.value || baseFileData[keyName]?.original,
+          original: baseFileDataOriginal,
+          value: oldLocaleDataValue || baseFileDataOriginal,
         }
       : localeData[keyName];
   }
   // If its not an old translation, write the value to the locales file
   console.log(`Detected a new translation: ${translatedString}`);
   return {
-    original: baseFileData[keyName]?.original,
+    original: baseFileDataOriginal,
     value: translatedString,
     isNewTranslation: true,
   };

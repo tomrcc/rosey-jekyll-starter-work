@@ -131,7 +131,8 @@ async function removeOldTranslationFiles(
   translationsFiles,
   translationsLocalePath,
   baseUrlFileDataKeys,
-  pages
+  pages,
+  namespaceArray
 ) {
   await Promise.all(
     translationsFiles.map(async (fileName) => {
@@ -141,7 +142,14 @@ async function removeOldTranslationFiles(
         return;
       }
 
-      if (filePath.endsWith("common.yaml")) {
+      let isFilePathNamespace = false;
+      for (const namespace of namespaceArray) {
+        if (filePath.endsWith(`${namespace}.yaml`)) {
+          isFilePathNamespace = true;
+          break;
+        }
+      }
+      if (isFilePathNamespace) {
         return;
       }
 
