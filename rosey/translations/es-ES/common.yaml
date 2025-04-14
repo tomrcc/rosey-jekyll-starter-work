@@ -1,3 +1,58 @@
+_inputs:
+  $:
+    type: object
+    comment: Translations that appear on many pages
+    options:
+      place_groups_below: false
+      groups:
+        - heading: Still to translate (es-ES)
+          comment: Text to translate
+          inputs:
+            - common:about
+            - common:blog
+            - common:elements
+            - common:home
+            - common:menu
+            - common:pages
+            - common:projects
+        - heading: Already translated (es-ES)
+          comment: Text already translated
+          inputs: []
+  common:about:
+    label: About
+    hidden: false
+    type: text
+    options: {}
+  common:blog:
+    label: Blog
+    hidden: false
+    type: text
+    options: {}
+  common:elements:
+    label: Elements
+    hidden: false
+    type: text
+    options: {}
+  common:home:
+    label: Home
+    hidden: false
+    type: text
+    options: {}
+  common:menu:
+    label: Menu
+    hidden: false
+    type: text
+    options: {}
+  common:pages:
+    label: Pages
+    hidden: false
+    type: text
+    options: {}
+  common:projects:
+    label: Projects
+    hidden: false
+    type: text
+    options: {}
 common:about: ""
 common:blog: ""
 common:elements: ""

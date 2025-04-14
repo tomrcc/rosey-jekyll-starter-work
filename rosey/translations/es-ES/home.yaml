@@ -1,4 +1,3 @@
-urlTranslation: index.html
 _inputs:
   $:
     type: object
@@ -53,6 +52,7 @@ _inputs:
     options: {}
     comment: "[See on
       page](https://driven-darkness.cloudvent.net/#:~:text=See%20my%20works)"
+urlTranslation: index.html
 get-in-touch: Ponte en contacto
 hi-there-i-am-vanessa-marley: Hola, soy Vanessa Marley.
 p-strong-photographer-strong-and-strong-visual-content-strategist-strong-from-albany-i-work-as-a-lifestyle-product-and-landscape-photographer-creating-images-for-a-diverse-range-of-requests-from-online-media-to-printed-artwork-p:
