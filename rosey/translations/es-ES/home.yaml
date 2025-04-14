@@ -1,15 +1,15 @@
 _inputs:
   $:
     type: object
-    comment: "[See ](https://driven-darkness.cloudvent.net/)"
+    comment: "[See ](https://daring-button.cloudvent.net/)"
     options:
       place_groups_below: false
       groups:
         - heading: Still to translate (es-ES)
-          comment: Text to translate on [](https://driven-darkness.cloudvent.net/)
+          comment: Text to translate on [](https://daring-button.cloudvent.net/)
           inputs: []
         - heading: Already translated (es-ES)
-          comment: Text already translated on [](https://driven-darkness.cloudvent.net/)
+          comment: Text already translated on [](https://daring-button.cloudvent.net/)
           inputs:
             - get-in-touch
             - hi-there-i-am-vanessa-marley
@@ -21,23 +21,23 @@ _inputs:
     type: text
     options: {}
     comment: "[See in
-      context](https://driven-darkness.cloudvent.net/#:~:text=Get%20in%20touch)"
+      context](https://daring-button.cloudvent.net/#:~:text=Get%20in%20touch)"
   hi-there-i-am-vanessa-marley:
     label: Hi there, I am Vanessa Marley
     hidden: false
     type: textarea
     options: {}
     comment: "[See in
-      context](https://driven-darkness.cloudvent.net/#:~:text=Hi%20there,%20I%2\
-      0am%20Vanessa%20Marley)"
+      context](https://daring-button.cloudvent.net/#:~:text=Hi%20there,%20I%20a\
+      m%20Vanessa%20Marley)"
   p-strong-photographer-strong-and-strong-visual-content-strategist-strong-from-albany-i-work-as-a-lifestyle-product-and-landscape-photographer-creating-images-for-a-diverse-range-of-requests-from-online-media-to-printed-artwork-p:
     label: Photographer and Visual Content Strategist...
     hidden: false
     type: textarea
     options: {}
     comment: "[See in
-      context](https://driven-darkness.cloudvent.net/#:~:text=Photographer%20an\
-      d%20Visual,to%20printed%20artwork)"
+      context](https://daring-button.cloudvent.net/#:~:text=Photographer%20and%\
+      20Visual,to%20printed%20artwork)"
     context:
       open: false
       title: Untranslated Text
@@ -51,7 +51,7 @@ _inputs:
     type: text
     options: {}
     comment: "[See in
-      context](https://driven-darkness.cloudvent.net/#:~:text=See%20my%20works)"
+      context](https://daring-button.cloudvent.net/#:~:text=See%20my%20works)"
 urlTranslation: index.html
 get-in-touch: Ponte en contacto
 hi-there-i-am-vanessa-marley: Hola, soy Vanessa Marley.
