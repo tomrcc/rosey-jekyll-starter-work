@@ -3,8 +3,8 @@ _inputs:
     type: object
     comment: "[See in context
       tag/rest](https://daring-button.cloudvent.net/tag/rest)  //  [See in git
-      history](https://github.com/tomrcc/rosey-jekyll-starter-workcommits/stagi\
-      ngtag/rest)"
+      history](https://github.com/tomrcc/rosey-jekyll-starter-work/commits/stag\
+      ing/tag/rest.html)"
     options:
       place_groups_below: false
       groups:
@@ -12,14 +12,14 @@ _inputs:
           comment: "[See in context
             tag/rest](https://daring-button.cloudvent.net/tag/rest)  //  [See in
             git
-            history](https://github.com/tomrcc/rosey-jekyll-starter-workcommits\
-            /stagingtag/rest)"
+            history](https://github.com/tomrcc/rosey-jekyll-starter-work/commit\
+            s/staging/tag/rest.html)"
           inputs: []
         - heading: Already translated (es-ES)
           comment: "[See in context
             tag/rest](https://daring-button.cloudvent.net/tag/rest)  //  [See in
             git
-            history](https://github.com/tomrcc/rosey-jekyll-starter-workcommits\
-            /stagingtag/rest)"
+            history](https://github.com/tomrcc/rosey-jekyll-starter-work/commit\
+            s/staging/tag/rest.html)"
           inputs: []
 urlTranslation: tag/rest.html

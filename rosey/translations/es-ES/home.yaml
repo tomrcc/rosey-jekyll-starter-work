@@ -4,8 +4,8 @@ _inputs:
     comment: "[See in context
       index.html](https://daring-button.cloudvent.net/index.html)  //  [See in
       git
-      history](https://github.com/tomrcc/rosey-jekyll-starter-workcommits/stagi\
-      ngindex.html)"
+      history](https://github.com/tomrcc/rosey-jekyll-starter-work/commits/stag\
+      ing/index.html)"
     options:
       place_groups_below: false
       groups:
@@ -13,15 +13,15 @@ _inputs:
           comment: "[See in context
             index.html](https://daring-button.cloudvent.net/index.html)  //  [S\
             ee in git
-            history](https://github.com/tomrcc/rosey-jekyll-starter-workcommits\
-            /stagingindex.html)"
+            history](https://github.com/tomrcc/rosey-jekyll-starter-work/commit\
+            s/staging/index.html)"
           inputs: []
         - heading: Already translated (es-ES)
           comment: "[See in context
             index.html](https://daring-button.cloudvent.net/index.html)  //  [S\
             ee in git
-            history](https://github.com/tomrcc/rosey-jekyll-starter-workcommits\
-            /stagingindex.html)"
+            history](https://github.com/tomrcc/rosey-jekyll-starter-work/commit\
+            s/staging/index.html)"
           inputs:
             - get-in-touch
             - hi-there-i-am-vanessa-marley

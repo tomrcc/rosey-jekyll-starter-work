@@ -4,8 +4,8 @@ _inputs:
     comment: "[See in context
       tag/lifestyle](https://daring-button.cloudvent.net/tag/lifestyle)  //  [S\
       ee in git
-      history](https://github.com/tomrcc/rosey-jekyll-starter-workcommits/stagi\
-      ngtag/lifestyle)"
+      history](https://github.com/tomrcc/rosey-jekyll-starter-work/commits/stag\
+      ing/tag/lifestyle.html)"
     options:
       place_groups_below: false
       groups:
@@ -13,14 +13,14 @@ _inputs:
           comment: "[See in context
             tag/lifestyle](https://daring-button.cloudvent.net/tag/lifestyle)  \
             //  [See in git
-            history](https://github.com/tomrcc/rosey-jekyll-starter-workcommits\
-            /stagingtag/lifestyle)"
+            history](https://github.com/tomrcc/rosey-jekyll-starter-work/commit\
+            s/staging/tag/lifestyle.html)"
           inputs: []
         - heading: Already translated (es-ES)
           comment: "[See in context
             tag/lifestyle](https://daring-button.cloudvent.net/tag/lifestyle)  \
             //  [See in git
-            history](https://github.com/tomrcc/rosey-jekyll-starter-workcommits\
-            /stagingtag/lifestyle)"
+            history](https://github.com/tomrcc/rosey-jekyll-starter-work/commit\
+            s/staging/tag/lifestyle.html)"
           inputs: []
 urlTranslation: tag/lifestyle.html

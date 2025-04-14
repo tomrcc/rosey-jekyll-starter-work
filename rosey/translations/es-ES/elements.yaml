@@ -3,8 +3,8 @@ _inputs:
     type: object
     comment: "[See in context
       elements/](https://daring-button.cloudvent.net/elements/)  //  [See in git
-      history](https://github.com/tomrcc/rosey-jekyll-starter-workcommits/stagi\
-      ngelements/)"
+      history](https://github.com/tomrcc/rosey-jekyll-starter-work/commits/stag\
+      ing/elements/index.html)"
     options:
       place_groups_below: false
       groups:
@@ -12,14 +12,14 @@ _inputs:
           comment: "[See in context
             elements/](https://daring-button.cloudvent.net/elements/)  //  [See
             in git
-            history](https://github.com/tomrcc/rosey-jekyll-starter-workcommits\
-            /stagingelements/)"
+            history](https://github.com/tomrcc/rosey-jekyll-starter-work/commit\
+            s/staging/elements/index.html)"
           inputs: []
         - heading: Already translated (es-ES)
           comment: "[See in context
             elements/](https://daring-button.cloudvent.net/elements/)  //  [See
             in git
-            history](https://github.com/tomrcc/rosey-jekyll-starter-workcommits\
-            /stagingelements/)"
+            history](https://github.com/tomrcc/rosey-jekyll-starter-work/commit\
+            s/staging/elements/index.html)"
           inputs: []
 urlTranslation: elements/index.html

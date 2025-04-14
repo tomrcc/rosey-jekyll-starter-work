@@ -4,8 +4,8 @@ _inputs:
     comment: "[See in context
       tag/travel](https://daring-button.cloudvent.net/tag/travel)  //  [See in
       git
-      history](https://github.com/tomrcc/rosey-jekyll-starter-workcommits/stagi\
-      ngtag/travel)"
+      history](https://github.com/tomrcc/rosey-jekyll-starter-work/commits/stag\
+      ing/tag/travel.html)"
     options:
       place_groups_below: false
       groups:
@@ -13,14 +13,14 @@ _inputs:
           comment: "[See in context
             tag/travel](https://daring-button.cloudvent.net/tag/travel)  //  [S\
             ee in git
-            history](https://github.com/tomrcc/rosey-jekyll-starter-workcommits\
-            /stagingtag/travel)"
+            history](https://github.com/tomrcc/rosey-jekyll-starter-work/commit\
+            s/staging/tag/travel.html)"
           inputs: []
         - heading: Already translated (es-ES)
           comment: "[See in context
             tag/travel](https://daring-button.cloudvent.net/tag/travel)  //  [S\
             ee in git
-            history](https://github.com/tomrcc/rosey-jekyll-starter-workcommits\
-            /stagingtag/travel)"
+            history](https://github.com/tomrcc/rosey-jekyll-starter-work/commit\
+            s/staging/tag/travel.html)"
           inputs: []
 urlTranslation: tag/travel.html
