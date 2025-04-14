@@ -1,4 +1,8 @@
 {
+	"about": {
+		"original": "About",
+		"value": "About"
+	},
 	"antelope-canyon": {
 		"original": "Antelope Canyon",
 		"value": "Antelope Canyon"
@@ -6,6 +10,10 @@
 	"big-airplane": {
 		"original": "Big airplane",
 		"value": "Big airplane"
+	},
+	"blog": {
+		"original": "Blog",
+		"value": "Blog"
 	},
 	"common:about": {
 		"original": "About",
@@ -39,6 +47,10 @@
 		"original": "Desk setup",
 		"value": "Desk setup"
 	},
+	"elements": {
+		"original": "Elements",
+		"value": "Elements"
+	},
 	"email-address": {
 		"original": "Email address",
 		"value": "Email address"
@@ -54,6 +66,10 @@
 	"hi-there-i-am-vanessa-marley": {
 		"original": "Hi there, I am Vanessa Marley",
 		"value": "Hola, soy Vanessa Marley."
+	},
+	"i-show-only-my-best-works-built-completely-with-passion-simplicity-and-creativity": {
+		"original": "I show only my best works built completely with passion, simplicity, and creativity!",
+		"value": "I show only my best works built completely with passion, simplicity, and creativity!"
 	},
 	"join-my-mailing-list": {
 		"original": "Join my mailing list",
@@ -107,6 +123,10 @@
 		"original": "Mountains",
 		"value": "Mountains"
 	},
+	"my-works": {
+		"original": "My works",
+		"value": "My works"
+	},
 	"notes": {
 		"original": "Notes",
 		"value": "Notes"
@@ -154,5 +174,9 @@
 	"travel": {
 		"original": "Travel",
 		"value": "Travel"
+	},
+	"vonge-blog-features-productivity-tips-inspiration-and-strategies-for-massive-profits-find-out-how-to-set-up-a-successful-blog-or-how-to-make-yours-even-better": {
+		"original": "Vonge blog features productivity, tips, inspiration and strategies for massive profits. Find out how to set up a successful blog or how to make yours even better!",
+		"value": "Vonge blog features productivity, tips, inspiration and strategies for massive profits. Find out how to set up a successful blog or how to make yours even better!"
 	}
 }

@@ -16,6 +16,7 @@ async function readFileWithFallback(filepath, fallbackString) {
     if (err.code === "ENOENT") {
       return fallbackString;
     }
+    console.log(`Error reading ${filepath}`);
     throw err;
   }
 }
@@ -93,7 +94,7 @@ function getYamlFileName(fileName) {
     return "";
   }
   return fileName
-    .replace("/index.html", "")
+    .replace("/index.html", ".yaml")
     .replace(".html", ".yaml")
     .replace("index", "home");
 }
