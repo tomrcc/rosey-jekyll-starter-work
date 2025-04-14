@@ -8,7 +8,7 @@ github_history:
   enabled: true
   repo_url: https://github.com/tomrcc/rosey-jekyll-starter-work
   branch_name: staging
-  comment_text: See in git history
+  comment_text: Git history
 namespace_pages:
   - common
 rosey_paths:
