@@ -1,22 +1,23 @@
 _inputs:
   $:
     type: object
-    comment: "[See about/](https://daring-button.cloudvent.net/about/)"
+    comment: "[See in context
+      about/](https://daring-button.cloudvent.net/about/)  //  [See in git
+      history](https://github.com/tomrcc/rosey-jekyll-starter-workcommits/stagi\
+      ngabout/)"
     options:
       place_groups_below: false
       groups:
         - heading: Still to translate (es-ES)
-          comment: >-
-            Text to translate on
-            [about/](https://daring-button.cloudvent.net/about/)
-
-            Some new line text?
+          comment: "[See in context
+            about/](https://daring-button.cloudvent.net/about/)  //  [See in git
+            history](https://github.com/tomrcc/rosey-jekyll-starter-workcommits\
+            /stagingabout/)"
           inputs: []
         - heading: Already translated (es-ES)
-          comment: >-
-            Text already translated on
-            [about/](https://daring-button.cloudvent.net/about/)
-
-            Some new line text which will be git link?
+          comment: "[See in context
+            about/](https://daring-button.cloudvent.net/about/)  //  [See in git
+            history](https://github.com/tomrcc/rosey-jekyll-starter-workcommits\
+            /stagingabout/)"
           inputs: []
 urlTranslation: about/index.html

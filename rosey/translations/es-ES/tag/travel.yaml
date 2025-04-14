@@ -1,22 +1,26 @@
 _inputs:
   $:
     type: object
-    comment: "[See tag/travel](https://daring-button.cloudvent.net/tag/travel)"
+    comment: "[See in context
+      tag/travel](https://daring-button.cloudvent.net/tag/travel)  //  [See in
+      git
+      history](https://github.com/tomrcc/rosey-jekyll-starter-workcommits/stagi\
+      ngtag/travel)"
     options:
       place_groups_below: false
       groups:
         - heading: Still to translate (es-ES)
-          comment: >-
-            Text to translate on
-            [tag/travel](https://daring-button.cloudvent.net/tag/travel)
-
-            Some new line text?
+          comment: "[See in context
+            tag/travel](https://daring-button.cloudvent.net/tag/travel)  //  [S\
+            ee in git
+            history](https://github.com/tomrcc/rosey-jekyll-starter-workcommits\
+            /stagingtag/travel)"
           inputs: []
         - heading: Already translated (es-ES)
-          comment: >-
-            Text already translated on
-            [tag/travel](https://daring-button.cloudvent.net/tag/travel)
-
-            Some new line text which will be git link?
+          comment: "[See in context
+            tag/travel](https://daring-button.cloudvent.net/tag/travel)  //  [S\
+            ee in git
+            history](https://github.com/tomrcc/rosey-jekyll-starter-workcommits\
+            /stagingtag/travel)"
           inputs: []
 urlTranslation: tag/travel.html

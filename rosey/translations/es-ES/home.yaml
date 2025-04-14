@@ -1,19 +1,27 @@
 _inputs:
   $:
     type: object
-    comment: "[See ](https://daring-button.cloudvent.net/)"
+    comment: "[See in context
+      index.html](https://daring-button.cloudvent.net/index.html)  //  [See in
+      git
+      history](https://github.com/tomrcc/rosey-jekyll-starter-workcommits/stagi\
+      ngindex.html)"
     options:
       place_groups_below: false
       groups:
         - heading: Still to translate (es-ES)
-          comment: |-
-            Text to translate on [](https://daring-button.cloudvent.net/)
-            Some new line text?
+          comment: "[See in context
+            index.html](https://daring-button.cloudvent.net/index.html)  //  [S\
+            ee in git
+            history](https://github.com/tomrcc/rosey-jekyll-starter-workcommits\
+            /stagingindex.html)"
           inputs: []
         - heading: Already translated (es-ES)
-          comment: |-
-            Text already translated on [](https://daring-button.cloudvent.net/)
-            Some new line text which will be git link?
+          comment: "[See in context
+            index.html](https://daring-button.cloudvent.net/index.html)  //  [S\
+            ee in git
+            history](https://github.com/tomrcc/rosey-jekyll-starter-workcommits\
+            /stagingindex.html)"
           inputs:
             - get-in-touch
             - hi-there-i-am-vanessa-marley
@@ -25,23 +33,24 @@ _inputs:
     type: text
     options: {}
     comment: "[See in
-      context](https://daring-button.cloudvent.net/#:~:text=Get%20in%20touch)"
+      context](https://daring-button.cloudvent.net/index.html#:~:text=Get%20in%\
+      20touch)"
   hi-there-i-am-vanessa-marley:
     label: Hi there, I am Vanessa Marley
     hidden: false
     type: textarea
     options: {}
     comment: "[See in
-      context](https://daring-button.cloudvent.net/#:~:text=Hi%20there,%20I%20a\
-      m%20Vanessa%20Marley)"
+      context](https://daring-button.cloudvent.net/index.html#:~:text=Hi%20ther\
+      e,%20I%20am%20Vanessa%20Marley)"
   p-strong-photographer-strong-and-strong-visual-content-strategist-strong-from-albany-i-work-as-a-lifestyle-product-and-landscape-photographer-creating-images-for-a-diverse-range-of-requests-from-online-media-to-printed-artwork-p:
     label: Photographer and Visual Content Strategist...
     hidden: false
     type: textarea
     options: {}
     comment: "[See in
-      context](https://daring-button.cloudvent.net/#:~:text=Photographer%20and%\
-      20Visual,to%20printed%20artwork)"
+      context](https://daring-button.cloudvent.net/index.html#:~:text=Photograp\
+      her%20and%20Visual,to%20printed%20artwork)"
     context:
       open: false
       title: Untranslated Text
@@ -55,7 +64,8 @@ _inputs:
     type: text
     options: {}
     comment: "[See in
-      context](https://daring-button.cloudvent.net/#:~:text=See%20my%20works)"
+      context](https://daring-button.cloudvent.net/index.html#:~:text=See%20my%\
+      20works)"
 urlTranslation: index.html
 get-in-touch: Ponte en contacto
 hi-there-i-am-vanessa-marley: Hola, soy Vanessa Marley.
