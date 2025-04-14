@@ -1,16 +1,75 @@
 _inputs:
   $:
     type: object
-    comment: "[See projects/](https://driven-darkness.cloudvent.net/projects/)"
+    comment: "[projects/](https://daring-button.cloudvent.net/projects/)  //  [Git
+      history](https://github.com/tomrcc/rosey-jekyll-starter-work/commits/stag\
+      ing/./rosey/translations/es-ES/projects.yaml)"
     options:
       place_groups_below: false
       groups:
         - heading: Still to translate (es-ES)
-          comment: Text to translate on
-            [projects/](https://driven-darkness.cloudvent.net/projects/)
-          inputs: []
+          comment: "[projects/](https://daring-button.cloudvent.net/projects/)  //  [Git
+            history](https://github.com/tomrcc/rosey-jekyll-starter-work/commit\
+            s/staging/./rosey/translations/es-ES/projects.yaml)"
+          inputs:
+            - email-address
+            - i-show-only-my-best-works-built-completely-with-passion-simplicity-and-creativity
+            - join-my-mailing-list
+            - my-works
+            - subscribe
         - heading: Already translated (es-ES)
-          comment: Text already translated on
-            [projects/](https://driven-darkness.cloudvent.net/projects/)
+          comment: "[projects/](https://daring-button.cloudvent.net/projects/)  //  [Git
+            history](https://github.com/tomrcc/rosey-jekyll-starter-work/commit\
+            s/staging/./rosey/translations/es-ES/projects.yaml)"
           inputs: []
+  email-address:
+    label: Email address
+    hidden: false
+    type: text
+    options: {}
+    comment: "[See in
+      context](https://daring-button.cloudvent.net/projects/#:~:text=Email%20ad\
+      dress)"
+  i-show-only-my-best-works-built-completely-with-passion-simplicity-and-creativity:
+    label: I show only my best works built completely...
+    hidden: false
+    type: textarea
+    options: {}
+    comment: "[See in
+      context](https://daring-button.cloudvent.net/projects/#:~:text=I%20show%2\
+      0only,simplicity)"
+    context:
+      open: false
+      title: Untranslated Text
+      icon: translate
+      content: I show only my best works built completely with passion, simplicity,
+        and creativity!
+  join-my-mailing-list:
+    label: Join my mailing list
+    hidden: false
+    type: textarea
+    options: {}
+    comment: "[See in
+      context](https://daring-button.cloudvent.net/projects/#:~:text=Join%20my%\
+      20mailing%20list)"
+  my-works:
+    label: My works
+    hidden: false
+    type: text
+    options: {}
+    comment: "[See in
+      context](https://daring-button.cloudvent.net/projects/#:~:text=My%20works\
+      )"
+  subscribe:
+    label: Subscribe
+    hidden: false
+    type: text
+    options: {}
+    comment: "[See in
+      context](https://daring-button.cloudvent.net/projects/#:~:text=Subscribe)"
 urlTranslation: projects/index.html
+email-address: ""
+i-show-only-my-best-works-built-completely-with-passion-simplicity-and-creativity: ""
+join-my-mailing-list: ""
+my-works: ""
+subscribe: suscribir

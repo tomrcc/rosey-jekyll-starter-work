@@ -1,16 +1,59 @@
 _inputs:
   $:
     type: object
-    comment: "[See tag/travel](https://driven-darkness.cloudvent.net/tag/travel)"
+    comment: "[tag/travel](https://daring-button.cloudvent.net/tag/travel)  //  [Git
+      history](https://github.com/tomrcc/rosey-jekyll-starter-work/commits/stag\
+      ing/./rosey/translations/es-ES/tag/travel.yaml)"
     options:
       place_groups_below: false
       groups:
         - heading: Still to translate (es-ES)
-          comment: Text to translate on
-            [tag/travel](https://driven-darkness.cloudvent.net/tag/travel)
-          inputs: []
+          comment: "[tag/travel](https://daring-button.cloudvent.net/tag/travel)  //  [Git
+            history](https://github.com/tomrcc/rosey-jekyll-starter-work/commit\
+            s/staging/./rosey/translations/es-ES/tag/travel.yaml)"
+          inputs:
+            - email-address
+            - join-my-mailing-list
+            - subscribe
+            - travel
         - heading: Already translated (es-ES)
-          comment: Text already translated on
-            [tag/travel](https://driven-darkness.cloudvent.net/tag/travel)
+          comment: "[tag/travel](https://daring-button.cloudvent.net/tag/travel)  //  [Git
+            history](https://github.com/tomrcc/rosey-jekyll-starter-work/commit\
+            s/staging/./rosey/translations/es-ES/tag/travel.yaml)"
           inputs: []
+  email-address:
+    label: Email address
+    hidden: false
+    type: text
+    options: {}
+    comment: "[See in
+      context](https://daring-button.cloudvent.net/tag/travel#:~:text=Email%20a\
+      ddress)"
+  join-my-mailing-list:
+    label: Join my mailing list
+    hidden: false
+    type: textarea
+    options: {}
+    comment: "[See in
+      context](https://daring-button.cloudvent.net/tag/travel#:~:text=Join%20my\
+      %20mailing%20list)"
+  subscribe:
+    label: Subscribe
+    hidden: false
+    type: text
+    options: {}
+    comment: "[See in
+      context](https://daring-button.cloudvent.net/tag/travel#:~:text=Subscribe\
+      )"
+  travel:
+    label: Travel
+    hidden: false
+    type: text
+    options: {}
+    comment: "[See in
+      context](https://daring-button.cloudvent.net/tag/travel#:~:text=Travel)"
 urlTranslation: tag/travel.html
+email-address: ""
+join-my-mailing-list: ""
+subscribe: suscribir
+travel: ""

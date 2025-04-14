@@ -1,16 +1,58 @@
 _inputs:
   $:
     type: object
-    comment: "[See tag/notes](https://driven-darkness.cloudvent.net/tag/notes)"
+    comment: "[tag/notes](https://daring-button.cloudvent.net/tag/notes)  //  [Git
+      history](https://github.com/tomrcc/rosey-jekyll-starter-work/commits/stag\
+      ing/./rosey/translations/es-ES/tag/notes.yaml)"
     options:
       place_groups_below: false
       groups:
         - heading: Still to translate (es-ES)
-          comment: Text to translate on
-            [tag/notes](https://driven-darkness.cloudvent.net/tag/notes)
-          inputs: []
+          comment: "[tag/notes](https://daring-button.cloudvent.net/tag/notes)  //  [Git
+            history](https://github.com/tomrcc/rosey-jekyll-starter-work/commit\
+            s/staging/./rosey/translations/es-ES/tag/notes.yaml)"
+          inputs:
+            - email-address
+            - join-my-mailing-list
+            - notes
+            - subscribe
         - heading: Already translated (es-ES)
-          comment: Text already translated on
-            [tag/notes](https://driven-darkness.cloudvent.net/tag/notes)
+          comment: "[tag/notes](https://daring-button.cloudvent.net/tag/notes)  //  [Git
+            history](https://github.com/tomrcc/rosey-jekyll-starter-work/commit\
+            s/staging/./rosey/translations/es-ES/tag/notes.yaml)"
           inputs: []
+  email-address:
+    label: Email address
+    hidden: false
+    type: text
+    options: {}
+    comment: "[See in
+      context](https://daring-button.cloudvent.net/tag/notes#:~:text=Email%20ad\
+      dress)"
+  join-my-mailing-list:
+    label: Join my mailing list
+    hidden: false
+    type: textarea
+    options: {}
+    comment: "[See in
+      context](https://daring-button.cloudvent.net/tag/notes#:~:text=Join%20my%\
+      20mailing%20list)"
+  notes:
+    label: Notes
+    hidden: false
+    type: text
+    options: {}
+    comment: "[See in
+      context](https://daring-button.cloudvent.net/tag/notes#:~:text=Notes)"
+  subscribe:
+    label: Subscribe
+    hidden: false
+    type: text
+    options: {}
+    comment: "[See in
+      context](https://daring-button.cloudvent.net/tag/notes#:~:text=Subscribe)"
 urlTranslation: tag/notes.html
+email-address: ""
+join-my-mailing-list: ""
+notes: ""
+subscribe: suscribir

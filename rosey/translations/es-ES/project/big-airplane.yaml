@@ -1,23 +1,57 @@
 _inputs:
   $:
     type: object
-    comment: "[See
-      project/big-airplane](https://driven-darkness.cloudvent.net/project/big-a\
-      irplane)"
+    comment: "[project/big-airplane](https://daring-button.cloudvent.net/project/bi\
+      g-airplane)  //  [Git
+      history](https://github.com/tomrcc/rosey-jekyll-starter-work/commits/stag\
+      ing/./rosey/translations/es-ES/project/big-airplane.yaml)"
     options:
       place_groups_below: false
       groups:
         - heading: Still to translate (es-ES)
-          comment: Text to translate on
-            [project/big-airplane](https://driven-darkness.cloudvent.net/project/big-airplane)
+          comment: "[project/big-airplane](https://daring-button.cloudvent.net/project/bi\
+            g-airplane)  //  [Git
+            history](https://github.com/tomrcc/rosey-jekyll-starter-work/commit\
+            s/staging/./rosey/translations/es-ES/project/big-airplane.yaml)"
           inputs:
+            - big-airplane
+            - email-address
+            - join-my-mailing-list
             - markdown:defecerit-sed-isti-ipsi-qui-voluptate-et-dolore-omnia-metiuntur-nonne-clamant-sapienti-plus-semper-adesse-quod-velit-quam-quod-nolit-quae-quidem-sapientes-sequuntur-duce-natura-tamquam-videntes-quod-enim-dissolutum-sit-id-esse-sine-sensu-quod-autem-sine-sensu-sunt-omnia-longum-est-enim-ad-omnia-respondere-quae-a-te-dicta-sunt-nam-cui-proposito-sit-conservatio-sui-necesse-est-huic-partes-quoque-sui-caras-suo-genere-laudabiles-servari
             - markdown:in-qua-quid-est-boni-praeter-summam-voluptatem-et-eam-sempiternam-cur-post-tarentum-ad-archytam-qua-ex-cognitione-facilior-facta-est-investigatio-rerum-occultissimarum-negat-enim-tenuissimo-victu-id-est-contemptissimis-escis-et-potionibus-minorem-voluptatem
             - markdown:praeteritis-inquit-gaudeo-praeteritis-inquit-gaudeo-quod-inquit-quamquam-voluptatibus-quibusdam-est-saepe-iucundius-tamen-expetitur-propter-voluptatem-scientiam-pollicentur-quam-non-erat-mirum-sapientiae-cupido-patria-esse-cariorem-non-quaeritur-autem-quid-naturae-tuae-consentaneum-sit-sed-quid-disciplinae-ita-ne-hoc-quidem-modo-paria-peccata-sunt-ita-prorsus-inquam-nunc-ita-separantur-ut-disiuncta-sint-quo-nihil-potest-esse-perversius-virtutibus-igitur-rectissime-mihi-videris-et-ad-consuetudinem-nostrae-orationis
+            - photography
+            - subscribe
         - heading: Already translated (es-ES)
-          comment: Text already translated on
-            [project/big-airplane](https://driven-darkness.cloudvent.net/project/big-airplane)
+          comment: "[project/big-airplane](https://daring-button.cloudvent.net/project/bi\
+            g-airplane)  //  [Git
+            history](https://github.com/tomrcc/rosey-jekyll-starter-work/commit\
+            s/staging/./rosey/translations/es-ES/project/big-airplane.yaml)"
           inputs: []
+  big-airplane:
+    label: Big airplane
+    hidden: false
+    type: text
+    options: {}
+    comment: "[See in
+      context](https://daring-button.cloudvent.net/project/big-airplane#:~:text\
+      =Big%20airplane)"
+  email-address:
+    label: Email address
+    hidden: false
+    type: text
+    options: {}
+    comment: "[See in
+      context](https://daring-button.cloudvent.net/project/big-airplane#:~:text\
+      =Email%20address)"
+  join-my-mailing-list:
+    label: Join my mailing list
+    hidden: false
+    type: textarea
+    options: {}
+    comment: "[See in
+      context](https://daring-button.cloudvent.net/project/big-airplane#:~:text\
+      =Join%20my%20mailing%20list)"
   markdown:defecerit-sed-isti-ipsi-qui-voluptate-et-dolore-omnia-metiuntur-nonne-clamant-sapienti-plus-semper-adesse-quod-velit-quam-quod-nolit-quae-quidem-sapientes-sequuntur-duce-natura-tamquam-videntes-quod-enim-dissolutum-sit-id-esse-sine-sensu-quod-autem-sine-sensu-sunt-omnia-longum-est-enim-ad-omnia-respondere-quae-a-te-dicta-sunt-nam-cui-proposito-sit-conservatio-sui-necesse-est-huic-partes-quoque-sui-caras-suo-genere-laudabiles-servari:
     label: Defecerit Sed isti ipsi, qui voluptate et ...
     hidden: false
@@ -33,8 +67,8 @@ _inputs:
       copyformatting: true
       blockquote: true
     comment: "[See in
-      context](https://driven-darkness.cloudvent.net/project/big-airplane#:~:te\
-      xt=Defecerit%20Sed%20isti,genere%20laudabiles%20servari)"
+      context](https://daring-button.cloudvent.net/project/big-airplane#:~:text\
+      =Defecerit%20Sed%20isti,genere%20laudabiles%20servari)"
     context:
       open: false
       title: Untranslated Text
@@ -61,8 +95,8 @@ _inputs:
       copyformatting: true
       blockquote: true
     comment: "[See in
-      context](https://driven-darkness.cloudvent.net/project/big-airplane#:~:te\
-      xt=In%20qua%20quid,potionibus)"
+      context](https://daring-button.cloudvent.net/project/big-airplane#:~:text\
+      =In%20qua%20quid,potionibus)"
     context:
       open: false
       title: Untranslated Text
@@ -86,8 +120,8 @@ _inputs:
       copyformatting: true
       blockquote: true
     comment: "[See in
-      context](https://driven-darkness.cloudvent.net/project/big-airplane#:~:te\
-      xt=Praeteritis,consuetudinem%20nostrae%20orationis)"
+      context](https://daring-button.cloudvent.net/project/big-airplane#:~:text\
+      =Praeteritis,consuetudinem%20nostrae%20orationis)"
     context:
       open: false
       title: Untranslated Text
@@ -100,7 +134,28 @@ _inputs:
         paria peccata sunt. Ita prorsus, inquam; Nunc ita separantur, ut
         disiuncta sint, quo nihil potest esse perversius. Virtutibus igitur
         rectissime mihi videris et ad consuetudinem nostrae orationis.
+  photography:
+    label: Photography
+    hidden: false
+    type: text
+    options: {}
+    comment: "[See in
+      context](https://daring-button.cloudvent.net/project/big-airplane#:~:text\
+      =Photography)"
+  subscribe:
+    label: Subscribe
+    hidden: false
+    type: text
+    options: {}
+    comment: "[See in
+      context](https://daring-button.cloudvent.net/project/big-airplane#:~:text\
+      =Subscribe)"
 urlTranslation: project/big-airplane.html
+big-airplane: ""
+email-address: ""
+join-my-mailing-list: ""
 markdown:defecerit-sed-isti-ipsi-qui-voluptate-et-dolore-omnia-metiuntur-nonne-clamant-sapienti-plus-semper-adesse-quod-velit-quam-quod-nolit-quae-quidem-sapientes-sequuntur-duce-natura-tamquam-videntes-quod-enim-dissolutum-sit-id-esse-sine-sensu-quod-autem-sine-sensu-sunt-omnia-longum-est-enim-ad-omnia-respondere-quae-a-te-dicta-sunt-nam-cui-proposito-sit-conservatio-sui-necesse-est-huic-partes-quoque-sui-caras-suo-genere-laudabiles-servari: ""
 markdown:in-qua-quid-est-boni-praeter-summam-voluptatem-et-eam-sempiternam-cur-post-tarentum-ad-archytam-qua-ex-cognitione-facilior-facta-est-investigatio-rerum-occultissimarum-negat-enim-tenuissimo-victu-id-est-contemptissimis-escis-et-potionibus-minorem-voluptatem: ""
 markdown:praeteritis-inquit-gaudeo-praeteritis-inquit-gaudeo-quod-inquit-quamquam-voluptatibus-quibusdam-est-saepe-iucundius-tamen-expetitur-propter-voluptatem-scientiam-pollicentur-quam-non-erat-mirum-sapientiae-cupido-patria-esse-cariorem-non-quaeritur-autem-quid-naturae-tuae-consentaneum-sit-sed-quid-disciplinae-ita-ne-hoc-quidem-modo-paria-peccata-sunt-ita-prorsus-inquam-nunc-ita-separantur-ut-disiuncta-sint-quo-nihil-potest-esse-perversius-virtutibus-igitur-rectissime-mihi-videris-et-ad-consuetudinem-nostrae-orationis: ""
+photography: ""
+subscribe: suscribir

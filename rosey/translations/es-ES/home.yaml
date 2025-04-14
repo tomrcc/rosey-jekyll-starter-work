@@ -1,43 +1,69 @@
 _inputs:
   $:
     type: object
-    comment: "[See ](https://driven-darkness.cloudvent.net/)"
+    comment: "[index.html](https://daring-button.cloudvent.net/index.html)  //  [Git
+      history](https://github.com/tomrcc/rosey-jekyll-starter-work/commits/stag\
+      ing/./rosey/translations/es-ES/home.yaml)"
     options:
       place_groups_below: false
       groups:
         - heading: Still to translate (es-ES)
-          comment: Text to translate on [](https://driven-darkness.cloudvent.net/)
-          inputs: []
+          comment: "[index.html](https://daring-button.cloudvent.net/index.html)  //  [Git
+            history](https://github.com/tomrcc/rosey-jekyll-starter-work/commit\
+            s/staging/./rosey/translations/es-ES/home.yaml)"
+          inputs:
+            - email-address
+            - join-my-mailing-list
+            - subscribe
         - heading: Already translated (es-ES)
-          comment: Text already translated on [](https://driven-darkness.cloudvent.net/)
+          comment: "[index.html](https://daring-button.cloudvent.net/index.html)  //  [Git
+            history](https://github.com/tomrcc/rosey-jekyll-starter-work/commit\
+            s/staging/./rosey/translations/es-ES/home.yaml)"
           inputs:
             - get-in-touch
             - hi-there-i-am-vanessa-marley
             - p-strong-photographer-strong-and-strong-visual-content-strategist-strong-from-albany-i-work-as-a-lifestyle-product-and-landscape-photographer-creating-images-for-a-diverse-range-of-requests-from-online-media-to-printed-artwork-p
             - see-my-works
+  email-address:
+    label: Email address
+    hidden: false
+    type: text
+    options: {}
+    comment: "[See in
+      context](https://daring-button.cloudvent.net/index.html#:~:text=Email%20a\
+      ddress)"
   get-in-touch:
     label: Get in touch
     hidden: false
     type: text
     options: {}
     comment: "[See in
-      context](https://driven-darkness.cloudvent.net/#:~:text=Get%20in%20touch)"
+      context](https://daring-button.cloudvent.net/index.html#:~:text=Get%20in%\
+      20touch)"
   hi-there-i-am-vanessa-marley:
     label: Hi there, I am Vanessa Marley
     hidden: false
     type: textarea
     options: {}
     comment: "[See in
-      context](https://driven-darkness.cloudvent.net/#:~:text=Hi%20there,%20I%2\
-      0am%20Vanessa%20Marley)"
+      context](https://daring-button.cloudvent.net/index.html#:~:text=Hi%20ther\
+      e,%20I%20am%20Vanessa%20Marley)"
+  join-my-mailing-list:
+    label: Join my mailing list
+    hidden: false
+    type: textarea
+    options: {}
+    comment: "[See in
+      context](https://daring-button.cloudvent.net/index.html#:~:text=Join%20my\
+      %20mailing%20list)"
   p-strong-photographer-strong-and-strong-visual-content-strategist-strong-from-albany-i-work-as-a-lifestyle-product-and-landscape-photographer-creating-images-for-a-diverse-range-of-requests-from-online-media-to-printed-artwork-p:
     label: Photographer and Visual Content Strategist...
     hidden: false
     type: textarea
     options: {}
     comment: "[See in
-      context](https://driven-darkness.cloudvent.net/#:~:text=Photographer%20an\
-      d%20Visual,to%20printed%20artwork)"
+      context](https://daring-button.cloudvent.net/index.html#:~:text=Photograp\
+      her%20and%20Visual,to%20printed%20artwork)"
     context:
       open: false
       title: Untranslated Text
@@ -51,12 +77,24 @@ _inputs:
     type: text
     options: {}
     comment: "[See in
-      context](https://driven-darkness.cloudvent.net/#:~:text=See%20my%20works)"
+      context](https://daring-button.cloudvent.net/index.html#:~:text=See%20my%\
+      20works)"
+  subscribe:
+    label: Subscribe
+    hidden: false
+    type: text
+    options: {}
+    comment: "[See in
+      context](https://daring-button.cloudvent.net/index.html#:~:text=Subscribe\
+      )"
 urlTranslation: index.html
+email-address: ""
 get-in-touch: Ponte en contacto
 hi-there-i-am-vanessa-marley: Hola, soy Vanessa Marley.
+join-my-mailing-list: ""
 p-strong-photographer-strong-and-strong-visual-content-strategist-strong-from-albany-i-work-as-a-lifestyle-product-and-landscape-photographer-creating-images-for-a-diverse-range-of-requests-from-online-media-to-printed-artwork-p:
   Fotógrafo y estratega de contenido visual de Albany. Trabajo como fotógrafo de
   estilo de vida, productos y paisajes, creando imágenes para una amplia gama de
   solicitudes, desde medios digitales hasta obras impresas.
 see-my-works: Ver mis trabajos
+subscribe: suscribir

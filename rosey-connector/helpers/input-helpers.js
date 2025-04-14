@@ -1,4 +1,4 @@
-import { getPageString } from "./file-helpers.js";
+import { getPageString, getYamlFileName } from "./file-helpers.js";
 import { formatMarkdownText } from "./markdown-formatters.js";
 import { NodeHtmlMarkdown } from "node-html-markdown";
 const nhm = new NodeHtmlMarkdown(
@@ -8,7 +8,14 @@ const nhm = new NodeHtmlMarkdown(
 );
 
 // Input set up
-function initDefaultInputs(data, page, locale, seeOnPageCommentSettings) {
+function initDefaultInputs(
+  data,
+  translationFilesDirPath,
+  page,
+  locale,
+  seeOnPageCommentSettings,
+  githubCommentSettings
+) {
   // Create the inputs obj if there is none
   if (!data._inputs) {
     data._inputs = {};
@@ -17,28 +24,38 @@ function initDefaultInputs(data, page, locale, seeOnPageCommentSettings) {
   // Create the page input object
   if (!data._inputs.$) {
     const pageString = getPageString(page);
+    const pageFilePath = getYamlFileName(page);
     const seeOnPageCommentEnabled = seeOnPageCommentSettings.enabled;
     const baseUrl = seeOnPageCommentSettings.base_url;
+    const githubCommentEnabled = githubCommentSettings.enabled;
+    const githubRepo = githubCommentSettings.repo_url;
+    const githubBranchName = githubCommentSettings.branch_name;
+    const githubCommentText = githubCommentSettings.comment_text;
+
+    let inputComment = "";
+    if (seeOnPageCommentEnabled) {
+      inputComment += `[${pageString}](${baseUrl}${pageString})`;
+    }
+    if (githubCommentEnabled) {
+      inputComment += `${
+        inputComment.length > 1 ? "  //  " : ""
+      }[${githubCommentText}](${githubRepo}/commits/${githubBranchName}/${translationFilesDirPath}/${locale}/${pageFilePath})`;
+    }
+
     data._inputs.$ = {
       type: "object",
-      comment: seeOnPageCommentEnabled
-        ? `[See ${pageString}](${baseUrl}${pageString})`
-        : "",
+      comment: inputComment,
       options: {
         place_groups_below: false,
         groups: [
           {
             heading: `Still to translate (${locale})`,
-            comment: seeOnPageCommentEnabled
-              ? `Text to translate on [${pageString}](${baseUrl}${pageString})`
-              : "",
+            comment: inputComment,
             inputs: [],
           },
           {
             heading: `Already translated (${locale})`,
-            comment: seeOnPageCommentEnabled
-              ? `Text already translated on [${pageString}](${baseUrl}${pageString})`
-              : "",
+            comment: inputComment,
             inputs: [],
           },
         ],

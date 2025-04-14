@@ -1,6 +1,38 @@
 {
   "version": 2,
   "keys": {
+    "about": {
+      "original": "About",
+      "value": null,
+      "pages": {
+        "about/index.html": 1
+      },
+      "total": 1
+    },
+    "antelope-canyon": {
+      "original": "Antelope Canyon",
+      "value": null,
+      "pages": {
+        "project/antelope-anyon.html": 1
+      },
+      "total": 1
+    },
+    "big-airplane": {
+      "original": "Big airplane",
+      "value": null,
+      "pages": {
+        "project/big-airplane.html": 1
+      },
+      "total": 1
+    },
+    "blog": {
+      "original": "Blog",
+      "value": null,
+      "pages": {
+        "blog/index.html": 1
+      },
+      "total": 1
+    },
     "common:about": {
       "original": "About",
       "value": null,
@@ -253,6 +285,58 @@
       },
       "total": 58
     },
+    "desk-setup": {
+      "original": "Desk setup",
+      "value": null,
+      "pages": {
+        "project/desk-setup.html": 1
+      },
+      "total": 1
+    },
+    "elements": {
+      "original": "Elements",
+      "value": null,
+      "pages": {
+        "elements/index.html": 1
+      },
+      "total": 1
+    },
+    "email-address": {
+      "original": "Email address",
+      "value": null,
+      "pages": {
+        "about/index.html": 1,
+        "blog/believe-and-act-as-if-it-were-impossible-to-fail.html": 1,
+        "blog/do-what-you-can-with-what-you-have-where-you-are.html": 1,
+        "blog/everything-has-beauty-but-not-everyone-can-see.html": 1,
+        "blog/index.html": 1,
+        "blog/it-is-never-too-late-to-be-what-you-might-have-been.html": 1,
+        "blog/life-shrinks-or-expands-in-proportion-to-one-s-courage.html": 1,
+        "blog/strive-not-to-be-a-success-but-rather-to-be-of-value.html": 1,
+        "blog/that-which-does-not-kill-us-makes-us-stronger.html": 1,
+        "blog/the-way-i-see-it-every-life-is-a-pile-of-good-things.html": 1,
+        "blog/you-must-be-the-change-you-wish-to-see-in-the-world.html": 1,
+        "elements/index.html": 1,
+        "index.html": 1,
+        "project/antelope-anyon.html": 1,
+        "project/big-airplane.html": 1,
+        "project/desk-setup.html": 1,
+        "project/green-plant.html": 1,
+        "project/mountains.html": 1,
+        "project/prague-city.html": 1,
+        "project/quiet-lake.html": 1,
+        "project/sea-and-rest.html": 1,
+        "project/the-rocks.html": 1,
+        "projects/index.html": 1,
+        "tag/life.html": 1,
+        "tag/lifestyle.html": 1,
+        "tag/notes.html": 1,
+        "tag/rest.html": 1,
+        "tag/story.html": 1,
+        "tag/travel.html": 1
+      },
+      "total": 29
+    },
     "get-in-touch": {
       "original": "Get in touch",
       "value": null,
@@ -261,11 +345,79 @@
       },
       "total": 1
     },
+    "green-plant": {
+      "original": "Green Plant",
+      "value": null,
+      "pages": {
+        "project/green-plant.html": 1
+      },
+      "total": 1
+    },
     "hi-there-i-am-vanessa-marley": {
       "original": "Hi there, I am Vanessa Marley",
       "value": null,
       "pages": {
         "index.html": 1
+      },
+      "total": 1
+    },
+    "i-show-only-my-best-works-built-completely-with-passion-simplicity-and-creativity": {
+      "original": "I show only my best works built completely with passion, simplicity, and creativity!",
+      "value": null,
+      "pages": {
+        "projects/index.html": 1
+      },
+      "total": 1
+    },
+    "join-my-mailing-list": {
+      "original": "Join my mailing list",
+      "value": null,
+      "pages": {
+        "about/index.html": 1,
+        "blog/believe-and-act-as-if-it-were-impossible-to-fail.html": 1,
+        "blog/do-what-you-can-with-what-you-have-where-you-are.html": 1,
+        "blog/everything-has-beauty-but-not-everyone-can-see.html": 1,
+        "blog/index.html": 1,
+        "blog/it-is-never-too-late-to-be-what-you-might-have-been.html": 1,
+        "blog/life-shrinks-or-expands-in-proportion-to-one-s-courage.html": 1,
+        "blog/strive-not-to-be-a-success-but-rather-to-be-of-value.html": 1,
+        "blog/that-which-does-not-kill-us-makes-us-stronger.html": 1,
+        "blog/the-way-i-see-it-every-life-is-a-pile-of-good-things.html": 1,
+        "blog/you-must-be-the-change-you-wish-to-see-in-the-world.html": 1,
+        "elements/index.html": 1,
+        "index.html": 1,
+        "project/antelope-anyon.html": 1,
+        "project/big-airplane.html": 1,
+        "project/desk-setup.html": 1,
+        "project/green-plant.html": 1,
+        "project/mountains.html": 1,
+        "project/prague-city.html": 1,
+        "project/quiet-lake.html": 1,
+        "project/sea-and-rest.html": 1,
+        "project/the-rocks.html": 1,
+        "projects/index.html": 1,
+        "tag/life.html": 1,
+        "tag/lifestyle.html": 1,
+        "tag/notes.html": 1,
+        "tag/rest.html": 1,
+        "tag/story.html": 1,
+        "tag/travel.html": 1
+      },
+      "total": 29
+    },
+    "life": {
+      "original": "Life",
+      "value": null,
+      "pages": {
+        "tag/life.html": 1
+      },
+      "total": 1
+    },
+    "lifestyle": {
+      "original": "Lifestyle",
+      "value": null,
+      "pages": {
+        "tag/lifestyle.html": 1
       },
       "total": 1
     },
@@ -413,6 +565,30 @@
       },
       "total": 9
     },
+    "mountains": {
+      "original": "Mountains",
+      "value": null,
+      "pages": {
+        "project/mountains.html": 1
+      },
+      "total": 1
+    },
+    "my-works": {
+      "original": "My works",
+      "value": null,
+      "pages": {
+        "projects/index.html": 1
+      },
+      "total": 1
+    },
+    "notes": {
+      "original": "Notes",
+      "value": null,
+      "pages": {
+        "tag/notes.html": 1
+      },
+      "total": 1
+    },
     "p-strong-photographer-strong-and-strong-visual-content-strategist-strong-from-albany-i-work-as-a-lifestyle-product-and-landscape-photographer-creating-images-for-a-diverse-range-of-requests-from-online-media-to-printed-artwork-p": {
       "original": "<p><strong>Photographer</strong> and <strong>Visual Content Strategist</strong> from Albany. I work as a lifestyle, product, and landscape photographer, creating images for a diverse range of requests, from online media to printed artwork.</p>",
       "value": null,
@@ -421,11 +597,127 @@
       },
       "total": 1
     },
+    "photography": {
+      "original": "Photography",
+      "value": null,
+      "pages": {
+        "project/antelope-anyon.html": 1,
+        "project/big-airplane.html": 1,
+        "project/desk-setup.html": 1,
+        "project/green-plant.html": 1,
+        "project/mountains.html": 1,
+        "project/prague-city.html": 1,
+        "project/quiet-lake.html": 1,
+        "project/sea-and-rest.html": 1,
+        "project/the-rocks.html": 1
+      },
+      "total": 9
+    },
+    "prague-city": {
+      "original": "Prague city",
+      "value": null,
+      "pages": {
+        "project/prague-city.html": 1
+      },
+      "total": 1
+    },
+    "quiet-lake": {
+      "original": "Quiet Lake",
+      "value": null,
+      "pages": {
+        "project/quiet-lake.html": 1
+      },
+      "total": 1
+    },
+    "rest": {
+      "original": "Rest",
+      "value": null,
+      "pages": {
+        "tag/rest.html": 1
+      },
+      "total": 1
+    },
+    "sea-and-rest": {
+      "original": "Sea and rest",
+      "value": null,
+      "pages": {
+        "project/sea-and-rest.html": 1
+      },
+      "total": 1
+    },
     "see-my-works": {
       "original": "\n                  See my works\n                ",
       "value": null,
       "pages": {
         "index.html": 1
+      },
+      "total": 1
+    },
+    "story": {
+      "original": "Story",
+      "value": null,
+      "pages": {
+        "tag/story.html": 1
+      },
+      "total": 1
+    },
+    "subscribe": {
+      "original": "Subscribe",
+      "value": null,
+      "pages": {
+        "about/index.html": 1,
+        "blog/believe-and-act-as-if-it-were-impossible-to-fail.html": 1,
+        "blog/do-what-you-can-with-what-you-have-where-you-are.html": 1,
+        "blog/everything-has-beauty-but-not-everyone-can-see.html": 1,
+        "blog/index.html": 1,
+        "blog/it-is-never-too-late-to-be-what-you-might-have-been.html": 1,
+        "blog/life-shrinks-or-expands-in-proportion-to-one-s-courage.html": 1,
+        "blog/strive-not-to-be-a-success-but-rather-to-be-of-value.html": 1,
+        "blog/that-which-does-not-kill-us-makes-us-stronger.html": 1,
+        "blog/the-way-i-see-it-every-life-is-a-pile-of-good-things.html": 1,
+        "blog/you-must-be-the-change-you-wish-to-see-in-the-world.html": 1,
+        "elements/index.html": 1,
+        "index.html": 1,
+        "project/antelope-anyon.html": 1,
+        "project/big-airplane.html": 1,
+        "project/desk-setup.html": 1,
+        "project/green-plant.html": 1,
+        "project/mountains.html": 1,
+        "project/prague-city.html": 1,
+        "project/quiet-lake.html": 1,
+        "project/sea-and-rest.html": 1,
+        "project/the-rocks.html": 1,
+        "projects/index.html": 1,
+        "tag/life.html": 1,
+        "tag/lifestyle.html": 1,
+        "tag/notes.html": 1,
+        "tag/rest.html": 1,
+        "tag/story.html": 1,
+        "tag/travel.html": 1
+      },
+      "total": 29
+    },
+    "the-rocks": {
+      "original": "The rocks",
+      "value": null,
+      "pages": {
+        "project/the-rocks.html": 1
+      },
+      "total": 1
+    },
+    "travel": {
+      "original": "Travel",
+      "value": null,
+      "pages": {
+        "tag/travel.html": 1
+      },
+      "total": 1
+    },
+    "vonge-blog-features-productivity-tips-inspiration-and-strategies-for-massive-profits-find-out-how-to-set-up-a-successful-blog-or-how-to-make-yours-even-better": {
+      "original": "Vonge blog features productivity, tips, inspiration and strategies for massive profits. Find out how to set up a successful blog or how to make yours even better!",
+      "value": null,
+      "pages": {
+        "blog/index.html": 1
       },
       "total": 1
     }
