@@ -8,7 +8,13 @@ const nhm = new NodeHtmlMarkdown(
 );
 
 // Input set up
-function initDefaultInputs(data, page, locale, seeOnPageCommentSettings) {
+function initDefaultInputs(
+  data,
+  page,
+  locale,
+  seeOnPageCommentSettings,
+  githubCommentSettings
+) {
   // Create the inputs obj if there is none
   if (!data._inputs) {
     data._inputs = {};
@@ -18,27 +24,37 @@ function initDefaultInputs(data, page, locale, seeOnPageCommentSettings) {
   if (!data._inputs.$) {
     const pageString = getPageString(page);
     const seeOnPageCommentEnabled = seeOnPageCommentSettings.enabled;
+    const seeOnPageCommentText = seeOnPageCommentSettings.comment_text;
     const baseUrl = seeOnPageCommentSettings.base_url;
+    const githubCommentEnabled = githubCommentSettings.enabled;
+    const githubRepo = githubCommentSettings.repo_url;
+    const githubBranchName = githubCommentSettings.branch_name;
+    const githubCommentText = githubCommentSettings.comment_text;
+
+    let inputComment = "";
+    if (seeOnPageCommentEnabled) {
+      inputComment += `[${seeOnPageCommentText} ${pageString}](${baseUrl}${pageString})`;
+    }
+    if (githubCommentEnabled) {
+      inputComment += `${
+        inputComment.length > 1 ? "  //  " : ""
+      }[${githubCommentText}](${githubRepo}commits/${githubBranchName}${pageString})`;
+    }
+
     data._inputs.$ = {
       type: "object",
-      comment: seeOnPageCommentEnabled
-        ? `[See ${pageString}](${baseUrl}${pageString})`
-        : "",
+      comment: inputComment,
       options: {
         place_groups_below: false,
         groups: [
           {
             heading: `Still to translate (${locale})`,
-            comment: seeOnPageCommentEnabled
-              ? `Text to translate on [${pageString}](${baseUrl}${pageString})\nSome new line text?`
-              : "",
+            comment: inputComment,
             inputs: [],
           },
           {
             heading: `Already translated (${locale})`,
-            comment: seeOnPageCommentEnabled
-              ? `Text already translated on [${pageString}](${baseUrl}${pageString})\nSome new line text which will be git link?`
-              : "",
+            comment: inputComment,
             inputs: [],
           },
         ],

@@ -99,6 +99,9 @@ function getYamlFileName(fileName) {
 }
 
 function getPageString(page) {
+  if (page === "index.html") {
+    return page;
+  }
   return page.replace(".html", "").replace("index", "");
 }
 

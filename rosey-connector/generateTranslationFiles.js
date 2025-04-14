@@ -27,6 +27,7 @@ export async function generateTranslationFiles(configData) {
   // Get all the config data
   const locales = configData.locales;
   const seeOnPageCommentSettings = configData.see_on_page_comment;
+  const githubCommentSettings = configData.github_history;
   const baseFilePath = configData.rosey_paths.rosey_base_file_path;
   const baseUrlFilePath = configData.rosey_paths.rosey_base_urls_file_path;
   const translationFilesDirPath = configData.rosey_paths.translations_dir_path;
@@ -45,6 +46,7 @@ export async function generateTranslationFiles(configData) {
     await generateTranslationFilesForLocale(
       locale,
       seeOnPageCommentSettings,
+      githubCommentSettings,
       baseFileData,
       baseUrlFileData,
       translationFilesDirPath,
@@ -59,6 +61,7 @@ export async function generateTranslationFiles(configData) {
 async function generateTranslationFilesForLocale(
   locale,
   seeOnPageCommentSettings,
+  githubCommentSettings,
   baseFileData,
   baseUrlFileData,
   translationFilesDirPath,
@@ -123,7 +126,8 @@ async function generateTranslationFilesForLocale(
         translationDataToWrite,
         page,
         locale,
-        seeOnPageCommentSettings
+        seeOnPageCommentSettings,
+        githubCommentSettings
       );
       // Process the url translation
       processUrlTranslation(translationFileData, translationDataToWrite, page);
