@@ -4,7 +4,7 @@ _inputs:
     comment: "[project/quiet-lake](https://daring-button.cloudvent.net/project/quie\
       t-lake)  //  [See in git
       history](https://github.com/tomrcc/rosey-jekyll-starter-work/commits/stag\
-      ing/./rosey/translations/es-ES/project/quiet-lake.html)"
+      ing/./rosey/translations/es-ES/project/quiet-lake.yaml)"
     options:
       place_groups_below: false
       groups:
@@ -12,7 +12,7 @@ _inputs:
           comment: "[project/quiet-lake](https://daring-button.cloudvent.net/project/quie\
             t-lake)  //  [See in git
             history](https://github.com/tomrcc/rosey-jekyll-starter-work/commit\
-            s/staging/./rosey/translations/es-ES/project/quiet-lake.html)"
+            s/staging/./rosey/translations/es-ES/project/quiet-lake.yaml)"
           inputs:
             - markdown:defecerit-sed-isti-ipsi-qui-voluptate-et-dolore-omnia-metiuntur-nonne-clamant-sapienti-plus-semper-adesse-quod-velit-quam-quod-nolit-quae-quidem-sapientes-sequuntur-duce-natura-tamquam-videntes-quod-enim-dissolutum-sit-id-esse-sine-sensu-quod-autem-sine-sensu-sunt-omnia-longum-est-enim-ad-omnia-respondere-quae-a-te-dicta-sunt-nam-cui-proposito-sit-conservatio-sui-necesse-est-huic-partes-quoque-sui-caras-suo-genere-laudabiles-servari
             - markdown:in-qua-quid-est-boni-praeter-summam-voluptatem-et-eam-sempiternam-cur-post-tarentum-ad-archytam-qua-ex-cognitione-facilior-facta-est-investigatio-rerum-occultissimarum-negat-enim-tenuissimo-victu-id-est-contemptissimis-escis-et-potionibus-minorem-voluptatem
@@ -21,7 +21,7 @@ _inputs:
           comment: "[project/quiet-lake](https://daring-button.cloudvent.net/project/quie\
             t-lake)  //  [See in git
             history](https://github.com/tomrcc/rosey-jekyll-starter-work/commit\
-            s/staging/./rosey/translations/es-ES/project/quiet-lake.html)"
+            s/staging/./rosey/translations/es-ES/project/quiet-lake.yaml)"
           inputs: []
   markdown:defecerit-sed-isti-ipsi-qui-voluptate-et-dolore-omnia-metiuntur-nonne-clamant-sapienti-plus-semper-adesse-quod-velit-quam-quod-nolit-quae-quidem-sapientes-sequuntur-duce-natura-tamquam-videntes-quod-enim-dissolutum-sit-id-esse-sine-sensu-quod-autem-sine-sensu-sunt-omnia-longum-est-enim-ad-omnia-respondere-quae-a-te-dicta-sunt-nam-cui-proposito-sit-conservatio-sui-necesse-est-huic-partes-quoque-sui-caras-suo-genere-laudabiles-servari:
     label: Defecerit Sed isti ipsi, qui voluptate et ...

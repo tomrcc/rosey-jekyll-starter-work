@@ -4,7 +4,7 @@ _inputs:
     comment: "[tag/rest](https://daring-button.cloudvent.net/tag/rest)  //  [See in
       git
       history](https://github.com/tomrcc/rosey-jekyll-starter-work/commits/stag\
-      ing/./rosey/translations/es-ES/tag/rest.html)"
+      ing/./rosey/translations/es-ES/tag/rest.yaml)"
     options:
       place_groups_below: false
       groups:
@@ -12,12 +12,12 @@ _inputs:
           comment: "[tag/rest](https://daring-button.cloudvent.net/tag/rest)  //  [See in
             git
             history](https://github.com/tomrcc/rosey-jekyll-starter-work/commit\
-            s/staging/./rosey/translations/es-ES/tag/rest.html)"
+            s/staging/./rosey/translations/es-ES/tag/rest.yaml)"
           inputs: []
         - heading: Already translated (es-ES)
           comment: "[tag/rest](https://daring-button.cloudvent.net/tag/rest)  //  [See in
             git
             history](https://github.com/tomrcc/rosey-jekyll-starter-work/commit\
-            s/staging/./rosey/translations/es-ES/tag/rest.html)"
+            s/staging/./rosey/translations/es-ES/tag/rest.yaml)"
           inputs: []
 urlTranslation: tag/rest.html

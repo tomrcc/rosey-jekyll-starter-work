@@ -4,7 +4,7 @@ _inputs:
     comment: "[index.html](https://daring-button.cloudvent.net/index.html)  //  [See
       in git
       history](https://github.com/tomrcc/rosey-jekyll-starter-work/commits/stag\
-      ing/./rosey/translations/es-ES/index.html)"
+      ing/./rosey/translations/es-ES/home.yaml)"
     options:
       place_groups_below: false
       groups:
@@ -12,13 +12,13 @@ _inputs:
           comment: "[index.html](https://daring-button.cloudvent.net/index.html)  //  [See
             in git
             history](https://github.com/tomrcc/rosey-jekyll-starter-work/commit\
-            s/staging/./rosey/translations/es-ES/index.html)"
+            s/staging/./rosey/translations/es-ES/home.yaml)"
           inputs: []
         - heading: Already translated (es-ES)
           comment: "[index.html](https://daring-button.cloudvent.net/index.html)  //  [See
             in git
             history](https://github.com/tomrcc/rosey-jekyll-starter-work/commit\
-            s/staging/./rosey/translations/es-ES/index.html)"
+            s/staging/./rosey/translations/es-ES/home.yaml)"
           inputs:
             - get-in-touch
             - hi-there-i-am-vanessa-marley
