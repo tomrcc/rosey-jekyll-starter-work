@@ -6,11 +6,17 @@ _inputs:
       place_groups_below: false
       groups:
         - heading: Still to translate (es-ES)
-          comment: Text to translate on
+          comment: >-
+            Text to translate on
             [elements/](https://daring-button.cloudvent.net/elements/)
+
+            Some new line text?
           inputs: []
         - heading: Already translated (es-ES)
-          comment: Text already translated on
+          comment: >-
+            Text already translated on
             [elements/](https://daring-button.cloudvent.net/elements/)
+
+            Some new line text which will be git link?
           inputs: []
 urlTranslation: elements/index.html

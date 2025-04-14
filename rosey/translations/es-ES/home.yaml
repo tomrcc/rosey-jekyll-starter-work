@@ -6,10 +6,14 @@ _inputs:
       place_groups_below: false
       groups:
         - heading: Still to translate (es-ES)
-          comment: Text to translate on [](https://daring-button.cloudvent.net/)
+          comment: |-
+            Text to translate on [](https://daring-button.cloudvent.net/)
+            Some new line text?
           inputs: []
         - heading: Already translated (es-ES)
-          comment: Text already translated on [](https://daring-button.cloudvent.net/)
+          comment: |-
+            Text already translated on [](https://daring-button.cloudvent.net/)
+            Some new line text which will be git link?
           inputs:
             - get-in-touch
             - hi-there-i-am-vanessa-marley
