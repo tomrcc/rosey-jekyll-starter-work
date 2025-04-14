@@ -141,6 +141,10 @@ async function removeOldTranslationFiles(
         return;
       }
 
+      if (filePath.endsWith("common.yaml")) {
+        return;
+      }
+
       const fileNameHtmlFormatted = getTranslationHtmlFilename(
         fileName,
         baseUrlFileDataKeys
@@ -148,7 +152,7 @@ async function removeOldTranslationFiles(
 
       if (!pages.includes(fileNameHtmlFormatted)) {
         console.log(
-          `🧹 The page ${fileNameHtmlFormatted} doesn't exist in the pages in our base.json - deleting!`
+          `🧹 The page ${filePath} doesn't exist in the pages in our base.json - deleting!`
         );
 
         await fs.promises.unlink(filePath);

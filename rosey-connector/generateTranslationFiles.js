@@ -75,7 +75,7 @@ async function generateTranslationFilesForLocale(
     recursive: true,
   });
 
-  // Remove translations pages no longer present in the base.json file
+  // Remove translations pages that are no longer present in the base.json file or are one of our namepace-created files
   await removeOldTranslationFiles(
     translationsFiles,
     translationsLocalePath,
