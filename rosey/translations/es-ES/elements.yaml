@@ -1,24 +1,24 @@
 _inputs:
   $:
     type: object
-    comment: "[elements/](https://daring-button.cloudvent.net/elements/)  //  [Git
-      history](https://github.com/tomrcc/rosey-jekyll-starter-work/commits/stag\
-      ing/./rosey/translations/es-ES/elements.yaml)"
+    comment: >-
+      [elements/](https://daring-button.cloudvent.net/elements/)  //  [Git
+      history](https://github.com/tomrcc/rosey-jekyll-starter-work/commits/staging/./rosey/translations/es-ES/elements.yaml)
     options:
       place_groups_below: false
       groups:
         - heading: Still to translate (es-ES)
-          comment: "[elements/](https://daring-button.cloudvent.net/elements/)  //  [Git
-            history](https://github.com/tomrcc/rosey-jekyll-starter-work/commit\
-            s/staging/./rosey/translations/es-ES/elements.yaml)"
+          comment: >-
+            [elements/](https://daring-button.cloudvent.net/elements/)  //  [Git
+            history](https://github.com/tomrcc/rosey-jekyll-starter-work/commits/staging/./rosey/translations/es-ES/elements.yaml)
           inputs:
             - email-address
             - join-my-mailing-list
             - subscribe
         - heading: Already translated (es-ES)
-          comment: "[elements/](https://daring-button.cloudvent.net/elements/)  //  [Git
-            history](https://github.com/tomrcc/rosey-jekyll-starter-work/commit\
-            s/staging/./rosey/translations/es-ES/elements.yaml)"
+          comment: >-
+            [elements/](https://daring-button.cloudvent.net/elements/)  //  [Git
+            history](https://github.com/tomrcc/rosey-jekyll-starter-work/commits/staging/./rosey/translations/es-ES/elements.yaml)
           inputs:
             - elements
   elements:
@@ -26,33 +26,35 @@ _inputs:
     hidden: false
     type: text
     options: {}
-    comment: "[See in
-      context](https://daring-button.cloudvent.net/elements/#:~:text=Elements)"
+    comment: >-
+      [See in
+      context](https://daring-button.cloudvent.net/elements/#:~:text=Elements)
   email-address:
     label: Email address
     hidden: false
     type: text
     options: {}
-    comment: "[See in
-      context](https://daring-button.cloudvent.net/elements/#:~:text=Email%20ad\
-      dress)"
+    comment: >-
+      [See in
+      context](https://daring-button.cloudvent.net/elements/#:~:text=Email%20address)
   join-my-mailing-list:
     label: Join my mailing list
     hidden: false
     type: textarea
     options: {}
-    comment: "[See in
-      context](https://daring-button.cloudvent.net/elements/#:~:text=Join%20my%\
-      20mailing%20list)"
+    comment: >-
+      [See in
+      context](https://daring-button.cloudvent.net/elements/#:~:text=Join%20my%20mailing%20list)
   subscribe:
     label: Subscribe
     hidden: false
     type: text
     options: {}
-    comment: "[See in
-      context](https://daring-button.cloudvent.net/elements/#:~:text=Subscribe)"
+    comment: >-
+      [See in
+      context](https://daring-button.cloudvent.net/elements/#:~:text=Subscribe)
 urlTranslation: elementos/index.html
 elements: Elementos
-email-address: ""
-join-my-mailing-list: ""
+email-address: Dupe 1
+join-my-mailing-list: Dupe 2
 subscribe: suscribir
