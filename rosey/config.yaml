@@ -1,5 +1,8 @@
 locales:
   - es-ES
+input_lengths:
+  label: 42
+  textarea: 20
 see_on_page_comment:
   enabled: true
   base_url: https://daring-button.cloudvent.net/

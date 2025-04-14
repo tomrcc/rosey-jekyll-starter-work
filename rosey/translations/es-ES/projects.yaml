@@ -12,16 +12,16 @@ _inputs:
             history](https://github.com/tomrcc/rosey-jekyll-starter-work/commit\
             s/staging/./rosey/translations/es-ES/projects.yaml)"
           inputs:
-            - email-address
             - i-show-only-my-best-works-built-completely-with-passion-simplicity-and-creativity
-            - join-my-mailing-list
             - my-works
-            - subscribe
         - heading: Already translated (es-ES)
           comment: "[projects/](https://daring-button.cloudvent.net/projects/)  //  [Git
             history](https://github.com/tomrcc/rosey-jekyll-starter-work/commit\
             s/staging/./rosey/translations/es-ES/projects.yaml)"
-          inputs: []
+          inputs:
+            - email-address
+            - join-my-mailing-list
+            - subscribe
   email-address:
     label: Email address
     hidden: false
@@ -68,8 +68,8 @@ _inputs:
     comment: "[See in
       context](https://daring-button.cloudvent.net/projects/#:~:text=Subscribe)"
 urlTranslation: projects/index.html
-email-address: ""
+email-address: Únete a mi lista de correo
 i-show-only-my-best-works-built-completely-with-passion-simplicity-and-creativity: ""
-join-my-mailing-list: ""
+join-my-mailing-list: Únete a mi lista de correo
 my-works: ""
 subscribe: suscribir

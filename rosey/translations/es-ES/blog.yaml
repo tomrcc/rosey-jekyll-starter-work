@@ -12,8 +12,6 @@ _inputs:
             history](https://github.com/tomrcc/rosey-jekyll-starter-work/commit\
             s/staging/./rosey/translations/es-ES/blog.yaml)"
           inputs:
-            - email-address
-            - join-my-mailing-list
             - vonge-blog-features-productivity-tips-inspiration-and-strategies-for-massive-profits-find-out-how-to-set-up-a-successful-blog-or-how-to-make-yours-even-better
         - heading: Already translated (es-ES)
           comment: "[blog/](https://daring-button.cloudvent.net/blog/)  //  [Git
@@ -21,6 +19,8 @@ _inputs:
             s/staging/./rosey/translations/es-ES/blog.yaml)"
           inputs:
             - blog
+            - email-address
+            - join-my-mailing-list
             - subscribe
   blog:
     label: Blog
@@ -68,7 +68,7 @@ _inputs:
         yours even better!
 urlTranslation: blog/index.html
 blog: Blog
-email-address: ""
-join-my-mailing-list: ""
+email-address: Únete a mi lista de correo
+join-my-mailing-list: Únete a mi lista de correo
 subscribe: suscribir
 vonge-blog-features-productivity-tips-inspiration-and-strategies-for-massive-profits-find-out-how-to-set-up-a-successful-blog-or-how-to-make-yours-even-better: ""

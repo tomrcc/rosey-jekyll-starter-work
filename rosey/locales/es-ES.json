@@ -25,7 +25,7 @@
 	},
 	"common:elements": {
 		"original": "Elements",
-		"value": "Acerca de"
+		"value": "Elementos"
 	},
 	"common:home": {
 		"original": "Home",
@@ -53,7 +53,7 @@
 	},
 	"email-address": {
 		"original": "Email address",
-		"value": "Email address"
+		"value": "Únete a mi lista de correo"
 	},
 	"get-in-touch": {
 		"original": "Get in touch",
@@ -73,7 +73,7 @@
 	},
 	"join-my-mailing-list": {
 		"original": "Join my mailing list",
-		"value": "Join my mailing list"
+		"value": "Únete a mi lista de correo"
 	},
 	"life": {
 		"original": "Life",
