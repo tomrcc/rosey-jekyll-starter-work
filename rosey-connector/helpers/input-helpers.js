@@ -10,6 +10,7 @@ const nhm = new NodeHtmlMarkdown(
 // Input set up
 function initDefaultInputs(
   data,
+  translationFilesDirPath,
   page,
   locale,
   seeOnPageCommentSettings,
@@ -24,7 +25,6 @@ function initDefaultInputs(
   if (!data._inputs.$) {
     const pageString = getPageString(page);
     const seeOnPageCommentEnabled = seeOnPageCommentSettings.enabled;
-    const seeOnPageCommentText = seeOnPageCommentSettings.comment_text;
     const baseUrl = seeOnPageCommentSettings.base_url;
     const githubCommentEnabled = githubCommentSettings.enabled;
     const githubRepo = githubCommentSettings.repo_url;
@@ -33,12 +33,12 @@ function initDefaultInputs(
 
     let inputComment = "";
     if (seeOnPageCommentEnabled) {
-      inputComment += `[${seeOnPageCommentText} ${pageString}](${baseUrl}${pageString})`;
+      inputComment += `[${pageString}](${baseUrl}${pageString})`;
     }
     if (githubCommentEnabled) {
       inputComment += `${
         inputComment.length > 1 ? "  //  " : ""
-      }[${githubCommentText}](${githubRepo}/commits/${githubBranchName}/${page})`;
+      }[${githubCommentText}](${githubRepo}/commits/${githubBranchName}/${translationFilesDirPath}/${locale}/${page})`;
     }
 
     data._inputs.$ = {

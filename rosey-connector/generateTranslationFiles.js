@@ -124,6 +124,7 @@ async function generateTranslationFilesForLocale(
       // Set up inputs for the page if none exist already
       initDefaultInputs(
         translationDataToWrite,
+        translationFilesDirPath,
         page,
         locale,
         seeOnPageCommentSettings,
