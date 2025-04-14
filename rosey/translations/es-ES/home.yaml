@@ -1,27 +1,24 @@
 _inputs:
   $:
     type: object
-    comment: "[See in context
-      index.html](https://daring-button.cloudvent.net/index.html)  //  [See in
-      git
+    comment: "[index.html](https://daring-button.cloudvent.net/index.html)  //  [See
+      in git
       history](https://github.com/tomrcc/rosey-jekyll-starter-work/commits/stag\
-      ing/index.html)"
+      ing/./rosey/translations/es-ES/index.html)"
     options:
       place_groups_below: false
       groups:
         - heading: Still to translate (es-ES)
-          comment: "[See in context
-            index.html](https://daring-button.cloudvent.net/index.html)  //  [S\
-            ee in git
+          comment: "[index.html](https://daring-button.cloudvent.net/index.html)  //  [See
+            in git
             history](https://github.com/tomrcc/rosey-jekyll-starter-work/commit\
-            s/staging/index.html)"
+            s/staging/./rosey/translations/es-ES/index.html)"
           inputs: []
         - heading: Already translated (es-ES)
-          comment: "[See in context
-            index.html](https://daring-button.cloudvent.net/index.html)  //  [S\
-            ee in git
+          comment: "[index.html](https://daring-button.cloudvent.net/index.html)  //  [See
+            in git
             history](https://github.com/tomrcc/rosey-jekyll-starter-work/commit\
-            s/staging/index.html)"
+            s/staging/./rosey/translations/es-ES/index.html)"
           inputs:
             - get-in-touch
             - hi-there-i-am-vanessa-marley

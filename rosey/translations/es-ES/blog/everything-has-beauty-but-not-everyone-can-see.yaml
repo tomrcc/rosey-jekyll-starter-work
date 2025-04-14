@@ -1,22 +1,22 @@
 _inputs:
   $:
     type: object
-    comment: "[See in context
-      blog/everything-has-beauty-but-not-everyone-can-see](https://daring-butto\
-      n.cloudvent.net/blog/everything-has-beauty-but-not-everyone-can-see)  //  \
-      [See in git
+    comment: "[blog/everything-has-beauty-but-not-everyone-can-see](https://daring-\
+      button.cloudvent.net/blog/everything-has-beauty-but-not-everyone-can-see)  \
+      //  [See in git
       history](https://github.com/tomrcc/rosey-jekyll-starter-work/commits/stag\
-      ing/blog/everything-has-beauty-but-not-everyone-can-see.html)"
+      ing/./rosey/translations/es-ES/blog/everything-has-beauty-but-not-everyon\
+      e-can-see.html)"
     options:
       place_groups_below: false
       groups:
         - heading: Still to translate (es-ES)
-          comment: "[See in context
-            blog/everything-has-beauty-but-not-everyone-can-see](https://daring\
-            -button.cloudvent.net/blog/everything-has-beauty-but-not-everyone-c\
-            an-see)  //  [See in git
+          comment: "[blog/everything-has-beauty-but-not-everyone-can-see](https://daring-\
+            button.cloudvent.net/blog/everything-has-beauty-but-not-everyone-ca\
+            n-see)  //  [See in git
             history](https://github.com/tomrcc/rosey-jekyll-starter-work/commit\
-            s/staging/blog/everything-has-beauty-but-not-everyone-can-see.html)"
+            s/staging/./rosey/translations/es-ES/blog/everything-has-beauty-but\
+            -not-everyone-can-see.html)"
           inputs:
             - markdown:ego-quoque-inquit-didicerim-libentius-si-quid-attuleris-quam-te-reprehenderim-i-am-quod-insipientes-alios-ita-esse-ut-nullo-modo-ad-sapientiam-possent-pervenire-alios-qui-possent-si-id-egissent-sapientiam-consequi-id-quaeris-inquam-in-quo-utrum-respondero-verses-te-huc-atque-illuc-necesse-est-sed-quid-ages-tandem-si-utilitas-ab-amicitia-ut-fit-saepe-oratio-defecerit-sed-isti-ipsi-qui-voluptate-et-dolore-omnia-metiuntur-nonne-clamant-sapienti-plus-semper-adesse-quod-velit-quam-quod-nolit-quae-quidem-sapientes-sequuntur-duce-natura-tamquam-videntes-quod-enim-dissolutum-sit-id-esse-sine-sensu-quod-autem-sine-sensu-sit-id-nihil-ad-nos-pertinere-omnino-idne-consensisse-de-calatino-plurimas-gentis-cantibus-arbitramur-primarium-populi-fuisse-quod-praestantissimus-fuisset-in-conficiendis-disseretur-voluptatibus-utram-tandem-linguam-nescio-quod-dicit-epicurus-voluptate-terra-perfectio
             - markdown:in-omni-enim-arte-vel-studio-vel-quavis-scientia-velas-in-ipsa-virtute-optimum-quidque-est-quod-est-ut-dixi-habere-ea-quae-secundum-naturam-sint-vel-omnia-vel-plurima-et-maxima-quodsi-ipsam-honestatem-undique-pertectam-atque-absolutam-tecum-optime-deindestum-etiam-cum-mediocri-amico-neque-enim-disputari-sine-reprehensione-nec-cum-iracundia-aut-pertinacia-recte-disputari-potest-an-partus-ancillae-sitned-in-fructum-habendus-disseretur-inter-principes-civitatis-p-ut-in-geometria-prima-si-dederis-danda-sunt-omnia-longum-est-enim-ad-omnia-respondere-quae-a-te-dicta-sunt-nam-cui-proposito-sintero-conservatio-sui-necesse-est-huic-partes-quoque-sui-caras-suo-genere-laudabiles-rarissimum-servari-tinere
@@ -25,12 +25,12 @@ _inputs:
             - markdown:sin-tantum-modo-ad-indicia-veteris-memoriae-cognoscenda-curiosorum-haec-et-tu-ita-posuisti-et-verba-vestra-sunt-idemne-potest-esse-dies-saepius-qui-semel-fuit-ampulla-enim-sit-necne-sit-quis-non-iure-optimo-irrideatur-si-laboret-ego-vero-volo-in-virtute-vim-esse-quam-maximam-serpere-anguiculos-nare-anaticulas-evolare-merulas-cornibus-uti-videmus-boves-nepas-aculeis-archytam-qua-ex-cognitione-facilior-facta-est-investiga
             - markdown:the-longer-i-live-the-more-i-realize-that-i-am-never-wrong-about-anything-and-that-all-the-pains-i-have-so-humbly-taken-to-verify-my-notions-have-only-wasted-my-time
         - heading: Already translated (es-ES)
-          comment: "[See in context
-            blog/everything-has-beauty-but-not-everyone-can-see](https://daring\
-            -button.cloudvent.net/blog/everything-has-beauty-but-not-everyone-c\
-            an-see)  //  [See in git
+          comment: "[blog/everything-has-beauty-but-not-everyone-can-see](https://daring-\
+            button.cloudvent.net/blog/everything-has-beauty-but-not-everyone-ca\
+            n-see)  //  [See in git
             history](https://github.com/tomrcc/rosey-jekyll-starter-work/commit\
-            s/staging/blog/everything-has-beauty-but-not-everyone-can-see.html)"
+            s/staging/./rosey/translations/es-ES/blog/everything-has-beauty-but\
+            -not-everyone-can-see.html)"
           inputs: []
   markdown:ego-quoque-inquit-didicerim-libentius-si-quid-attuleris-quam-te-reprehenderim-i-am-quod-insipientes-alios-ita-esse-ut-nullo-modo-ad-sapientiam-possent-pervenire-alios-qui-possent-si-id-egissent-sapientiam-consequi-id-quaeris-inquam-in-quo-utrum-respondero-verses-te-huc-atque-illuc-necesse-est-sed-quid-ages-tandem-si-utilitas-ab-amicitia-ut-fit-saepe-oratio-defecerit-sed-isti-ipsi-qui-voluptate-et-dolore-omnia-metiuntur-nonne-clamant-sapienti-plus-semper-adesse-quod-velit-quam-quod-nolit-quae-quidem-sapientes-sequuntur-duce-natura-tamquam-videntes-quod-enim-dissolutum-sit-id-esse-sine-sensu-quod-autem-sine-sensu-sit-id-nihil-ad-nos-pertinere-omnino-idne-consensisse-de-calatino-plurimas-gentis-cantibus-arbitramur-primarium-populi-fuisse-quod-praestantissimus-fuisset-in-conficiendis-disseretur-voluptatibus-utram-tandem-linguam-nescio-quod-dicit-epicurus-voluptate-terra-perfectio:
     label: Ego quoque, inquit, didicerim libentius si...

@@ -1,25 +1,23 @@
 _inputs:
   $:
     type: object
-    comment: "[See in context
-      tag/life](https://daring-button.cloudvent.net/tag/life)  //  [See in git
+    comment: "[tag/life](https://daring-button.cloudvent.net/tag/life)  //  [See in
+      git
       history](https://github.com/tomrcc/rosey-jekyll-starter-work/commits/stag\
-      ing/tag/life.html)"
+      ing/./rosey/translations/es-ES/tag/life.html)"
     options:
       place_groups_below: false
       groups:
         - heading: Still to translate (es-ES)
-          comment: "[See in context
-            tag/life](https://daring-button.cloudvent.net/tag/life)  //  [See in
+          comment: "[tag/life](https://daring-button.cloudvent.net/tag/life)  //  [See in
             git
             history](https://github.com/tomrcc/rosey-jekyll-starter-work/commit\
-            s/staging/tag/life.html)"
+            s/staging/./rosey/translations/es-ES/tag/life.html)"
           inputs: []
         - heading: Already translated (es-ES)
-          comment: "[See in context
-            tag/life](https://daring-button.cloudvent.net/tag/life)  //  [See in
+          comment: "[tag/life](https://daring-button.cloudvent.net/tag/life)  //  [See in
             git
             history](https://github.com/tomrcc/rosey-jekyll-starter-work/commit\
-            s/staging/tag/life.html)"
+            s/staging/./rosey/translations/es-ES/tag/life.html)"
           inputs: []
 urlTranslation: tag/life.html

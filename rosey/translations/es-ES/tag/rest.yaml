@@ -1,25 +1,23 @@
 _inputs:
   $:
     type: object
-    comment: "[See in context
-      tag/rest](https://daring-button.cloudvent.net/tag/rest)  //  [See in git
+    comment: "[tag/rest](https://daring-button.cloudvent.net/tag/rest)  //  [See in
+      git
       history](https://github.com/tomrcc/rosey-jekyll-starter-work/commits/stag\
-      ing/tag/rest.html)"
+      ing/./rosey/translations/es-ES/tag/rest.html)"
     options:
       place_groups_below: false
       groups:
         - heading: Still to translate (es-ES)
-          comment: "[See in context
-            tag/rest](https://daring-button.cloudvent.net/tag/rest)  //  [See in
+          comment: "[tag/rest](https://daring-button.cloudvent.net/tag/rest)  //  [See in
             git
             history](https://github.com/tomrcc/rosey-jekyll-starter-work/commit\
-            s/staging/tag/rest.html)"
+            s/staging/./rosey/translations/es-ES/tag/rest.html)"
           inputs: []
         - heading: Already translated (es-ES)
-          comment: "[See in context
-            tag/rest](https://daring-button.cloudvent.net/tag/rest)  //  [See in
+          comment: "[tag/rest](https://daring-button.cloudvent.net/tag/rest)  //  [See in
             git
             history](https://github.com/tomrcc/rosey-jekyll-starter-work/commit\
-            s/staging/tag/rest.html)"
+            s/staging/./rosey/translations/es-ES/tag/rest.html)"
           inputs: []
 urlTranslation: tag/rest.html
