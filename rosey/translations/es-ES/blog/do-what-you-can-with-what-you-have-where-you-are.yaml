@@ -3,14 +3,14 @@ _inputs:
     type: object
     comment: "[See
       blog/do-what-you-can-with-what-you-have-where-you-are](https://driven-dar\
-      kness.cloudvent.net/broken/blog/do-what-you-can-with-what-you-have-where-\
-      you-are)"
+      kness.cloudvent.net/blog/do-what-you-can-with-what-you-have-where-you-are\
+      )"
     options:
       place_groups_below: false
       groups:
         - heading: Still to translate (es-ES)
           comment: Text to translate on
-            [blog/do-what-you-can-with-what-you-have-where-you-are](https://driven-darkness.cloudvent.net/broken/blog/do-what-you-can-with-what-you-have-where-you-are)
+            [blog/do-what-you-can-with-what-you-have-where-you-are](https://driven-darkness.cloudvent.net/blog/do-what-you-can-with-what-you-have-where-you-are)
           inputs:
             - markdown:ego-quoque-inquit-didicerim-libentius-si-quid-attuleris-quam-te-reprehenderim-i-am-quod-insipientes-alios-ita-esse-ut-nullo-modo-ad-sapientiam-possent-pervenire-alios-qui-possent-si-id-egissent-sapientiam-consequi-id-quaeris-inquam-in-quo-utrum-respondero-verses-te-huc-atque-illuc-necesse-est-sed-quid-ages-tandem-si-utilitas-ab-amicitia-ut-fit-saepe-oratio-defecerit-sed-isti-ipsi-qui-voluptate-et-dolore-omnia-metiuntur-nonne-clamant-sapienti-plus-semper-adesse-quod-velit-quam-quod-nolit-quae-quidem-sapientes-sequuntur-duce-natura-tamquam-videntes-quod-enim-dissolutum-sit-id-esse-sine-sensu-quod-autem-sine-sensu-sit-id-nihil-ad-nos-pertinere-omnino-idne-consensisse-de-calatino-plurimas-gentis-cantibus-arbitramur-primarium-populi-fuisse-quod-praestantissimus-fuisset-in-conficiendis-disseretur-voluptatibus-utram-tandem-linguam-nescio-quod-dicit-epicurus-voluptate-terra-perfectio
             - markdown:in-omni-enim-arte-vel-studio-vel-quavis-scientia-velas-in-ipsa-virtute-optimum-quidque-est-quod-est-ut-dixi-habere-ea-quae-secundum-naturam-sint-vel-omnia-vel-plurima-et-maxima-quodsi-ipsam-honestatem-undique-pertectam-atque-absolutam-tecum-optime-deindestum-etiam-cum-mediocri-amico-neque-enim-disputari-sine-reprehensione-nec-cum-iracundia-aut-pertinacia-recte-disputari-potest-an-partus-ancillae-sitned-in-fructum-habendus-disseretur-inter-principes-civitatis-p-ut-in-geometria-prima-si-dederis-danda-sunt-omnia-longum-est-enim-ad-omnia-respondere-quae-a-te-dicta-sunt-nam-cui-proposito-sintero-conservatio-sui-necesse-est-huic-partes-quoque-sui-caras-suo-genere-laudabiles-rarissimum-servari-tinere
@@ -20,7 +20,7 @@ _inputs:
             - markdown:the-longer-i-live-the-more-i-realize-that-i-am-never-wrong-about-anything-and-that-all-the-pains-i-have-so-humbly-taken-to-verify-my-notions-have-only-wasted-my-time
         - heading: Already translated (es-ES)
           comment: Text already translated on
-            [blog/do-what-you-can-with-what-you-have-where-you-are](https://driven-darkness.cloudvent.net/broken/blog/do-what-you-can-with-what-you-have-where-you-are)
+            [blog/do-what-you-can-with-what-you-have-where-you-are](https://driven-darkness.cloudvent.net/blog/do-what-you-can-with-what-you-have-where-you-are)
           inputs: []
   markdown:ego-quoque-inquit-didicerim-libentius-si-quid-attuleris-quam-te-reprehenderim-i-am-quod-insipientes-alios-ita-esse-ut-nullo-modo-ad-sapientiam-possent-pervenire-alios-qui-possent-si-id-egissent-sapientiam-consequi-id-quaeris-inquam-in-quo-utrum-respondero-verses-te-huc-atque-illuc-necesse-est-sed-quid-ages-tandem-si-utilitas-ab-amicitia-ut-fit-saepe-oratio-defecerit-sed-isti-ipsi-qui-voluptate-et-dolore-omnia-metiuntur-nonne-clamant-sapienti-plus-semper-adesse-quod-velit-quam-quod-nolit-quae-quidem-sapientes-sequuntur-duce-natura-tamquam-videntes-quod-enim-dissolutum-sit-id-esse-sine-sensu-quod-autem-sine-sensu-sit-id-nihil-ad-nos-pertinere-omnino-idne-consensisse-de-calatino-plurimas-gentis-cantibus-arbitramur-primarium-populi-fuisse-quod-praestantissimus-fuisset-in-conficiendis-disseretur-voluptatibus-utram-tandem-linguam-nescio-quod-dicit-epicurus-voluptate-terra-perfectio:
     label: Ego quoque, inquit, didicerim libentius si...
@@ -37,9 +37,9 @@ _inputs:
       copyformatting: true
       blockquote: true
     comment: "[See in
-      context](https://driven-darkness.cloudvent.net/broken/blog/do-what-you-ca\
-      n-with-what-you-have-where-you-are#:~:text=Ego%20quoque,voluptate%20terra\
-      %20perfectio)"
+      context](https://driven-darkness.cloudvent.net/blog/do-what-you-can-with-\
+      what-you-have-where-you-are#:~:text=Ego%20quoque,voluptate%20terra%20perf\
+      ectio)"
     context:
       open: false
       title: Untranslated Text
@@ -73,9 +73,9 @@ _inputs:
       copyformatting: true
       blockquote: true
     comment: "[See in
-      context](https://driven-darkness.cloudvent.net/broken/blog/do-what-you-ca\
-      n-with-what-you-have-where-you-are#:~:text=In%20omni%20enim,rarissimum%20\
-      servari%20tinere)"
+      context](https://driven-darkness.cloudvent.net/blog/do-what-you-can-with-\
+      what-you-have-where-you-are#:~:text=In%20omni%20enim,rarissimum%20servari\
+      %20tinere)"
     context:
       open: false
       title: Untranslated Text
@@ -106,9 +106,8 @@ _inputs:
       copyformatting: true
       blockquote: true
     comment: "[See in
-      context](https://driven-darkness.cloudvent.net/broken/blog/do-what-you-ca\
-      n-with-what-you-have-where-you-are#:~:text=In%20qua%20quid,videatur%20in%\
-      20nis)"
+      context](https://driven-darkness.cloudvent.net/blog/do-what-you-can-with-\
+      what-you-have-where-you-are#:~:text=In%20qua%20quid,videatur%20in%20nis)"
     context:
       open: false
       title: Untranslated Text
@@ -139,9 +138,9 @@ _inputs:
       copyformatting: true
       blockquote: true
     comment: "[See in
-      context](https://driven-darkness.cloudvent.net/broken/blog/do-what-you-ca\
-      n-with-what-you-have-where-you-are#:~:text=Qua%20ex%20cognitione,disputar\
-      i%20sine%20potissimum)"
+      context](https://driven-darkness.cloudvent.net/blog/do-what-you-can-with-\
+      what-you-have-where-you-are#:~:text=Qua%20ex%20cognitione,disputari%20sin\
+      e%20potissimum)"
     context:
       open: false
       title: Untranslated Text
@@ -168,9 +167,9 @@ _inputs:
       copyformatting: true
       blockquote: true
     comment: "[See in
-      context](https://driven-darkness.cloudvent.net/broken/blog/do-what-you-ca\
-      n-with-what-you-have-where-you-are#:~:text=Sin%20tantum%20modo,facta%20es\
-      t%20investiga)"
+      context](https://driven-darkness.cloudvent.net/blog/do-what-you-can-with-\
+      what-you-have-where-you-are#:~:text=Sin%20tantum%20modo,facta%20est%20inv\
+      estiga)"
     context:
       open: false
       title: Untranslated Text
@@ -197,9 +196,8 @@ _inputs:
       copyformatting: true
       blockquote: true
     comment: "[See in
-      context](https://driven-darkness.cloudvent.net/broken/blog/do-what-you-ca\
-      n-with-what-you-have-where-you-are#:~:text=The%20longer%20I,wasted%20my%2\
-      0time!)"
+      context](https://driven-darkness.cloudvent.net/blog/do-what-you-can-with-\
+      what-you-have-where-you-are#:~:text=The%20longer%20I,wasted%20my%20time!)"
     context:
       open: false
       title: Untranslated Text

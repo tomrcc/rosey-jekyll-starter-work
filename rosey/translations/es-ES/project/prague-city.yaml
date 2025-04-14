@@ -2,21 +2,21 @@ _inputs:
   $:
     type: object
     comment: "[See
-      project/prague-city](https://driven-darkness.cloudvent.net/broken/project\
-      /prague-city)"
+      project/prague-city](https://driven-darkness.cloudvent.net/project/prague\
+      -city)"
     options:
       place_groups_below: false
       groups:
         - heading: Still to translate (es-ES)
           comment: Text to translate on
-            [project/prague-city](https://driven-darkness.cloudvent.net/broken/project/prague-city)
+            [project/prague-city](https://driven-darkness.cloudvent.net/project/prague-city)
           inputs:
             - markdown:defecerit-sed-isti-ipsi-qui-voluptate-et-dolore-omnia-metiuntur-nonne-clamant-sapienti-plus-semper-adesse-quod-velit-quam-quod-nolit-quae-quidem-sapientes-sequuntur-duce-natura-tamquam-videntes-quod-enim-dissolutum-sit-id-esse-sine-sensu-quod-autem-sine-sensu-sunt-omnia-longum-est-enim-ad-omnia-respondere-quae-a-te-dicta-sunt-nam-cui-proposito-sit-conservatio-sui-necesse-est-huic-partes-quoque-sui-caras-suo-genere-laudabiles-servari
             - markdown:in-qua-quid-est-boni-praeter-summam-voluptatem-et-eam-sempiternam-cur-post-tarentum-ad-archytam-qua-ex-cognitione-facilior-facta-est-investigatio-rerum-occultissimarum-negat-enim-tenuissimo-victu-id-est-contemptissimis-escis-et-potionibus-minorem-voluptatem
             - markdown:praeteritis-inquit-gaudeo-praeteritis-inquit-gaudeo-quod-inquit-quamquam-voluptatibus-quibusdam-est-saepe-iucundius-tamen-expetitur-propter-voluptatem-scientiam-pollicentur-quam-non-erat-mirum-sapientiae-cupido-patria-esse-cariorem-non-quaeritur-autem-quid-naturae-tuae-consentaneum-sit-sed-quid-disciplinae-ita-ne-hoc-quidem-modo-paria-peccata-sunt-ita-prorsus-inquam-nunc-ita-separantur-ut-disiuncta-sint-quo-nihil-potest-esse-perversius-virtutibus-igitur-rectissime-mihi-videris-et-ad-consuetudinem-nostrae-orationis
         - heading: Already translated (es-ES)
           comment: Text already translated on
-            [project/prague-city](https://driven-darkness.cloudvent.net/broken/project/prague-city)
+            [project/prague-city](https://driven-darkness.cloudvent.net/project/prague-city)
           inputs: []
   markdown:defecerit-sed-isti-ipsi-qui-voluptate-et-dolore-omnia-metiuntur-nonne-clamant-sapienti-plus-semper-adesse-quod-velit-quam-quod-nolit-quae-quidem-sapientes-sequuntur-duce-natura-tamquam-videntes-quod-enim-dissolutum-sit-id-esse-sine-sensu-quod-autem-sine-sensu-sunt-omnia-longum-est-enim-ad-omnia-respondere-quae-a-te-dicta-sunt-nam-cui-proposito-sit-conservatio-sui-necesse-est-huic-partes-quoque-sui-caras-suo-genere-laudabiles-servari:
     label: Defecerit Sed isti ipsi, qui voluptate et ...
@@ -33,8 +33,8 @@ _inputs:
       copyformatting: true
       blockquote: true
     comment: "[See in
-      context](https://driven-darkness.cloudvent.net/broken/project/prague-city\
-      #:~:text=Defecerit%20Sed%20isti,genere%20laudabiles%20servari)"
+      context](https://driven-darkness.cloudvent.net/project/prague-city#:~:tex\
+      t=Defecerit%20Sed%20isti,genere%20laudabiles%20servari)"
     context:
       open: false
       title: Untranslated Text
@@ -61,8 +61,8 @@ _inputs:
       copyformatting: true
       blockquote: true
     comment: "[See in
-      context](https://driven-darkness.cloudvent.net/broken/project/prague-city\
-      #:~:text=In%20qua%20quid,potionibus)"
+      context](https://driven-darkness.cloudvent.net/project/prague-city#:~:tex\
+      t=In%20qua%20quid,potionibus)"
     context:
       open: false
       title: Untranslated Text
@@ -86,8 +86,8 @@ _inputs:
       copyformatting: true
       blockquote: true
     comment: "[See in
-      context](https://driven-darkness.cloudvent.net/broken/project/prague-city\
-      #:~:text=Praeteritis,consuetudinem%20nostrae%20orationis)"
+      context](https://driven-darkness.cloudvent.net/project/prague-city#:~:tex\
+      t=Praeteritis,consuetudinem%20nostrae%20orationis)"
     context:
       open: false
       title: Untranslated Text
