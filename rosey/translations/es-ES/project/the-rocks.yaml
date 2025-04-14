@@ -14,15 +14,36 @@ _inputs:
             history](https://github.com/tomrcc/rosey-jekyll-starter-work/commit\
             s/staging/./rosey/translations/es-ES/project/the-rocks.yaml)"
           inputs:
+            - email-address
+            - join-my-mailing-list
             - markdown:defecerit-sed-isti-ipsi-qui-voluptate-et-dolore-omnia-metiuntur-nonne-clamant-sapienti-plus-semper-adesse-quod-velit-quam-quod-nolit-quae-quidem-sapientes-sequuntur-duce-natura-tamquam-videntes-quod-enim-dissolutum-sit-id-esse-sine-sensu-quod-autem-sine-sensu-sunt-omnia-longum-est-enim-ad-omnia-respondere-quae-a-te-dicta-sunt-nam-cui-proposito-sit-conservatio-sui-necesse-est-huic-partes-quoque-sui-caras-suo-genere-laudabiles-servari
             - markdown:in-qua-quid-est-boni-praeter-summam-voluptatem-et-eam-sempiternam-cur-post-tarentum-ad-archytam-qua-ex-cognitione-facilior-facta-est-investigatio-rerum-occultissimarum-negat-enim-tenuissimo-victu-id-est-contemptissimis-escis-et-potionibus-minorem-voluptatem
             - markdown:praeteritis-inquit-gaudeo-praeteritis-inquit-gaudeo-quod-inquit-quamquam-voluptatibus-quibusdam-est-saepe-iucundius-tamen-expetitur-propter-voluptatem-scientiam-pollicentur-quam-non-erat-mirum-sapientiae-cupido-patria-esse-cariorem-non-quaeritur-autem-quid-naturae-tuae-consentaneum-sit-sed-quid-disciplinae-ita-ne-hoc-quidem-modo-paria-peccata-sunt-ita-prorsus-inquam-nunc-ita-separantur-ut-disiuncta-sint-quo-nihil-potest-esse-perversius-virtutibus-igitur-rectissime-mihi-videris-et-ad-consuetudinem-nostrae-orationis
+            - photography
+            - subscribe
+            - the-rocks
         - heading: Already translated (es-ES)
           comment: "[project/the-rocks](https://daring-button.cloudvent.net/project/the-r\
             ocks)  //  [Git
             history](https://github.com/tomrcc/rosey-jekyll-starter-work/commit\
             s/staging/./rosey/translations/es-ES/project/the-rocks.yaml)"
           inputs: []
+  email-address:
+    label: Email address
+    hidden: false
+    type: text
+    options: {}
+    comment: "[See in
+      context](https://daring-button.cloudvent.net/project/the-rocks#:~:text=Em\
+      ail%20address)"
+  join-my-mailing-list:
+    label: Join my mailing list
+    hidden: false
+    type: textarea
+    options: {}
+    comment: "[See in
+      context](https://daring-button.cloudvent.net/project/the-rocks#:~:text=Jo\
+      in%20my%20mailing%20list)"
   markdown:defecerit-sed-isti-ipsi-qui-voluptate-et-dolore-omnia-metiuntur-nonne-clamant-sapienti-plus-semper-adesse-quod-velit-quam-quod-nolit-quae-quidem-sapientes-sequuntur-duce-natura-tamquam-videntes-quod-enim-dissolutum-sit-id-esse-sine-sensu-quod-autem-sine-sensu-sunt-omnia-longum-est-enim-ad-omnia-respondere-quae-a-te-dicta-sunt-nam-cui-proposito-sit-conservatio-sui-necesse-est-huic-partes-quoque-sui-caras-suo-genere-laudabiles-servari:
     label: Defecerit Sed isti ipsi, qui voluptate et ...
     hidden: false
@@ -105,7 +126,36 @@ _inputs:
         paria peccata sunt. Ita prorsus, inquam; Nunc ita separantur, ut
         disiuncta sint, quo nihil potest esse perversius. Virtutibus igitur
         rectissime mihi videris et ad consuetudinem nostrae orationis.
+  photography:
+    label: Photography
+    hidden: false
+    type: text
+    options: {}
+    comment: "[See in
+      context](https://daring-button.cloudvent.net/project/the-rocks#:~:text=Ph\
+      otography)"
+  subscribe:
+    label: Subscribe
+    hidden: false
+    type: text
+    options: {}
+    comment: "[See in
+      context](https://daring-button.cloudvent.net/project/the-rocks#:~:text=Su\
+      bscribe)"
+  the-rocks:
+    label: The rocks
+    hidden: false
+    type: text
+    options: {}
+    comment: "[See in
+      context](https://daring-button.cloudvent.net/project/the-rocks#:~:text=Th\
+      e%20rocks)"
 urlTranslation: project/the-rocks.html
+email-address: ""
+join-my-mailing-list: ""
 markdown:defecerit-sed-isti-ipsi-qui-voluptate-et-dolore-omnia-metiuntur-nonne-clamant-sapienti-plus-semper-adesse-quod-velit-quam-quod-nolit-quae-quidem-sapientes-sequuntur-duce-natura-tamquam-videntes-quod-enim-dissolutum-sit-id-esse-sine-sensu-quod-autem-sine-sensu-sunt-omnia-longum-est-enim-ad-omnia-respondere-quae-a-te-dicta-sunt-nam-cui-proposito-sit-conservatio-sui-necesse-est-huic-partes-quoque-sui-caras-suo-genere-laudabiles-servari: ""
 markdown:in-qua-quid-est-boni-praeter-summam-voluptatem-et-eam-sempiternam-cur-post-tarentum-ad-archytam-qua-ex-cognitione-facilior-facta-est-investigatio-rerum-occultissimarum-negat-enim-tenuissimo-victu-id-est-contemptissimis-escis-et-potionibus-minorem-voluptatem: ""
 markdown:praeteritis-inquit-gaudeo-praeteritis-inquit-gaudeo-quod-inquit-quamquam-voluptatibus-quibusdam-est-saepe-iucundius-tamen-expetitur-propter-voluptatem-scientiam-pollicentur-quam-non-erat-mirum-sapientiae-cupido-patria-esse-cariorem-non-quaeritur-autem-quid-naturae-tuae-consentaneum-sit-sed-quid-disciplinae-ita-ne-hoc-quidem-modo-paria-peccata-sunt-ita-prorsus-inquam-nunc-ita-separantur-ut-disiuncta-sint-quo-nihil-potest-esse-perversius-virtutibus-igitur-rectissime-mihi-videris-et-ad-consuetudinem-nostrae-orationis: ""
+photography: ""
+subscribe: ""
+the-rocks: ""

@@ -11,10 +11,48 @@ _inputs:
           comment: "[tag/life](https://daring-button.cloudvent.net/tag/life)  //  [Git
             history](https://github.com/tomrcc/rosey-jekyll-starter-work/commit\
             s/staging/./rosey/translations/es-ES/tag/life.yaml)"
-          inputs: []
+          inputs:
+            - email-address
+            - join-my-mailing-list
+            - life
+            - subscribe
         - heading: Already translated (es-ES)
           comment: "[tag/life](https://daring-button.cloudvent.net/tag/life)  //  [Git
             history](https://github.com/tomrcc/rosey-jekyll-starter-work/commit\
             s/staging/./rosey/translations/es-ES/tag/life.yaml)"
           inputs: []
+  email-address:
+    label: Email address
+    hidden: false
+    type: text
+    options: {}
+    comment: "[See in
+      context](https://daring-button.cloudvent.net/tag/life#:~:text=Email%20add\
+      ress)"
+  join-my-mailing-list:
+    label: Join my mailing list
+    hidden: false
+    type: textarea
+    options: {}
+    comment: "[See in
+      context](https://daring-button.cloudvent.net/tag/life#:~:text=Join%20my%2\
+      0mailing%20list)"
+  life:
+    label: Life
+    hidden: false
+    type: text
+    options: {}
+    comment: "[See in
+      context](https://daring-button.cloudvent.net/tag/life#:~:text=Life)"
+  subscribe:
+    label: Subscribe
+    hidden: false
+    type: text
+    options: {}
+    comment: "[See in
+      context](https://daring-button.cloudvent.net/tag/life#:~:text=Subscribe)"
 urlTranslation: tag/life.html
+email-address: ""
+join-my-mailing-list: ""
+life: ""
+subscribe: ""

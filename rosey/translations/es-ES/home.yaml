@@ -11,7 +11,10 @@ _inputs:
           comment: "[index.html](https://daring-button.cloudvent.net/index.html)  //  [Git
             history](https://github.com/tomrcc/rosey-jekyll-starter-work/commit\
             s/staging/./rosey/translations/es-ES/home.yaml)"
-          inputs: []
+          inputs:
+            - email-address
+            - join-my-mailing-list
+            - subscribe
         - heading: Already translated (es-ES)
           comment: "[index.html](https://daring-button.cloudvent.net/index.html)  //  [Git
             history](https://github.com/tomrcc/rosey-jekyll-starter-work/commit\
@@ -21,6 +24,14 @@ _inputs:
             - hi-there-i-am-vanessa-marley
             - p-strong-photographer-strong-and-strong-visual-content-strategist-strong-from-albany-i-work-as-a-lifestyle-product-and-landscape-photographer-creating-images-for-a-diverse-range-of-requests-from-online-media-to-printed-artwork-p
             - see-my-works
+  email-address:
+    label: Email address
+    hidden: false
+    type: text
+    options: {}
+    comment: "[See in
+      context](https://daring-button.cloudvent.net/index.html#:~:text=Email%20a\
+      ddress)"
   get-in-touch:
     label: Get in touch
     hidden: false
@@ -37,6 +48,14 @@ _inputs:
     comment: "[See in
       context](https://daring-button.cloudvent.net/index.html#:~:text=Hi%20ther\
       e,%20I%20am%20Vanessa%20Marley)"
+  join-my-mailing-list:
+    label: Join my mailing list
+    hidden: false
+    type: textarea
+    options: {}
+    comment: "[See in
+      context](https://daring-button.cloudvent.net/index.html#:~:text=Join%20my\
+      %20mailing%20list)"
   p-strong-photographer-strong-and-strong-visual-content-strategist-strong-from-albany-i-work-as-a-lifestyle-product-and-landscape-photographer-creating-images-for-a-diverse-range-of-requests-from-online-media-to-printed-artwork-p:
     label: Photographer and Visual Content Strategist...
     hidden: false
@@ -60,11 +79,22 @@ _inputs:
     comment: "[See in
       context](https://daring-button.cloudvent.net/index.html#:~:text=See%20my%\
       20works)"
+  subscribe:
+    label: Subscribe
+    hidden: false
+    type: text
+    options: {}
+    comment: "[See in
+      context](https://daring-button.cloudvent.net/index.html#:~:text=Subscribe\
+      )"
 urlTranslation: index.html
+email-address: ""
 get-in-touch: Ponte en contacto
 hi-there-i-am-vanessa-marley: Hola, soy Vanessa Marley.
+join-my-mailing-list: ""
 p-strong-photographer-strong-and-strong-visual-content-strategist-strong-from-albany-i-work-as-a-lifestyle-product-and-landscape-photographer-creating-images-for-a-diverse-range-of-requests-from-online-media-to-printed-artwork-p:
   Fotógrafo y estratega de contenido visual de Albany. Trabajo como fotógrafo de
   estilo de vida, productos y paisajes, creando imágenes para una amplia gama de
   solicitudes, desde medios digitales hasta obras impresas.
 see-my-works: Ver mis trabajos
+subscribe: ""

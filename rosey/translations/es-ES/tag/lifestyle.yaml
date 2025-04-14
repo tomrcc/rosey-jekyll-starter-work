@@ -13,11 +13,51 @@ _inputs:
             /  [Git
             history](https://github.com/tomrcc/rosey-jekyll-starter-work/commit\
             s/staging/./rosey/translations/es-ES/tag/lifestyle.yaml)"
-          inputs: []
+          inputs:
+            - email-address
+            - join-my-mailing-list
+            - lifestyle
+            - subscribe
         - heading: Already translated (es-ES)
           comment: "[tag/lifestyle](https://daring-button.cloudvent.net/tag/lifestyle)  /\
             /  [Git
             history](https://github.com/tomrcc/rosey-jekyll-starter-work/commit\
             s/staging/./rosey/translations/es-ES/tag/lifestyle.yaml)"
           inputs: []
+  email-address:
+    label: Email address
+    hidden: false
+    type: text
+    options: {}
+    comment: "[See in
+      context](https://daring-button.cloudvent.net/tag/lifestyle#:~:text=Email%\
+      20address)"
+  join-my-mailing-list:
+    label: Join my mailing list
+    hidden: false
+    type: textarea
+    options: {}
+    comment: "[See in
+      context](https://daring-button.cloudvent.net/tag/lifestyle#:~:text=Join%2\
+      0my%20mailing%20list)"
+  lifestyle:
+    label: Lifestyle
+    hidden: false
+    type: text
+    options: {}
+    comment: "[See in
+      context](https://daring-button.cloudvent.net/tag/lifestyle#:~:text=Lifest\
+      yle)"
+  subscribe:
+    label: Subscribe
+    hidden: false
+    type: text
+    options: {}
+    comment: "[See in
+      context](https://daring-button.cloudvent.net/tag/lifestyle#:~:text=Subscr\
+      ibe)"
 urlTranslation: tag/lifestyle.html
+email-address: ""
+join-my-mailing-list: ""
+lifestyle: ""
+subscribe: ""
