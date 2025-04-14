@@ -11,16 +11,16 @@ _inputs:
           comment: "[index.html](https://daring-button.cloudvent.net/index.html)  //  [Git
             history](https://github.com/tomrcc/rosey-jekyll-starter-work/commit\
             s/staging/./rosey/translations/es-ES/home.yaml)"
-          inputs:
-            - email-address
-            - join-my-mailing-list
+          inputs: []
         - heading: Already translated (es-ES)
           comment: "[index.html](https://daring-button.cloudvent.net/index.html)  //  [Git
             history](https://github.com/tomrcc/rosey-jekyll-starter-work/commit\
             s/staging/./rosey/translations/es-ES/home.yaml)"
           inputs:
+            - email-address
             - get-in-touch
             - hi-there-i-am-vanessa-marley
+            - join-my-mailing-list
             - p-strong-photographer-strong-and-strong-visual-content-strategist-strong-from-albany-i-work-as-a-lifestyle-product-and-landscape-photographer-creating-images-for-a-diverse-range-of-requests-from-online-media-to-printed-artwork-p
             - see-my-works
             - subscribe
@@ -88,10 +88,10 @@ _inputs:
       context](https://daring-button.cloudvent.net/index.html#:~:text=Subscribe\
       )"
 urlTranslation: index.html
-email-address: Dupe 1
+email-address: Únete a mi lista de correo
 get-in-touch: Ponte en contacto
 hi-there-i-am-vanessa-marley: Hola, soy Vanessa Marley.
-join-my-mailing-list: Dupe 2
+join-my-mailing-list: Únete a mi lista de correo
 p-strong-photographer-strong-and-strong-visual-content-strategist-strong-from-albany-i-work-as-a-lifestyle-product-and-landscape-photographer-creating-images-for-a-diverse-range-of-requests-from-online-media-to-printed-artwork-p:
   Fotógrafo y estratega de contenido visual de Albany. Trabajo como fotógrafo de
   estilo de vida, productos y paisajes, creando imágenes para una amplia gama de

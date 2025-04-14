@@ -18,8 +18,6 @@ _inputs:
             s/staging/./rosey/translations/es-ES/blog/do-what-you-can-with-what\
             -you-have-where-you-are.yaml)"
           inputs:
-            - email-address
-            - join-my-mailing-list
             - markdown:ego-quoque-inquit-didicerim-libentius-si-quid-attuleris-quam-te-reprehenderim-i-am-quod-insipientes-alios-ita-esse-ut-nullo-modo-ad-sapientiam-possent-pervenire-alios-qui-possent-si-id-egissent-sapientiam-consequi-id-quaeris-inquam-in-quo-utrum-respondero-verses-te-huc-atque-illuc-necesse-est-sed-quid-ages-tandem-si-utilitas-ab-amicitia-ut-fit-saepe-oratio-defecerit-sed-isti-ipsi-qui-voluptate-et-dolore-omnia-metiuntur-nonne-clamant-sapienti-plus-semper-adesse-quod-velit-quam-quod-nolit-quae-quidem-sapientes-sequuntur-duce-natura-tamquam-videntes-quod-enim-dissolutum-sit-id-esse-sine-sensu-quod-autem-sine-sensu-sit-id-nihil-ad-nos-pertinere-omnino-idne-consensisse-de-calatino-plurimas-gentis-cantibus-arbitramur-primarium-populi-fuisse-quod-praestantissimus-fuisset-in-conficiendis-disseretur-voluptatibus-utram-tandem-linguam-nescio-quod-dicit-epicurus-voluptate-terra-perfectio
             - markdown:in-omni-enim-arte-vel-studio-vel-quavis-scientia-velas-in-ipsa-virtute-optimum-quidque-est-quod-est-ut-dixi-habere-ea-quae-secundum-naturam-sint-vel-omnia-vel-plurima-et-maxima-quodsi-ipsam-honestatem-undique-pertectam-atque-absolutam-tecum-optime-deindestum-etiam-cum-mediocri-amico-neque-enim-disputari-sine-reprehensione-nec-cum-iracundia-aut-pertinacia-recte-disputari-potest-an-partus-ancillae-sitned-in-fructum-habendus-disseretur-inter-principes-civitatis-p-ut-in-geometria-prima-si-dederis-danda-sunt-omnia-longum-est-enim-ad-omnia-respondere-quae-a-te-dicta-sunt-nam-cui-proposito-sintero-conservatio-sui-necesse-est-huic-partes-quoque-sui-caras-suo-genere-laudabiles-rarissimum-servari-tinere
             - markdown:in-qua-quid-est-boni-praeter-summam-voluptatem-et-eam-sempiternam-cur-post-tarentum-ad-archytam-qua-ex-cognitione-facilior-facta-est-investigatio-rerum-occultissimarum-negat-enim-tenuissimo-victu-id-est-contemptissimis-escis-et-potionibus-reman-voluptatem-amico-percipi-quam-rebus-exquisitissimis-ad-epulandum-non-enim-iam-stirpis-bonum-quaeret-sed-animalis-qui-autem-esse-poteris-nisi-te-amor-ipse-ceperit-sic-igitur-in-homine-perfectio-ista-in-eo-potissimum-quod-est-optimum-id-est-in-virtute-laudatur-natura-sic-ab-iis-investigata-est-ut-nulla-pars-caelo-mari-terra-ut-po-tice-loquar-praetermissa-sit-eadem-nunc-means-adversum-te-oratio-est-mihi-quidem-homerus-huius-modi-quiddam-vidisse-videatur-in-nis
@@ -34,6 +32,8 @@ _inputs:
             s/staging/./rosey/translations/es-ES/blog/do-what-you-can-with-what\
             -you-have-where-you-are.yaml)"
           inputs:
+            - email-address
+            - join-my-mailing-list
             - subscribe
   email-address:
     label: Email address
@@ -243,8 +243,8 @@ _inputs:
       context](https://daring-button.cloudvent.net/blog/do-what-you-can-with-wh\
       at-you-have-where-you-are#:~:text=Subscribe)"
 urlTranslation: blog/do-what-you-can-with-what-you-have-where-you-are.html
-email-address: Dupe 1
-join-my-mailing-list: Dupe 2
+email-address: Únete a mi lista de correo
+join-my-mailing-list: Únete a mi lista de correo
 markdown:ego-quoque-inquit-didicerim-libentius-si-quid-attuleris-quam-te-reprehenderim-i-am-quod-insipientes-alios-ita-esse-ut-nullo-modo-ad-sapientiam-possent-pervenire-alios-qui-possent-si-id-egissent-sapientiam-consequi-id-quaeris-inquam-in-quo-utrum-respondero-verses-te-huc-atque-illuc-necesse-est-sed-quid-ages-tandem-si-utilitas-ab-amicitia-ut-fit-saepe-oratio-defecerit-sed-isti-ipsi-qui-voluptate-et-dolore-omnia-metiuntur-nonne-clamant-sapienti-plus-semper-adesse-quod-velit-quam-quod-nolit-quae-quidem-sapientes-sequuntur-duce-natura-tamquam-videntes-quod-enim-dissolutum-sit-id-esse-sine-sensu-quod-autem-sine-sensu-sit-id-nihil-ad-nos-pertinere-omnino-idne-consensisse-de-calatino-plurimas-gentis-cantibus-arbitramur-primarium-populi-fuisse-quod-praestantissimus-fuisset-in-conficiendis-disseretur-voluptatibus-utram-tandem-linguam-nescio-quod-dicit-epicurus-voluptate-terra-perfectio: ""
 markdown:in-omni-enim-arte-vel-studio-vel-quavis-scientia-velas-in-ipsa-virtute-optimum-quidque-est-quod-est-ut-dixi-habere-ea-quae-secundum-naturam-sint-vel-omnia-vel-plurima-et-maxima-quodsi-ipsam-honestatem-undique-pertectam-atque-absolutam-tecum-optime-deindestum-etiam-cum-mediocri-amico-neque-enim-disputari-sine-reprehensione-nec-cum-iracundia-aut-pertinacia-recte-disputari-potest-an-partus-ancillae-sitned-in-fructum-habendus-disseretur-inter-principes-civitatis-p-ut-in-geometria-prima-si-dederis-danda-sunt-omnia-longum-est-enim-ad-omnia-respondere-quae-a-te-dicta-sunt-nam-cui-proposito-sintero-conservatio-sui-necesse-est-huic-partes-quoque-sui-caras-suo-genere-laudabiles-rarissimum-servari-tinere: ""
 markdown:in-qua-quid-est-boni-praeter-summam-voluptatem-et-eam-sempiternam-cur-post-tarentum-ad-archytam-qua-ex-cognitione-facilior-facta-est-investigatio-rerum-occultissimarum-negat-enim-tenuissimo-victu-id-est-contemptissimis-escis-et-potionibus-reman-voluptatem-amico-percipi-quam-rebus-exquisitissimis-ad-epulandum-non-enim-iam-stirpis-bonum-quaeret-sed-animalis-qui-autem-esse-poteris-nisi-te-amor-ipse-ceperit-sic-igitur-in-homine-perfectio-ista-in-eo-potissimum-quod-est-optimum-id-est-in-virtute-laudatur-natura-sic-ab-iis-investigata-est-ut-nulla-pars-caelo-mari-terra-ut-po-tice-loquar-praetermissa-sit-eadem-nunc-means-adversum-te-oratio-est-mihi-quidem-homerus-huius-modi-quiddam-vidisse-videatur-in-nis: ""

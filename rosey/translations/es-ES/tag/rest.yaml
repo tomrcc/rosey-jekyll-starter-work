@@ -12,14 +12,14 @@ _inputs:
             history](https://github.com/tomrcc/rosey-jekyll-starter-work/commit\
             s/staging/./rosey/translations/es-ES/tag/rest.yaml)"
           inputs:
-            - email-address
-            - join-my-mailing-list
             - rest
         - heading: Already translated (es-ES)
           comment: "[tag/rest](https://daring-button.cloudvent.net/tag/rest)  //  [Git
             history](https://github.com/tomrcc/rosey-jekyll-starter-work/commit\
             s/staging/./rosey/translations/es-ES/tag/rest.yaml)"
           inputs:
+            - email-address
+            - join-my-mailing-list
             - subscribe
   email-address:
     label: Email address
@@ -52,7 +52,7 @@ _inputs:
     comment: "[See in
       context](https://daring-button.cloudvent.net/tag/rest#:~:text=Subscribe)"
 urlTranslation: tag/rest.html
-email-address: Dupe 1
-join-my-mailing-list: Dupe 2
+email-address: Únete a mi lista de correo
+join-my-mailing-list: Únete a mi lista de correo
 rest: ""
 subscribe: suscribir

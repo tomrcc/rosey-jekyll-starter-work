@@ -14,8 +14,6 @@ _inputs:
             history](https://github.com/tomrcc/rosey-jekyll-starter-work/commit\
             s/staging/./rosey/translations/es-ES/tag/lifestyle.yaml)"
           inputs:
-            - email-address
-            - join-my-mailing-list
             - lifestyle
         - heading: Already translated (es-ES)
           comment: "[tag/lifestyle](https://daring-button.cloudvent.net/tag/lifestyle)  /\
@@ -23,6 +21,8 @@ _inputs:
             history](https://github.com/tomrcc/rosey-jekyll-starter-work/commit\
             s/staging/./rosey/translations/es-ES/tag/lifestyle.yaml)"
           inputs:
+            - email-address
+            - join-my-mailing-list
             - subscribe
   email-address:
     label: Email address
@@ -57,7 +57,7 @@ _inputs:
       context](https://daring-button.cloudvent.net/tag/lifestyle#:~:text=Subscr\
       ibe)"
 urlTranslation: tag/lifestyle.html
-email-address: Dupe 1
-join-my-mailing-list: Dupe 2
+email-address: Únete a mi lista de correo
+join-my-mailing-list: Únete a mi lista de correo
 lifestyle: ""
 subscribe: suscribir
