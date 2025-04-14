@@ -15,12 +15,12 @@ _inputs:
             - email-address
             - join-my-mailing-list
             - notes
-            - subscribe
         - heading: Already translated (es-ES)
           comment: "[tag/notes](https://daring-button.cloudvent.net/tag/notes)  //  [Git
             history](https://github.com/tomrcc/rosey-jekyll-starter-work/commit\
             s/staging/./rosey/translations/es-ES/tag/notes.yaml)"
-          inputs: []
+          inputs:
+            - subscribe
   email-address:
     label: Email address
     hidden: false
@@ -52,7 +52,7 @@ _inputs:
     comment: "[See in
       context](https://daring-button.cloudvent.net/tag/notes#:~:text=Subscribe)"
 urlTranslation: tag/notes.html
-email-address: ""
-join-my-mailing-list: ""
+email-address: Dupe 1
+join-my-mailing-list: Dupe 2
 notes: ""
 subscribe: suscribir

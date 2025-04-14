@@ -17,13 +17,13 @@ _inputs:
             - email-address
             - join-my-mailing-list
             - lifestyle
-            - subscribe
         - heading: Already translated (es-ES)
           comment: "[tag/lifestyle](https://daring-button.cloudvent.net/tag/lifestyle)  /\
             /  [Git
             history](https://github.com/tomrcc/rosey-jekyll-starter-work/commit\
             s/staging/./rosey/translations/es-ES/tag/lifestyle.yaml)"
-          inputs: []
+          inputs:
+            - subscribe
   email-address:
     label: Email address
     hidden: false
@@ -57,7 +57,7 @@ _inputs:
       context](https://daring-button.cloudvent.net/tag/lifestyle#:~:text=Subscr\
       ibe)"
 urlTranslation: tag/lifestyle.html
-email-address: ""
-join-my-mailing-list: ""
+email-address: Dupe 1
+join-my-mailing-list: Dupe 2
 lifestyle: ""
 subscribe: suscribir
