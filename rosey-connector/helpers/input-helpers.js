@@ -38,7 +38,7 @@ function initDefaultInputs(
     if (githubCommentEnabled) {
       inputComment += `${
         inputComment.length > 1 ? "  //  " : ""
-      }[${githubCommentText}](${githubRepo}commits/${githubBranchName}${pageString})`;
+      }[${githubCommentText}](${githubRepo}/commits/${githubBranchName}/${page})`;
     }
 
     data._inputs.$ = {
