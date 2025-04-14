@@ -110,14 +110,10 @@ async function generateTranslationFilesForLocale(
       const translationFilePath = path.join(
         translationFilesDirPath,
         locale,
-        `${yamlPageName}.yaml`
+        yamlPageName
       );
       // Ensure nested translation pages have parent directory
-      await createParentDirIfExists(
-        yamlPageName,
-        translationFilesDirPath,
-        locale
-      );
+      await createParentDirIfExists(page, translationFilesDirPath, locale);
 
       // Get existing translation page data, returns a fallback if none exists
       const translationFileData = await readYamlFromFile(translationFilePath);

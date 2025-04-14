@@ -94,7 +94,7 @@ function getYamlFileName(fileName) {
   }
   return fileName
     .replace("/index.html", "")
-    .replace(".html", "")
+    .replace(".html", ".yaml")
     .replace("index", "home");
 }
 

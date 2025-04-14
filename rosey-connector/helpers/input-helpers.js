@@ -1,4 +1,4 @@
-import { getPageString } from "./file-helpers.js";
+import { getPageString, getYamlFileName } from "./file-helpers.js";
 import { formatMarkdownText } from "./markdown-formatters.js";
 import { NodeHtmlMarkdown } from "node-html-markdown";
 const nhm = new NodeHtmlMarkdown(
@@ -24,6 +24,7 @@ function initDefaultInputs(
   // Create the page input object
   if (!data._inputs.$) {
     const pageString = getPageString(page);
+    const pageFilePath = getYamlFileName(page);
     const seeOnPageCommentEnabled = seeOnPageCommentSettings.enabled;
     const baseUrl = seeOnPageCommentSettings.base_url;
     const githubCommentEnabled = githubCommentSettings.enabled;
@@ -38,7 +39,7 @@ function initDefaultInputs(
     if (githubCommentEnabled) {
       inputComment += `${
         inputComment.length > 1 ? "  //  " : ""
-      }[${githubCommentText}](${githubRepo}/commits/${githubBranchName}/${translationFilesDirPath}/${locale}/${page})`;
+      }[${githubCommentText}](${githubRepo}/commits/${githubBranchName}/${translationFilesDirPath}/${locale}/${pageFilePath})`;
     }
 
     data._inputs.$ = {
