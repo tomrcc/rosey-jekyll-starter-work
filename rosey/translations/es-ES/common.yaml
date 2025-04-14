@@ -53,10 +53,10 @@ _inputs:
     hidden: false
     type: text
     options: {}
-common:about: ""
-common:blog: ""
-common:elements: ""
-common:home: ""
-common:menu: ""
-common:pages: ""
-common:projects: ""
+common:about: Acerca de
+common:blog: Blog
+common:elements: Acerca de
+common:home: Hogar
+common:menu: Menú
+common:pages: Paginas
+common:projects: proyectos

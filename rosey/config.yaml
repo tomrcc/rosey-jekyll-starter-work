@@ -1,9 +1,9 @@
 locales:
   - es-ES
-see_on_page_comment: 
-  enabled: true
-  base_url: https://driven-darkness.cloudvent.net/
-  comment_text: See on page
+see_on_page_comment:
+  enabled: false
+  base_url: https://driven-darkness.cloudvent.net/broken/
+  comment_text: See on staging page
 github_history:
   enabled: true
   repo_url: https://github.com/tomrcc/rosey-jekyll-starter-work
@@ -30,7 +30,11 @@ _inputs:
   namespace_pages:
     type: array
     comment: >-
-      Group translations by namespace. A page will be created for each namespace, your translations will be scanned for corresponding Rosey namespaces, and grouped on the namespace page. See the [Rosey docs](https://rosey.app/docs/namespacing/) for details on adding namespaces to your html.
+      Group translations by namespace. A page will be created for each
+      namespace, your translations will be scanned for corresponding Rosey
+      namespaces, and grouped on the namespace page. See the [Rosey
+      docs](https://rosey.app/docs/namespacing/) for details on adding
+      namespaces to your html.
   locales:
     type: array
     comment: >-
