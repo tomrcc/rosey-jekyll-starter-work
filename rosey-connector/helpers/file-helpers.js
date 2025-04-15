@@ -62,10 +62,6 @@ async function readConfigFile(configFilePath) {
 }
 
 function getTranslationHtmlFilename(translationFilename, baseUrlFileData) {
-  if (translationFilename === "404.yaml") {
-    return "404.html";
-  }
-
   if (translationFilename === "home.yaml") {
     return "index.html";
   }
@@ -77,10 +73,15 @@ function getTranslationHtmlFilename(translationFilename, baseUrlFileData) {
   );
 
   const baseUrlFileDataKeys = Object.keys(baseUrlFileData);
+
   // Check whether the filename is filename.html or filename/index.html
-  const fileName = baseUrlFileDataKeys.includes(htmlFileName)
-    ? htmlFileName
-    : extensionlessHtmlFileName;
+  let fileName = "";
+  if (baseUrlFileDataKeys.includes(htmlFileName)) {
+    fileName = htmlFileName;
+  }
+  if (baseUrlFileDataKeys.includes(extensionlessHtmlFileName)) {
+    fileName = extensionlessHtmlFileName;
+  }
 
   if (!fileName) {
     console.log("No filename found in our base.urls.json");
